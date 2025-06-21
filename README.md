@@ -62,4 +62,110 @@ Sponsored by [CyberBiz](https://cyber-biz.com/) and [InnovGuard.com](https://inn
 
 📘 AI Data Security — Best Practices for Securing Data Used to Train & Operate AI Systems by Cybersecurity and Infrastructure Security Agency — This guidance highlights the critical role of data security in ensuring the accuracy, integrity, and trustworthiness of AI outcomes. It outlines key risks that may arise from data security and integrity issues across all phases of the AI lifecycle, from development and testing to deployment and operation. https://www.linkedin.com/feed/update/urn:li:activity:7331359099193872387
 
+## 📂 Upcoming Events
+
+📅 The AI Summit at Black Hat — August 5, 2025 | Mandalay Bay, Las Vegas  
+https://www.blackhat.com/us-25/ai-summit.html
+
+📅 AI Village @ DEF CON 33 — August 7, 2025 | Las Vegas Convention Center, Las Vegas, NV
+
+📅 Artificial Intelligence Risk Summit — August 19–20, 2025  
+https://www.airisksummit.com/
+
+📅 The AI Summit at Security Education Conference Toronto (SecTor) 2025 — September 30, 2025 | MTCC, Toronto, Ontario, Canada  
+https://www.blackhat.com/sector/2025/ai-summit.html
+
+📅 The International Conference on Cybersecurity and AI-Based Systems — September 1–4, 2025 | Bulgaria  
+https://www.cyber-ai.org/
+
+## 📚 Research
+
+📖 AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models  
+https://arxiv.org/abs/2506.14682
+
+📖 VulBinLLM: LLM-powered Vulnerability Detection for Stripped Binaries  
+https://arxiv.org/abs/2505.22010
+
+📖 CAI: An Open, Bug Bounty-Ready Cybersecurity AI  
+https://arxiv.org/abs/2504.06017
+
+📖 Dynamic Risk Assessments for Offensive Cybersecurity Agents  
+https://arxiv.org/abs/2505.18384
+
+📖 Design Patterns for Securing LLM Agents against Prompt Injections  
+https://arxiv.org/abs/2506.08837
+
+📖 PANDAGUARD: Systematic Evaluation of LLM Safety against Jailbreaking Attacks  
+https://arxiv.org/abs/2505.13862
+
+📖 Lessons from Defending Gemini Against Indirect Prompt Injections  
+https://arxiv.org/abs/2505.14534
+
+📖 Enterprise-Grade Security for the Model Context Protocol (MCP): Frameworks and Mitigation Strategies  
+https://arxiv.org/abs/2504.08623
+
+📖 Securing AI Agents with Information-Flow Control — As AI agents become increasingly autonomous and capable, ensuring their security against vulnerabilities such as prompt injection becomes critical. This paper explores the use of information-flow control (IFC) to provide security guarantees for AI agents.  
+https://arxiv.org/abs/2505.23643
+
+📖 Common Corpus: The Largest Collection of Ethical Data for LLM Pre-Training — Large Language Models (LLMs) are pre-trained on large amounts of data from different sources and domains. These data most often contain trillions of tokens with large portions of copyrighted or proprietary content, which hinders the usage of such models under AI legislation. This raises the need for truly open pre-training data that is compliant with the data security regulations. In this paper, we introduce Common Corpus, the largest open dataset for language model pre-training.  
+https://arxiv.org/abs/2506.01732
+
+📖 A Novel Zero-Trust Identity Framework for Agentic AI: Decentralized Authentication and Fine-Grained Access Control  
+https://arxiv.org/abs/2505.19301
+
+## 🛠 Tools & Resources
+
+🧰 GitHub Secure Code Game — A GitHub Security Lab initiative, providing an in-repo learning experience, where learners secure intentionally vulnerable code.  
+https://github.com/PromptLabs/Prompt-Hacking-Resources
+
+🧰 Cybersecurity AI (CAI), an open Bug Bounty-ready Artificial Intelligence  by Alias Robotics  
+https://github.com/aliasrobotics/cai
+
+🧰 Awesome LLMSecOps — LLM | Security | Operations in one github repo with good links and pictures.  
+https://github.com/wearetyomsmnv/Awesome-LLMSecOps
+
+🧰 tracecat  by Tracecat is a modern, open source automation platform built for security and IT engineers. Simple YAML-based templates for integrations with a no-code UI for workflows. Built-in lookup tables and case management. Orchestrated using Temporal for scale and reliability.  
+https://github.com/TracecatHQ/tracecat
+
+🧰 MCP-Defender — Desktop app that automatically scans and blocks malicious MCP traffic in AI apps like Cursor, Claude, VS Code and Windsurf.  
+https://github.com/MCP-Defender/MCP-Defender
+
+🧰 deepteam  by Confident AI (YC W25) — The LLM Red Teaming Framework.  
+https://github.com/confident-ai/deepteam
+
+🧰 Awesome Cybersecurity Agentic AI —   
+https://github.com/raphabot/awesome-cybersecurity-agentic-ai
+
+## 🎁 Bonus
+
+1️⃣ Kali GPT — Generates payloads, guides the use of Metasploit/Hydra, and explains techniques step-by-step  
+https://chatgpt.com/g/g-uRhIB5ire-kali-gpt
+
+2️⃣ White Rabbit Neo — Automates exploits and offensive scripts. Pure Red Team thinking  
+https://www.whiterabbitneo.com/
+
+3️⃣ Pentest GPT — Scans, exploits, reports. Follows OWASP workflows, automates findings  
+https://pentestgpt.ai/
+
+4️⃣ Bug Hunter GPT — Finds and exploits XSS, SQLi, CSRF. Generates PoCs step-by-step  
+https://chatgpt.com/g/g-y2KnRe0w4-bug-hunter-gpt
+
+5️⃣ X HackTricks GPT — Trained with hacktricks-xyz. Offensive and defensive techniques in context  
+https://chatgpt.com/g/g-aaNx59p4q-hacktricksgpt
+
+6️⃣ OSINT GPT — Finds leaks, analyzes social networks, dorks, domains, and more  
+https://chatgpt.com/g/g-ysjJG1VjM-osint-gpt
+
+7️⃣ SOC GPT — Automates analysis of SIEM alerts, ticket generation, and responses  
+https://chatgpt.com/g/g-tZAEuGaru-soc
+
+8️⃣ BlueTeam GPT — Designed for defenders: anomaly detection, hardening, MITRE ATT&CK  
+https://chatgpt.com/g/g-GP9M4UScu-blue-team-guide
+
+9️⃣ Threat Intel GPT — Summarizes threat reports, analyzes IOCs and TTPs in seconds  
+https://chatgpt.com/g/g-Vy4rIqiCF-threat-intel-bot
+
+🔟 YARA GPT — Writes and explains YARA rules for advanced detection  
+https://chatgpt.com/g/g-caq5P2JnM
+
 
