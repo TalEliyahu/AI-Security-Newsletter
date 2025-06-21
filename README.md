@@ -136,6 +136,26 @@ https://github.com/confident-ai/deepteam
 🧰 Awesome Cybersecurity Agentic AI —   
 https://github.com/raphabot/awesome-cybersecurity-agentic-ai
 
+## 🎥 Videos
+
+▶️ Why MCP Agents Are the Next Cyber Battleground  
+https://www.youtube.com/watch?v=5uQAz5oNeQU
+
+▶️ Hacking Windsurf: I Asked the AI for System Access — It Said Yes  
+https://www.youtube.com/watch?v=23Mz7qcRz50
+
+▶️ Hey Gemini, improve the APT Hunt run book — AI Runbooks for Google SecOps: Security Operations with Model Context Protocol — This project provides specialized AI agents that collaborate to handle security operations tasks including incident response, threat hunting, detection engineering, and security operations center (SOC) activities by Daniel Dye  
+https://www.youtube.com/watch?v=6Zz9ASWQ1jc
+
+▶️ Living off Microsoft Copilot — This talk is a comprehensive analysis of Microsoft Copilot taken to red-team-level practicality. We will show how Copilot plugins can be used to install a backdoor into other user's Copilot interactions, allowing for data theft as a starter and AI-based social engineering as the main course. We'll show how hackers can circumvent built-in security controls which focus on files and data by using AI against them.  
+https://www.youtube.com/watch?v=-YJgcTCSzU0
+
+▶️ This is how you make a $100 billion AI worm  
+https://www.youtube.com/watch?v=s4RKXTC8iuM
+
+▶️ Cybersecurity and Infrastructure Protection Subcommittee Hearing: Security to Model: Securing Artificial Intelligence to Strengthen Cybersecurity
+https://www.youtube.com/watch?v=tnmfsinO9sM
+
 ## 🎁 Bonus
 
 1️⃣ Kali GPT — Generates payloads, guides the use of Metasploit/Hydra, and explains techniques step-by-step  
