@@ -1,8 +1,8 @@
 # Adversarial AI Digest – 20 May, 2025
-A digest of AI security research, insights, reports, upcoming events, and tools & resources.  
-Follow AI Security community on Twitter and LinkedIn group for additional updates.  
 
-**Sponsored by InnovGuard.com - Technology Risk & Cybersecurity Advisory - Innovate and Invest with Confidence, Lead with Assurance.**
+A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AI Security community](https://linktr.ee/AISECHUB) on [Twitter](https://twitter.com) and [LinkedIn group](https://linkedin.com) for additional updates.
+
+Sponsored by [CyberBiz](https://cyber-biz.com/) and [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybersecurity Advisory, Innovate and Invest with Confidence, Lead with Assurance.
 
 ## 🔍 Insights
 📌 [AI Agents vs. Agentic AI — Design Is Defense](https://medium.com/ai-security-hub/ai-agents-vs-agentic-ai-ecfc5d8f41b6) — How AI Agents and Agentic AI really differ — and why security needs to be part of the design, not an afterthought.
