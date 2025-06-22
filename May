@@ -28,3 +28,119 @@ Follow AI Security community on Twitter and LinkedIn group for additional update
 📌 [Everything Wrong with MCP](https://blog.sshh.io/p/everything-wrong-with-mcp) — Shrivu Shankar details key flaws in the Model Context Protocol, including trust boundaries, cost control limitations, and prompt injection exposure.
 
 📌 [How to Pitch at RSA Conference Innovation Sandbox, Black Hat Startup Spotlight, and GISEC GLOBAL Cyberstars](https://www.linkedin.com/pulse/how-win-cybersecurity-oscar-tal-eliyahu-aobec/) — Cybersecurity startup competitions are more than just pitch stages — they’re credibility engines. This article breaks down what judges actually look for, how AI security is reshaping the field, and why early-stage founders should treat these competitions like investor-level opportunities.
+
+## 📄 Reports
+
+📘 [AI Agent Governance: A Field Guide](https://www.linkedin.com/feed/update/urn:li:activity:7328876049524543489) — A deep dive into agent deployment risks and governance gaps, mapping scenarios, and introducing frameworks for oversight.
+
+📘 [Agent Name Service (ANS) for Secure AI Agent Discovery](https://www.linkedin.com/feed/update/urn:li:activity:7328823746142568449) — Introduces a secure, DNS-inspired framework for AI agent discovery using PKI, structured schemas, and protocol adapters (A2A, MCP, ACP).
+
+📘 [IDC: AI in Security Ops](https://www.linkedin.com/feed/update/urn:li:activity:7325564352156119040) — A survey of 900+ professionals highlighting AI use cases, deployment frictions, and the need for governance frameworks.
+
+📘 [Securing AI: Addressing the OWASP Top 10 for LLM Applications](https://www.icitech.org/post/securing-aiaddressing-the-owasp-top-10-forlarge-language-model-applications) — By Dr. Darren Death at ICIT.
+
+📘 [Cobalt & Cyentia Institute: State of Pentesting 2025](https://www.linkedin.com/feed/update/urn:li:activity:7324377543984189440) — Highlights AI-specific penetration testing trends, fix rates, and vulnerabilities in LLMs.
+
+📘 [Check Point Software: State of AI Cybersecurity 2025](https://www.linkedin.com/feed/update/urn:li:activity:7323441087509839872) — A detailed look at GenAI use in phishing, malware, voice deepfakes, and criminal toolkits.
+
+📘 [Cisco: State of AI Security](https://www.linkedin.com/feed/update/urn:li:activity:7319411865632010241) — Covers infrastructure threats, AI policy trends, and attack vectors like prompt injection.
+
+📘 [Resemble AI: Deepfake Threats Q1 2025](https://www.resemble.ai/q1-2025-ai-deepfake-security-report/) — Quantifies deepfake-driven fraud, identity risks, and emerging multimodal threats.
+
+📘 [IBM Security X-Force: GenAI Threat Highlights](https://www.linkedin.com/feed/update/urn:li:activity:7319100078298648576) — Breaks down GenAI misuse trends and the gap between adoption and risk ownership.
+
+📘 [Imperva: Bad Bot Report](https://www.linkedin.com/feed/update/urn:li:activity:7318788439192006657) — Explores AI bot dominance in web traffic and major sources of automation.
+
+📘 [ETSI SAI Baseline Security for AI Systems](https://www.etsi.org/deliver/etsi_ts/104200_104299/104223/01.01.01_60/ts_104223v010101p.pdf) — Introduces baseline cybersecurity requirements and verification guidance.
+
+📘 [Automating Deception: AI in Romance Fraud](https://www.linkedin.com/feed/update/urn:li:activity:7318016094340857856) — Simon Moseley explores the role of GenAI in industrializing romance fraud at scale.
+
+📘 [AI Privacy Risks in LLMs - EDPB](https://www.linkedin.com/feed/update/urn:li:activity:7318291536704598016) — Isabel Barberá analyzes data leakage, prompt injection, and weak access controls across the LLM lifecycle.
+
+📘 [Microsoft: Taxonomy of Failure Modes in Agentic AI](https://www.linkedin.com/feed/update/urn:li:activity:7323553744065900547) — Categorizes failures, with memory corruption case studies and red team insights.
+
+---
+
+## 📂 Upcoming Events
+
+📅 [The AI Summit at Black Hat USA — August 5, 2025](https://www.blackhat.com/us-25/ai-summit.html) | Mandalay Bay, Las Vegas
+
+📅 [Artificial Intelligence Risk Summit — August 19–20, 2025](https://www.airisksummit.com/)
+
+📅 [The AI Summit at Security Education Conference Toronto (SecTor) 2025 — September 30, 2025](https://www.blackhat.com/sector/2025/ai-summit.html) | MTCC, Toronto, Ontario, Canada
+
+📅 [AI and Security: Transforming Modern AppDev by Techstrong Learning — June 4, 2025](https://www.techstrongevents.com/virtual-ai-and-security)
+
+📅 [The International Conference on Cybersecurity and AI-Based Systems — September 1–4, 2025](https://www.cyber-ai.org/) | Bulgaria
+
+---
+
+## 📚 Research
+
+📖 [Understanding LLM Supply Chains](https://arxiv.org/abs/2504.20763) — A deep mapping of 15,000+ open-source packages reveals how a small number of libraries (like transformers, langchain) dominate the ecosystem. A single vulnerability in one core package can indirectly affect 1,000+ others via transitive dependencies. Most issues go unreported through formal CVEs.
+
+📖 [Full-Stack Safety Survey for LLMs](https://arxiv.org/abs/2504.15585) — The first end-to-end review of safety challenges across the LLM lifecycle — from data collection to commercialization. Synthesizes over 800 papers, highlights risks in alignment, deployment, and model editing, and proposes forward-looking safeguards.
+
+📖 [The Leaderboard Illusion](https://arxiv.org/pdf/2504.20879) — A multi-institutional audit of Chatbot Arena exposes manipulation risks, duplicated prompts, silent model removal, and data inequality. Open-weight models receive less training data and sampling attention, distorting perception of model quality.
+
+📖 [LLM Agent Privacy & Security Survey](https://arxiv.org/html/2407.19354v1) — Categorizes nine key vulnerabilities in LLM agents, from hallucinations and knowledge poisoning to data leakage and agent manipulation. Case studies reveal the real-world impacts and gaps in current defenses.
+
+📖 [Control Levels for LLM Agents](https://arxiv.org/abs/2504.05259) — Introduces a 5-level framework (ACLs 1–5) to align security measures with AI agent capabilities. Offers structured control evaluation rules and red teaming affordances for increasingly powerful agents.
+
+📖 [Package Hallucination in LLMs](https://arxiv.org/abs/2406.10279) — LLMs frequently invent nonexistent libraries (e.g., `pip install xyz`) — a risk now named slopsquatting. Adversaries can register these fake packages with malware. Study shows 19.7% hallucination rate across 16 LLMs and 576K samples.
+
+📖 [Enterprise-Grade MCP Security](https://arxiv.org/abs/2504.08623) — AWS-backed paper on securing AI toolchains using Model Context Protocol. Recommends sandboxing, zero-trust design, and per-request access policies to mitigate tool poisoning, data leaks, and exfiltration.
+
+📖 [Can LLMs Classify CVEs?](https://arxiv.org/pdf/2504.10713v1) — Proposes a hybrid CVSS scoring pipeline combining Gemma 3 for objective fields with MiniLM+XGBoost for subjective ones, achieving 84% accuracy.
+
+📖 [Open Problems in Technical AI Governance](https://arxiv.org/abs/2407.14981) — Maps unresolved challenges in verifying, monitoring, and securing AI systems — from data traceability to model access policies and third-party audits.
+
+📖 [RAG LLMs Are Not Safer](https://arxiv.org/pdf/2504.18041) — Retrieval-augmented generation changes model behavior and risk profile. Even safe docs + safe models can yield unsafe outputs. Study shows red teaming methods are less effective in RAG settings.
+
+---
+
+## 🛠 Tools & Resources
+
+🧰 [Prompt Hacking Resources](https://github.com/PromptLabs/Prompt-Hacking-Resources) — A curated repo of jailbreaks, model attacks, and defense methods.
+
+🧰 [OWASP AISVS](https://github.com/OWASP/AISVS) — A verification standard for AI application security, akin to ASVS for traditional apps.
+
+🧰 [MCP Security Checklist by SlowMist](https://github.com/slowmist/MCP-Security-Checklist) — Audit-ready checklist for securing Model Context Protocol deployments.
+
+🧰 [Vulnerable MCP Project](https://vulnerablemcp.info/) — A live registry of known vulnerabilities in Model Context Protocol implementations.
+
+🧰 [MCP for Security Tools by Cyprox](https://github.com/cyproxio/mcp-for-security) — Integrate MCP with tools like Nmap, FFUF, SQLMap, and more.
+
+🧰 [Aetheris AI SBOM Generator by Capyx](https://huggingface.co/spaces/aetheris-ai/aibom-generator) — Extract and format model metadata and dependencies into CycloneDX SBOMs.
+
+🧰 [Synthetic Data Kit by Meta](https://github.com/meta-llama/synthetic-data-kit) — Generate synthetic datasets for LLM tuning.
+
+🧰 [NOVA Prompt Security Tool by Thomas Roccia](https://github.com/fr0gger/nova-framework) | [NovaHunting.ai](https://novahunting.ai/) — Hunt adversarial prompts, jailbreaks, and prompt injections.
+
+🧰 [Tencent AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) — Lightweight tool for AI infrastructure vulnerability scanning.
+
+🧰 [Taranis AI](https://github.com/taranis-ai/taranis-ai) — OSINT-focused AI platform for situational awareness and intel collection.
+
+---
+
+## 🎥 Videos
+
+▶️ [Data-Driven Insights into AI and Cybersecurity - Sandra Joyce & Mohamed Alkuwaiti](https://www.youtube.com/watch?v=IAhU1AAqxcY)
+
+▶️ [Backdooring AI Models - SANS Institute, Ahmed AbuGharbia](https://www.youtube.com/watch?v=orsGzJgU6Eo)
+
+▶️ [I Backdoored Cursor AI - John Hammond](https://youtu.be/FYok3diZY78)
+
+▶️ [Finding Web App Vulnerabilities with AI](https://youtu.be/v-McepNOrTQ)
+
+▶️ [The Art of Poison-Pilling Music Files - Benn Jordan](https://www.youtube.com/watch?v=xMYm2d9bmEA)
+
+▶️ [A2A - MCP SECURITY Threats: Protect your AI Agents](https://www.youtube.com/watch?v=h_6unQxHyb4)
+
+▶️ [What is LLMJacking? The Hidden Cloud Security Threat of AI Models - Jeff Crume](https://www.youtube.com/watch?v=dibZ1itSvM4)
+
+▶️ [How to Attack and Defend LLMs: AI Security Explained - Yaniv Hoffman](https://www.youtube.com/watch?v=6bYGhY9HB8k)
+
+▶️ [SpAIware & More: Advanced Prompt Injection Exploits in LLM Applications - Johann Rehberger](https://www.youtube.com/watch?v=84NVG1c5LRI)
+
+---
