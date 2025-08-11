@@ -71,3 +71,50 @@ Sponsored by [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybe
 📌 [NVIDIAScape – Critical NVIDIA AI Vulnerability](https://www.wiz.io/blog/nvidia-ai-vulnerability-cve-2025-23266-nvidiascape) — CVE-2025-23266 container escape in NVIDIA Toolkit enabling root access. By Nir Ohfeld & Shir Tamari @ Wiz.
 
 📌 [Hacker Plants Computer 'Wiping' Commands in Amazon's AI Coding Agent](https://www.404media.co/hacker-plants-computer-wiping-commands-in-amazons-ai-coding-agent) — Malicious PR in Amazon Q added destructive wipe commands. By Joseph Cox.
+
+## 📄 Reports
+
+📘 [SBOM for AI Use Cases](https://www.linkedin.com/feed/update/urn:li:activity:7352420212471709697) — Community-driven resource for applying SBOM practices to AI systems. Covers business, legal, and security risks from GenAI and LLMs, mirroring software supply chain challenges. Provides a standardized approach to improve transparency, trust, and governance. Authors: Helen Oakley, Daniel Bardenstein, Dmitry R.
+
+📘 [Securing Agentic Applications Guide](https://www.linkedin.com/feed/update/urn:li:activity:7355648811236511745) — Practical, actionable guidance for designing and deploying secure agentic applications powered by LLMs. Complements OWASP Agentic AI Threats & Mitigations with concrete technical recommendations for builders and defenders.
+
+📘 [America’s AI Action Plan – 12 AI Cybersecurity Priorities](https://www.linkedin.com/feed/update/urn:li:activity:7353987917704294400) — U.S. strategy for securing AI, including secure-by-design dev, AI incident response, AI-ISAC threat intel sharing, deepfake detection standards, and model risk evaluations. Targets IP protection, critical infrastructure defense, red-teaming, and export controls.
+
+📘 [Google's Approach for Secure AI Agents](https://www.linkedin.com/feed/update/urn:li:activity:7347701762813829120) — Framework for secure AI agents combining deterministic controls with dynamic, reasoning-based defenses. Principles: clear human controllers, limited powers, and full observability. By Santiago Díaz Muñoz, Christoph Kern, Kara Olive.
+
+📘 [Preparing Defenders of AI Systems V1.0](https://github.com/cosai-oasis/ws2-defenders/blob/main/preparing-defenders-of-ai-systems.md) — Coalition for Secure AI paper on shifting enterprise security priorities from models to agents. Highlights layered defenses, governance gaps, and AI-specific strategies.
+
+📘 [AI Controls Matrix (AICM)](https://cloudsecurityalliance.org/artifacts/ai-controls-matrix) — CSA vendor-agnostic framework with 243 controls across 18 domains for secure, responsible AI. Maps to ISO 42001, ISO 27001, NIST AI RMF 1.0, and BSI AIC4.
+
+📘 [AI Safety Practices Compared – 2025 FLI Report](https://www.linkedin.com/feed/update/urn:li:activity:7352842152759971840) — Evaluation of Anthropic, OpenAI, DeepMind, Meta, xAI, Zhipu AI, and DeepSeek across 33 safety indicators. Finds gaps in cyber misuse testing, red-teaming, incident reporting, and bug bounties.
+
+📘 [AI Risk Trends – 2025 Team8 CISO Village](https://www.linkedin.com/feed/update/urn:li:activity:7353987917704294400) — Survey of 110+ CISOs: 67% use AI agents, 25% faced AI-driven attacks, 77% expect AI to replace SOC tasks. Shadow AI governance remains weak.
+
+📘 [Understanding and Safeguarding Children’s Use of AI Chatbots](https://www.linkedin.com/feed/update/urn:li:activity:7351249793546924045) — Risks include misinformation, harmful content, emotional dependence, and privacy issues. Calls for age-appropriate design and stronger moderation.
+
+📘 [AI Coding Assistants: Security-Safe Navigation](https://www.linkedin.com/feed/update/urn:li:activity:7351007465494171649) — Secure Code Warrior report: top LLMs only ~47% correct and secure; insecure coding patterns persist. Highlights misconfigurations, lack of runtime awareness, and supply chain risks.
+
+📘 [Cyber and Artificial Intelligence Risk in Financial Services](https://www.linkedin.com/feed/update/urn:li:activity:7347449832065613825) — DFSA report on AI and cyber risks in financial services. By Justin Baldacchino and Herman Schueller.
+
+📘 [The AI Tech Stack: A Primer for Tech and Cyber Policy](https://www.linkedin.com/feed/update/urn:li:activity:7348456040172048385) — Paladin Capital Group defines five AI stack layers and stresses integrating security across governance, application, infrastructure, models, and data.
+
+📘 [AI Maturity Model for Cybersecurity](https://www.linkedin.com/feed/update/urn:li:activity:7352156064244514816) — Darktrace’s 5-level model from Manual Operations to AI Delegation, guiding CISOs toward autonomous defense with governance.
+
+📘 [The SAIL (Secure AI Lifecycle) Framework](https://www.linkedin.com/feed/update/urn:li:activity:7346638798056800257/) — Pillar Security’s practical guide for building and deploying secure AI applications, authored by 20+ industry experts.
+
+📘 [State of Cybersecurity Resilience 2025](https://www.linkedin.com/feed/update/urn:li:activity:7350979113358184451) — Accenture report: 90% of orgs lack maturity for modern AI threats, 77% miss foundational AI security practices. Recommends governance, AI-secure cores, and resilient systems.
+
+📘 [Databricks AI Governance Framework](https://www.linkedin.com/feed/update/urn:li:activity:7346374987928260613) — Guide for responsible, effective enterprise AI programs. By David Wells and Abhi A.
+
+📘 [State of LLM Application Security](https://www.linkedin.com/feed/update/urn:li:activity:7352038190066651136) — Cobalt report: 32% of LLM pentest issues are high/critical. Top risks include prompt injection, data leaks, poisoning, and bias; only 21% of serious AI vulns remediated.
+
+📘 [Multi-Layered AI Defense](https://www.linkedin.com/feed/update/urn:li:activity:7352381103879475203) — Darktrace outlines unsupervised, supervised, and generative AI in a continuous Learn → Detect → Investigate → Respond → Re-learn cycle with human oversight.
+
+📘 [Trustworthiness for AI in Defence](https://eda.europa.eu/docs/default-source/brochures/taid-white-paper-final-09052025.pdf) — European Defence Agency white paper on trusted AI, verification/validation, and certification requirements.
+
+📘 [The Mitigating ‘Hidden’ AI Risks Toolkit](https://www.linkedin.com/feed/update/urn:li:activity:7349585719247446016) — UK Government Communications guide for managing unintended AI risks. Draws from lessons deploying the “Assist” GenAI tool.
+
+📘 [SAFE-AI: A Framework for Securing AI-Enabled Systems](https://www.linkedin.com/feed/update/urn:li:activity:7347734136868020224) — MITRE framework addressing supply chain, adversarial inputs, poisoning, bias, and sensitive data exposure. By John Kressel.
+
+📘 [The General-Purpose AI Code of Practice – Safety & Security](https://www.linkedin.com/feed/update/urn:li:activity:7349138123362091009) — EU voluntary framework under the AI Act for managing systemic risks in advanced models, developed via multi-stakeholder process.
+
