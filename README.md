@@ -176,7 +176,7 @@ Sponsored by [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybe
 
 📖 [BAXBENCH: Can LLMs Generate Correct and Secure Backends?](https://arxiv.org/pdf/2502.11844) — PDF of the BaxBench paper above for direct access.
 
-## 🎥 Videos - https://www.youtube.com/playlist?list=PLFO56KBxdGBfcknOAnHJFYlld2FoLsbre 
+## 🎥 Videos - [Playlist](https://www.youtube.com/playlist?list=PLFO56KBxdGBfcknOAnHJFYlld2FoLsbre)
 
 1️⃣ [The Rise of Agents: Building Agentic Workflows for Security Operation – Roberto Rodriguez](https://www.youtube.com/watch?v=zoAPS1gsmUA&ab_channel=x33fcon)  
 2️⃣ [Harbinger: An AI-Powered Red Teaming Platform – Matthijs Gielen & Idan Ron](https://www.youtube.com/watch?v=8W8cIvHyCaQ&ab_channel=x33fcon)  
