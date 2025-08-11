@@ -138,4 +138,42 @@ Sponsored by [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybe
 
 📅 [The AI Summit at Security Education Conference Toronto (SecTor) 2025](https://www.blackhat.com/sector/2025/ai-summit.html) — September 30, 2025 | MTCC, Toronto, Ontario, Canada
 
+## 📚 Research
+
+📖 [We Urgently Need Privilege Management in MCP: A Measurement of API Usage in MCP Ecosystems](https://arxiv.org/abs/2507.06250) — Analysis of 2,562 MCP servers across 23 categories shows 1,438 using network APIs, 1,237 system-level, 613 file, and 25 memory APIs. High-risk operations cluster in low-star repos and categories like Dev Tools, API Dev, and Data Science, exposing privilege-escalation, tampering, and content-manipulation risks from insufficient isolation and overprivileged access. By Zhihao Li, Kun Li, Boyang Ma, Minghui Xu, Yue Zhang, Xiuzhen Cheng.
+
+📖 [TRiSM for Agentic AI: A Review of Trust, Risk, and Security Management in LLM-based Agentic Multi-Agent Systems](https://arxiv.org/abs/2506.04133) — Reviews lifecycle safeguards for agentic systems (prompt infection, memory poisoning, collusion, tool misuse). Aligns with NIST AI RMF and OWASP LLM Top 10 using explainability, ModelOps, security, privacy, and governance. By Shaina Raza, Ranjan Sapkota, Manoj Karkee, Christos Emmanouilidis.
+
+📖 [AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models](https://arxiv.org/abs/2506.14682) — Benchmark of 70 CTF challenges testing vulnerability finding/exploitation. Results: Claude-3.7-Sonnet 61%, Gemini-2.5-Pro 56%, GPT-4.5-Preview 49%. Strong at prompt injection; weak at system exploitation and model inversion. By Ads Dawson, Rob Mulla, Nick Landers, Shane Caldwell.
+
+📖 [A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures](https://arxiv.org/abs/2506.19676) — Reviews agent comms (e.g., Anthropic MCP, Google A2A), stages, risks (prompt injection, data leaks), and defenses (sandboxing, monitoring).
+
+📖 [RepoAudit: An Autonomous LLM-Agent for Repository-Level Code Auditing](https://arxiv.org/abs/2501.18160) — Agent with memory + validator for end-to-end repo audits. 78.43% precision; 40 true bugs across 15 benchmarks (~0.44h, $2.54 per project); 185 new bugs found in major projects, 174 confirmed/fixed. By Jinyao Guo et al.
+
+📖 [Decompiling Smart Contracts with a Large Language Model](https://arxiv.org/pdf/2506.19624) — Addresses opacity from low verification rates on Etherscan; proposes LLM-based semantic analysis of bytecode to surface vulnerabilities and malicious logic. By Isaac David, Liyi Zhou, Dawn Song, Arthur Gervais, Kaihua Qin.
+
+📖 [Dynamic Risk Assessments for Offensive Cybersecurity Agents](https://arxiv.org/pdf/2505.18384) — Argues static evaluations understate risk; proposes dynamic, compute-aware, continuously updated assessments for offensive agents. By Boyi Wei et al.
+
+📖 [When LLMs Autonomously Attack](https://engineering.cmu.edu/news-events/news/2025/07/24-when-llms-autonomously-attack.html) — CMU shows LLMs can plan/execute real-world cyberattacks in enterprise-grade networks; implications for future defenses. By Brian Singer et al.
+
+📖 [ETrace: Event-Driven Vulnerability Detection in Smart Contracts via LLM-Based Trace Analysis](https://arxiv.org/pdf/2506.15790) — Event-driven trace analysis to detect vulns where source code is unavailable.
+
+📖 [BaxBench: Can LLMs Generate Correct and Secure Backends?](https://arxiv.org/abs/2502.11844) — 392-task benchmark on production-grade backend generation. Top model (OpenAI o1) reaches 62% correctness; ~half of “correct” programs remain exploitable; performance drops on less common frameworks. By Mark Vero et al.
+
+📖 [Autonomous AI-based Cybersecurity Framework for Critical Infrastructure](https://arxiv.org/abs/2507.07416) — Hybrid AI framework for real-time vuln detection, threat modeling, and automated remediation across energy/health/transport/water; tackles adversarial AI, compliance, integration. By Jenifer Paulraj et al.
+
+📖 [SafeGenBench: A Benchmark Framework for Security Vulnerability Detection in LLM-Generated Code](https://arxiv.org/abs/2506.05692) — 558 tasks, 44 CWEs, 13 languages; zero-shot secure accuracy ~37%, ~61% with security prompts, ~74% with few-shot. Reasoning models (o3, DeepSeek-R1) lead; memory safety best, insecure configuration worst.
+
+📖 [Red Teaming AI Red Teaming](https://arxiv.org/pdf/2507.05538v1) — Critical look at AI red teaming’s evolution and practice. By Subhabrata Majumdar, Brian Pendleton, Abhishek Gupta.
+
+📖 [From Prompt Injections to Protocol Exploits: Threats in LLM-Powered AI Agent Workflows](https://arxiv.org/abs/2506.23260) — Unified threat model spanning input manipulation, model compromise, system/privacy attacks, and protocol exploits (MCP/ACP/A2A); discusses defenses and open challenges. By Mohamed Amine Ferrag et al.
+
+📖 [Vulnerability Detection Model using LLM and Code Chunk](https://arxiv.org/pdf/2506.19453) — Targets function-level vuln localization to mitigate OSS supply-chain risk; addresses difficulty of identifying true fixes amid unrelated patches. By Sajal Halder, Muhammad Ejaz Ahmed, Seyit A. Camtepe.
+
+📖 [Trivial Trojans: How Minimal MCP Servers Enable Cross-Tool Exfiltration of Sensitive Data](https://arxiv.org/abs/2507.19880) — PoC shows a benign-looking “weather” MCP server can discover/abuse banking tools to exfiltrate account balances, exploiting MCP trust model. By Nicola Croce, Tobin South.
+
+📖 [Security Challenges in AI Agent Deployment: Insights from a Large-Scale Public Competition](https://arxiv.org/abs/2507.20526) — Results from the largest public red-teaming of 22 frontier agents across 44 scenarios: 1.8M prompt-injection attempts, 60k+ policy violations; high transferability; most agents violate policies within 10–100 queries. Introduces the ART benchmark. By Andy Zou et al.
+
+📖 [BAXBENCH: Can LLMs Generate Correct and Secure Backends?](https://arxiv.org/pdf/2502.11844) — PDF of the BaxBench paper above for direct access.
+
 
