@@ -118,3 +118,24 @@ Sponsored by [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybe
 
 📘 [The General-Purpose AI Code of Practice – Safety & Security](https://www.linkedin.com/feed/update/urn:li:activity:7349138123362091009) — EU voluntary framework under the AI Act for managing systemic risks in advanced models, developed via multi-stakeholder process.
 
+## 📂 Upcoming Events
+
+📅 [The AI Summit at Black Hat](https://www.blackhat.com/us-25/ai-summit.html) — August 5, 2025 | Mandalay Bay, Las Vegas, USA  
+
+📅 AI Village @ DEF CON 33 — August 7, 2025 | Las Vegas Convention Center, Las Vegas, USA  
+
+📅 [Vegas AI Security Forum ‘25](https://aisecurity.forum/vegas-25) — August 7, 2025 | 10:00 AM – 11:00 PM | Palms Casino Resort, Las Vegas, USA  
+
+📅 [GRC Data & AI Summit](https://www.anecdotes.ai/grc-data-ai-summit) — August 13, 2025 | 9:00 AM PDT | Virtual | By Anecdotes  
+
+📅 [Artificial Intelligence Risk Summit](https://www.airisksummit.com/) — August 19–20, 2025 | Virtual & In-person  
+
+📅 [Agentic AI Security Summit 2025](https://web.cvent.com/event/6a48aa4b-a67c-40ca-81a5-3c3e8f78884c/) — August 19, 2025 | Cloud Security Alliance | Virtual  
+
+📅 [The International Conference on Cybersecurity and AI-Based Systems](https://www.cyber-ai.org/) — September 1–4, 2025 | Bulgaria  
+
+📅 [HackATHon 2025](https://hackaicon.ethiack.com/) — September 25, 2025 | LX Factory, Lisbon, Portugal | By ETHIACK  
+
+📅 [The AI Summit at Security Education Conference Toronto (SecTor) 2025](https://www.blackhat.com/sector/2025/ai-summit.html) — September 30, 2025 | MTCC, Toronto, Ontario, Canada
+
+
