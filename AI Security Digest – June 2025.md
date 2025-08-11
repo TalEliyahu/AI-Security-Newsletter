@@ -188,4 +188,24 @@ https://chatgpt.com/g/g-Vy4rIqiCF-threat-intel-bot
 🔟 YARA GPT — Writes and explains YARA rules for advanced detection  
 https://chatgpt.com/g/g-caq5P2JnM
 
+## 🛠 Tools & Resources
+
+🧰 [OSS-Fuzz Integrations via Agent-Based Build Generation](https://github.com/google/oss-fuzz-gen) – *Google* — OSS-Fuzz-Gen now supports end-to-end OSS-Fuzz project creation using an agentic LLM approach. Generates build scripts and fuzzing harnesses by iteratively exploring target repos, executing commands, and refining outputs. Tested on 225 GitHub projects, producing 88 valid build scripts. Includes new CLI tool (`oss-fuzz-generator`), with future plans for multi-harness builds and diagnostics.
+
+🧰 [Artificial Intelligence Vulnerability Scoring System (AIVSS)](https://github.com/owasp/www-project-artificial-intelligence-vulnerability-scoring-system) — The first comprehensive framework for assessing and scoring vulnerabilities in agentic AI systems. Built on OWASP principles with industry-standard scoring methodology. https://vineethsai.github.io/aivss/
+
+🧰 [MCP Security Wrapper – context-protector](https://github.com/trailofbits/mcp-context-protector) — A security wrapper for MCP servers addressing risks of running untrusted MCP servers, including line jumping, unexpected config changes, and prompt injection attacks. Implemented at the wrapper level for universal compatibility with all MCP apps.
+
+🧰 [Risk Atlas Nexus](https://huggingface.co/spaces/ibm/risk-atlas-nexus) – *IBM* — Python library for AI risk management linking IBM, NIST AI RMF, and MIT AI Risk Repository with benchmarks, detections, mitigations, and controls. Built on Risk Atlas Nexus, **GAF-Guard** is an agent-based framework for assessing and monitoring LLM risks for specific use cases.
+
+🧰 [Adversary Use of Artificial Intelligence and LLMs – Classification of TTPs](https://github.com/cybershujin/Threat-Actors-use-of-Artifical-Intelligence) — GitHub repo mapping known AI usage by cyber threat actors to techniques and tracking related TTPs. Focused on cyber threat campaigns (excluding misinformation), including AI-enhanced fraud activities.
+
+🧰 [cursor-security-rules](https://github.com/matank001/cursor-security-rules) — Security rules for the Cursor environment to improve development workflow and AI agent safety. Enforces safe coding, controls sensitive operations, and reduces AI-assisted development risks.
+
+🧰 [mcp-watch](https://github.com/kapilduraphe/mcp-watch) — Security scanner for Model Context Protocol (MCP) servers, detecting vulnerabilities and misconfigurations in MCP implementations.
+
+🧰 [Payloads for AI Red Teamers – OWASP AI Testing Guide Alignment](https://github.com/joey-melo/payloads/tree/main/OWASP%20AITG-APP) — Each `AITG-APP-XX.yaml` defines a targeted test case for prompt injection, data leakage, alignment failure, and explainability. Includes a system prompt for an LLM-based judge for automated evaluation.
+
+🧰 [gandalf-llm-pentester](https://github.com/MrMoshkovitz/gandalf-llm-pentester) — Automated red-teaming toolkit for stress-testing LLM defenses using vector attacks.
+
 
