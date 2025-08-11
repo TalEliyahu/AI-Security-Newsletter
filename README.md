@@ -122,7 +122,7 @@ Sponsored by [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybe
 
 📅 [The AI Summit at Black Hat](https://www.blackhat.com/us-25/ai-summit.html) — August 5, 2025 | Mandalay Bay, Las Vegas, USA  
 
-📅 AI Village @ DEF CON 33 — August 7, 2025 | Las Vegas Convention Center, Las Vegas, USA  
+📅 [AI Village @ DEF CON 33](https://aivillage.org/events/defcon33/) — August 7, 2025 | Las Vegas Convention Center, Las Vegas, USA  
 
 📅 [Vegas AI Security Forum ‘25](https://aisecurity.forum/vegas-25) — August 7, 2025 | 10:00 AM – 11:00 PM | Palms Casino Resort, Las Vegas, USA  
 
