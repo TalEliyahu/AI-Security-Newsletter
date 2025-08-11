@@ -176,4 +176,21 @@ Sponsored by [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybe
 
 📖 [BAXBENCH: Can LLMs Generate Correct and Secure Backends?](https://arxiv.org/pdf/2502.11844) — PDF of the BaxBench paper above for direct access.
 
+## 🎥 Videos - https://www.youtube.com/playlist?list=PLFO56KBxdGBfcknOAnHJFYlld2FoLsbre 
+
+1️⃣ [The Rise of Agents: Building Agentic Workflows for Security Operation – Roberto Rodriguez](https://www.youtube.com/watch?v=zoAPS1gsmUA&ab_channel=x33fcon)  
+2️⃣ [Harbinger: An AI-Powered Red Teaming Platform – Matthijs Gielen & Idan Ron](https://www.youtube.com/watch?v=8W8cIvHyCaQ&ab_channel=x33fcon)  
+3️⃣ [AI Second – Threat Centric Agentic Approach on Vulnerabilities – Francesco Cipollone](https://www.youtube.com/watch?v=mHFKG9KLybk&ab_channel=OWASPLondon)  
+4️⃣ [Is an AI really the top hacker in the US right now? – Matt Johansen](https://www.youtube.com/watch?v=lC2Ornloj24&ab_channel=MattJohansen)  
+5️⃣ [Harnessing AI for Offensive Security – Ads Dawson](https://www.youtube.com/watch?v=Xb_o_hVNm0E&ab_channel=OWASPAtlanta)  
+6️⃣ [Agentic AI and Security – David Hoelzer](https://www.youtube.com/watch?v=vA8Q5465HU4&ab_channel=SANSCyberDefense)  
+7️⃣ [When AI Goes Awry: Responding to AI Incidents – Eoin Wickens & Marta J.](https://www.youtube.com/watch?v=jaJWjHS1jkI&ab_channel=SecurityBSidesSanFrancisco)  
+8️⃣ [AI Red Teaming 101 (Episodes 1–10) – Amanda Minnich, Gary L., Nina C.](https://www.youtube.com/watch?v=DwFVhFdD2fs&ab_channel=MicrosoftDeveloper)  
+9️⃣ [One Search To Rule Them All: Threat Modelling AI Search – Kane N.](https://www.youtube.com/watch?v=ezCHPXP8eUo&ab_channel=SecurityBSidesSanFrancisco)  
+🔟 [Securing AI Agents: Threats and Exploitation Techniques – Naveen Konrajankuppam Mahavishnu & Mohankumar Vengatachalam](https://www.youtube.com/watch?v=NWpP_nAA4Do&ab_channel=SecurityBSidesSanFrancisco)  
+1️⃣1️⃣ [Secure Vibe Coding: 5 Key Lessons – Matt Brown](https://www.youtube.com/watch?v=O6jbzMOUvVs&ab_channel=OWASPToronto)  
+1️⃣2️⃣ [Building Security into AI – Robert Herbig](https://www.youtube.com/watch?v=0xah5jMflcI&ab_channel=freeCodeCamp.org)  
+1️⃣3️⃣ [BSidesSF 2025 – AI's Bitter Lesson for SOCs – Jackie Bow & Peter Sanford](https://www.youtube.com/watch?v=JRvQGRqMazA&ab_channel=SecurityBSidesSanFrancisco)  
+1️⃣4️⃣ [Let's Talk About the AI Apocalypse – Dylan Ayrey](https://www.youtube.com/watch?v=_ds6ybvH52M&ab_channel=SecurityBSidesSanFrancisco)  
+
 
