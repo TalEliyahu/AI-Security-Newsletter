@@ -204,33 +204,18 @@ We propose a set of targeted enhancements to improve privacy, security, and user
 🧰 [Phantomwall](https://github.com/c77-source/phantomwall) - Open-source prompt-injection firewall and telemetry to ship AI apps safely in minutes ⭐️3 https://github.com/c77-source/phantomwall
 
 # 🎥 Videos
-▶️ The Man Who Might SOLVE AI Alignment - by Steven Byrnes at Astera Institute 
 
-▶️ Building Secure ReactJS Apps: Mastering Advanced Security Techniques - by Jim Manico at Manicode Security 
+▶️ [The Man Who Might SOLVE AI Alignment - by Steven Byrnes (Astera Institute)](https://www.youtube.com/watch?v=_ZRUq3VEAc0)  
+▶️ [Building Secure ReactJS Apps: Mastering Advanced Security Techniques - by Jim Manico (OWASP; Manicode)](https://www.youtube.com/watch?v=BKaxtBSgueQ)  
+▶️ [Goodbye SOC Analyst, Hello Cyber Orchestration Engineer - by Josh Madakor](https://www.youtube.com/watch?v=_ELXqoDc2gU)  
+▶️ [Eyes in the Sky | Inside the Defense Department's Secretive Imagery Agency - by Catherine Herridge](https://www.youtube.com/watch?v=em9fKpMXjtY)  
+▶️ [DEF CON 33 Video Team - AIxCC with ShellPhish - by Shellphish](https://www.youtube.com/watch?v=PiJwIUGJGmw)  
+▶️ [DEF CON 33 Video Team - AIxCC: 42 Beyond Bugs - by DEF CON Video Team](https://www.youtube.com/watch?v=Ov8GSLqoPvQ)  
+▶️ [Inside the AIxCC Retrospective | Andrew Carney on DEF CON 33 - by Andrew Carney (AIxCC PM)](https://www.youtube.com/watch?v=hRJkhMx2AGU)  
+▶️ [(Mis)adventures with Copilot+: Attacking and Exploiting Windows NPU Drivers - by Nicola Stauffer (ZHAW InIT); Gürkan Gür (ZHAW InIT)](https://www.youtube.com/watch?v=K_C5-wZCAN0)  
+▶️ [The Pivotal Role of Large Language Models in Extracting Actionable TTP Attack Chains - by Jack Tang; Lorin Wu; Porot Mo](https://www.youtube.com/watch?v=7S3OSvWXP0I)  
+▶️ [The Oversights Under the Flow: Discovering the Vulnerable Tooling Suites From Azure MLOps - by Peng Zhou (Shanghai University)](https://www.youtube.com/watch?v=s49sgre_04c)  
+▶️ [Utilizing AI Models to Conceal and Extract Commands in C2 Images - by Qian Feng (Palo Alto Networks); Chris Navarrete (Palo Alto Networks)](https://www.youtube.com/watch?v=MoDYOm2fPJ0)
 
-▶️ Goodbye SOC Analyst, Hello Cyber Orchestration Engineer - by Josh Madakor at LOG(N) Pacific 
-
-▶️ Eyes in the Sky | Inside the Defense Department's Secretive Imagery Agency - by Catherine Herridge 
-
-▶️ DEF CON 33 Video Team - AIxCC with Shellphish 
-
-▶️ DEF CON 33 Video Team - AIxCC: 42 Beyond Bugs - by DEF CON 
-
-▶️ Inside the AIxCC Retrospective | Andrew Carney at Defense Advanced Research Projects Agency (DARPA)  
-
-▶️ (Mis)adventures with Copilot+: Attacking and Exploiting Windows NPU Drivers - by Nicola Stauffer and  Gürkan GÜR at ZHAW Institute of Computer Science (InIT) 
-
-▶️ The Pivotal Role of Large Language Models in Extracting Actionable TTP Attack Chains - by Jack Tang; Lorin Wu; Porot Mo at Qihoo 360 
-
-▶️ The Oversights Under the Flow: Discovering the Vulnerable Tooling Suites From Azure MLOps - by Peng Zhou at Shanghai University 
-
-▶️ Utilizing AI Models to Conceal and Extract Commands in C2 Images - by Feng Q. and Chris Navarrete at Palo Alto Networks 
-
-▶️ AI Model Penetration: Testing LLMs for Prompt Injection & Jailbreaks - by Jeff Crume, PhD, CISSP  at IBM Research 
-
-
-🤝 Let’s Connect
-If you’re a founder building something new or an investor evaluating early-stage opportunities — let’s connect.
-
-
-💬 Read something interesting? Share your thoughts in the comments.
+# 🤝 Let’s Connect
+If you’re a founder building something new or an investor evaluating early-stage opportunities — [let’s connect](https://calendly.com/innovguard/meeting).
