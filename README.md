@@ -1,6 +1,6 @@
 # AI Security Digest – August 2025
 
-https://pistachioapp.com/blog/copilot-broke-your-audit-logA digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow AI Security community on Twitter and LinkedIn group for additional updates.Also check out our new project, Awesome AI Security.
+A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow AI Security community on Twitter and LinkedIn group for additional updates.Also check out our new project, Awesome AI Security.
 
 Sponsored by InnovGuard.com - Technology Risk & Cybersecurity Advisory - Innovate and Invest with Confidence, Lead with Assurance.
 
