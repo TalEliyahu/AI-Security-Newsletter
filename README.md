@@ -1,4 +1,4 @@
-# README.md for AI Security Digest - October 2025
+# AI Security Digest - October 2025
 
 A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AI Security community](https://x.com/AISecHub) and our [LinkedIn group](https://www.linkedin.com/groups/14545517/) for additional updates. Also check out our project, [Awesome AI Security](https://github.com/TalEliyahu/Awesome-AI-Security).
 
