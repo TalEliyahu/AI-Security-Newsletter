@@ -108,6 +108,7 @@ Attribution graphs to map and reason about jailbreak chains and injection paths.
 🧰 **[prompt-security-standard](https://github.com/alvinveroy/prompt-security-standard)** - YAML-style standard to document and test GenAI and prompt security controls. ⭐️0  
 🧰 **[soc-cert-guardian-extension](https://github.com/joupify/soc-cert-guardian-extension)** - Chrome extension with AI-assisted checks and CVE intel for SOC and CERT workflows. ⭐️0  
 🧰 **[Aardvark - OpenAI's agentic security researcher](https://openai.com/index/introducing-aardvark/)** - GPT-5 powered agent that scans code, validates exploitability, and proposes patches.
+🧰 **[TrustGate](https://github.com/NeuralTrust/TrustGate)** - Generative Application Firewall to detect, block and prevent attacks against GenAI Applications. ⭐️48
 
 # 📄 Reports
 
