@@ -193,5 +193,9 @@ Sponsored by [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybe
 1️⃣3️⃣ [BSidesSF 2025 – AI's Bitter Lesson for SOCs – Jackie Bow & Peter Sanford](https://www.youtube.com/watch?v=JRvQGRqMazA&ab_channel=SecurityBSidesSanFrancisco)  
 1️⃣4️⃣ [Let's Talk About the AI Apocalypse – Dylan Ayrey](https://www.youtube.com/watch?v=_ds6ybvH52M&ab_channel=SecurityBSidesSanFrancisco)  
 
+# 🤝 Let's Connect
+If you're a founder building something new or an investor evaluating early-stage opportunities - [let's connect](https://calendly.com/innovguard/meeting).
+
+💬 Read something interesting? Share your thoughts in the comments.
 
 
