@@ -209,3 +209,9 @@ https://chatgpt.com/g/g-caq5P2JnM
 🧰 [gandalf-llm-pentester](https://github.com/MrMoshkovitz/gandalf-llm-pentester) — Automated red-teaming toolkit for stress-testing LLM defenses using vector attacks.
 
 
+# 🤝 Let's Connect
+If you're a founder building something new or an investor evaluating early-stage opportunities - [let's connect](https://calendly.com/innovguard/meeting).
+
+💬 Read something interesting? Share your thoughts in the comments.
+
+
