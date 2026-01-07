@@ -251,3 +251,10 @@ SLM for safety/adversarial risk detection across multiple categories and attack 
 ▶️ [Dreadnode at Offensive AI Con (OAIC) 2025 | From Benchmarks to Breaches: Scaling Offensive Security](https://www.youtube.com/watch?v=W3pRfofIv2E&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=61)  
 ▶️ [Show Me The Honey: Creating Elasticsearch Honeypots Powered By LLMs - Claire Dickson (Burn)](https://www.youtube.com/watch?v=Jt4W9wwAaOM&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=62)  
 
+
+# 🤝 Let's Connect
+If you're a founder building something new or an investor evaluating early-stage opportunities - [let's connect](https://calendly.com/innovguard/meeting).
+
+💬 Read something interesting? Share your thoughts in the comments.
+
+
