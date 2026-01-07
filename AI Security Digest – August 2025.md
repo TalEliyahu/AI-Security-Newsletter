@@ -1,4 +1,4 @@
-# AI Security Digest – August 2025
+# AI Security Newsletter – August 2025
 
 A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AI Security community](https://linktr.ee/AISECHUB) on [Twitter](https://x.com/AISecHub) and [LinkedIn group](https://www.linkedin.com/groups/14545517/) for additional updates. Also check out our new project, [Awesome AI Security](https://github.com/TalEliyahu/Awesome-AI-Security).
 
