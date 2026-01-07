@@ -1,4 +1,4 @@
-# AI Security Digest – June 2025
+# AI Security Newsletter – June 2025
 
 A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AI Security community](https://linktr.ee/AISECHUB) on [Twitter](https://twitter.com) and [LinkedIn group](https://linkedin.com) for additional updates.
 
