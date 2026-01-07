@@ -1,193 +1,253 @@
-# AI Security Digest - October 2025
+# AI Security Digest - December 2025
 
 A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AI Security community](https://x.com/AISecHub) and our [LinkedIn group](https://www.linkedin.com/groups/14545517/) for additional updates. Also check out our project, [Awesome AI Security](https://github.com/TalEliyahu/Awesome-AI-Security).
 
 Sponsored by [InnovGuard.com](https://innovguard.com) - Technology Risk & Cybersecurity Advisory - Innovate and Invest with Confidence, Lead with Assurance.
 
+
 # 🔍 Insights
 
-📌 [Prompt injection to RCE in AI agents](https://blog.trailofbits.com/2025/10/22/prompt-injection-to-rce-in-ai-agents/)  
-Design antipatterns enable argument injection to reach command execution across multiple agent platforms under coordinated disclosure.
+📌 [186 Jailbreaks: Applying MLOps to AI Red Teaming](https://dreadnode.io/blog/186-jailbreaks-applying-mlops-to-ai-red-teaming)  
+Dreadnode shows how treating AI red teaming as an MLOps-style optimization problem enabled automatic generation of 186 successful jailbreaks (reported 78 percent success rate) against Llama Maverick-17B-128E-Instruct, benchmarking Crescendo, GOAT, and TAP across harm categories, and arguing for continuous algorithmic red teaming for modern multimodal systems.
 
-📌 [Meet Aardvark - OpenAI's GPT-5 Powered Autonomous Security Agent](https://kenhuangus.substack.com/p/meet-aardvark-openais-gpt-5-powered)  
-GPT-5 powered agent monitors codebases, validates exploits, and generates patches - currently in private beta.
+📌 [I hacked the System Instructions for Nano Banana](https://generativeai.pub/i-hacked-the-system-instructions-for-nano-banana-bd53703eff36)  
+Extracts system instructions for Google’s Gemini 2.5 Flash Image “Nano Banana”, including a “Depiction Protocol” that forces it to always emit `<img>` and defer content judgment to an external safety layer, raising questions about hidden rulebooks, pre-filter generation, and guardrail effectiveness.
 
-📌 [Analyzing The Security Risks of OpenAI's AgentKit](https://labs.zenity.io/p/analyzing-the-security-risks-of-openai-s-agentkit)  
-Security review of AgentKit - attack surface, pitfalls, and mitigations for agentic workflows in OpenAI’s platform.
+📌 [8 Million Users' AI Conversations Sold for Profit by "Privacy" Extensions](https://www.koi.security/blog/8-million-users-ai-conversations-sold-for-profit-by-privacy-extensions)  
+Koi reports Urban VPN and related Featured browser extensions intercepting and exfiltrating millions of users’ AI chat conversations (ChatGPT, Claude, Gemini, Copilot) for marketing/analytics while branding as privacy-protecting tools.
 
-📌 [AI Security Startups Watchlist - Top 30 2025](https://www.linkedin.com/pulse/ai-security-startups-watchlist-top-30-2025-tal-eliyahu-ozqwc/)  
-Neutral, unsponsored list tracking startups securing models, agents, data paths, and identities.
+📌 [IDEsaster: A Novel Vulnerability Class in AI IDEs](https://maccarita.com/posts/idesaster/)  
+Describes “IDEsaster” as an attack chain where prompt-injected AI coding agents abuse shared base IDE features (VS Code, JetBrains, Zed) to turn ordinary tools/settings into cross-product data exfiltration and RCE paths, arguing IDEs need “Secure for AI” redesign.
 
-📌 [OpenAI's new browser Atlas falls for AI-targeted cloaking attack](https://splx.ai/blog/ai-targeted-cloaking-openai-atlas)  
-Agent-aware cloaking serves different realities to humans and AI browsers like Atlas, ChatGPT, and Perplexity.
+📌 [NDAA puts AI cyber risk in the crosshairs](https://www.reversinglabs.com/blog/ndaa-ai-risk)  
+Argues the latest U.S. NDAA signals upcoming enterprise requirements such as AI-focused SBOMs (“AI-BOMs”), explicit model-tampering and AI supply-chain controls, and ML-model malware scanning.
 
-📌 [Introducing CodeMender - an AI agent for code security](https://deepmind.google/discover/blog/introducing-codemender-an-ai-agent-for-code-security/)  
-Early results on an AI agent improving code security by finding and fixing vulnerabilities at scale.
+📌 [Data Leakage: AI’s Plumbing Problem](https://www.crowdstrike.com/en-us/blog/data-leakage-ai-plumbing-problem/)  
+Explains AI apps leak sensitive data across layers (RAG, agents, training data, user behavior, logs, context storage) and argues a defense-in-depth approach is required to prevent systemic exposure.
 
-📌 [Vibecoding and the illusion of security](https://baldur.dk/blog/vibecoding-and-the-illusion-of-security.html)  
-Attempt to vibecode a secure 2FA app followed by manual review that exposes missed vulnerabilities.
+📌 [How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks](https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/)  
+Describes how secure-by-default mobile frameworks (e.g., SecureLinkLauncher) combined with Llama-based automated patching can wrap risky Android/iOS APIs, enforce scoped intent handling, and migrate large codebases to safer APIs.
 
-📌 [Top 6 MCP Vulnerabilities and How to Fix Them](https://www.descope.com/blog/post/mcp-vulnerabilities)  
-Six MCP risks - tool poisoning, neighborjacking, cross server shadowing, spoofing and token theft, lethal trifecta, rug pull updates - with defenses.
+📌 [XBOW vs CAI: Assessments vs Security Capability](https://news.aliasrobotics.com/xbow-vs-cai-assessments-vs-security-capability/)  
+Argues XBOW optimizes point-in-time assessments/reports while CAI focuses on building continuous in-house security capability via reusable in-environment workflows that compound over time.
 
-📌 [Building Secured Agents - Soft Guardrails, Hard Boundaries, and the Layers Between](https://idanhabler.medium.com/building-safer-agents-soft-guardrails-hard-boundaries-and-the-layers-between-14205d709b93)  
-Agents that think, plan, and act require boundaries and control - trust and prompts are not enough.
+📌 [AI Malware: Hype vs. Reality](https://www.recordedfuture.com/blog/ai-malware-hype-vs-reality)  
+Maps most “AI malware” to AIM3 Levels 1–3 (GenAI accelerating existing tradecraft/orchestration) and argues defenders should focus on AI service abuse monitoring and baseline hardening rather than fully autonomous malware hype.
 
-📌 [CoPhish - Using Microsoft Copilot Studio as a wrapper for OAuth phishing](https://securitylabs.datadoghq.com/articles/cophish-using-microsoft-copilot-studio-as-a-wrapper/)  
-Consent-policy changes help but exploitable OAuth scenarios remain for internal apps and privileged admins.
+📌 [Microsoft Copilot Studio Security Risk: How Simple Prompt Injection Leaked Credit Cards and Booked a $0 Trip](https://www.tenable.com/blog/microsoft-copilot-studio-security-risk-how-simple-prompt-injection-leaked-sensitive-data)  
+Walks through prompt-injection against a Copilot Studio agent leading to sensitive data exposure and workflow manipulation, highlighting the risk of excessive agent permissions and untrusted instruction handling.
 
-📌 [Prompt Hijacking Attack - How Session Hijacking Affects MCP Ecosystems](https://jfrog.com/blog/mcp-prompt-hijacking-vulnerability/)  
-Conditions and impact of prompt hijacking with CVE-2025-6515 as a case study.
+📌 [LLM Security Risks in 2026](https://sombrainc.com/blog/llm-security-risks-2026)  
+Claims LLM risk clusters into prompt injection, agent/tool misuse, RAG/data-layer leakage or poisoning, and operational “Shadow AI”, and argues organizations must design for containment because prevention will not be perfect.
 
-📌 ["Prompt Inception" - When AI Becomes the Single Source of Truth](https://guard.io/labs/prompt-inception-when-ai-becomes-the-single-source-of-truth-whose-truth-will-it-be)  
-Invisible Unicode and image OCR inject instructions into agent prompts - gaps in preprocessing and sanitization.
+📌 [Task Injection – Exploiting agency of autonomous AI agents](https://bughunters.google.com/blog/4823857172971520/task-injection-exploiting-agency-of-autonomous-ai-agents)  
+Explains “task injection”: attackers embed plausible subtasks in an agent’s environment so it takes rogue actions or leaks data while still appearing aligned, motivating deterministic runtime policy enforcement plus checkpoints for sensitive actions.
 
-📌 [Unseeable prompt injections in screenshots](https://brave.com/blog/unseeable-prompt-injections/)  
-Indirect prompt injection via screenshots is systemic across AI browsers beyond the original Comet disclosure.
+📌 [PromptPwnd: Prompt Injection Vulnerabilities in GitHub Actions Using AI Agents](https://www.aikido.dev/blog/promptpwnd-github-actions-ai-agents)  
+Describes a CI/CD pattern where untrusted PR/issue/commit text is injected into prompts for AI agents (Gemini CLI, Claude Code, OpenAI Codex, GitHub AI Inference), leading to privileged tool misuse (secrets leak / workflow manipulation) in GitHub Actions/GitLab contexts.
 
-📌 [From Assistant to Adversary - Exploiting Agentic AI Developer Tools](https://developer.nvidia.com/blog/from-assistant-to-adversary-exploiting-agentic-ai-developer-tools/)  
-Watering-hole attacks plus assistive alignment and autonomy can lead to RCE on developer machines.
+📌 [PyTorch Users at Risk: Unveiling 3 Zero-Day PickleScan Vulnerabilities](https://jfrog.com/blog/unveiling-3-zero-day-vulnerabilities-in-picklescan/)  
+Reports three bypasses in PickleScan (extension spoofing, ZIP CRC errors, unsafe-globals subimports) that can allow malicious model artifacts to evade detection and still execute upon load in PyTorch.
 
-📌 [Metanarrative Prompt Injection](https://josephthacker.com/hacking/2025/10/20/metanarrative-prompt-injection.html)  
-Technique directly addresses the top-level AI or a specific processing step to steer behavior.
+📌 [New Prompt Injection Attack Vectors Through MCP Sampling](https://unit42.paloaltonetworks.com/model-context-protocol-attack-vectors/)  
+Warns MCP sampling can be abused by malicious servers to drain token/compute budgets, plant persistent instructions, and trigger hidden tool calls, motivating stricter templates, sanitization, rate limits, and approvals for sensitive actions.
 
-📌 [Microsoft 365 Copilot - Arbitrary Data Exfiltration Via Mermaid Diagrams](https://adamlogue.com/microsoft-365-copilot-arbitrary-data-exfiltration-via-mermaid-diagrams-fixed/)  
-Indirect prompt injection turns a Mermaid diagram into a clickpath that exfiltrates hex-encoded tenant data.
+📌 [Ghosts in the Machine: ASCII Smuggling across Various LLMs](https://www.firetail.ai/blog/ghosts-in-the-machine-ascii-smuggling-across-various-llms)  
+Tests ASCII/Unicode smuggling (tag/control characters) to hide instructions from humans but not LLMs, enabling spoofing and poisoning; reports differing normalization behavior across major models.
 
-📌 [The Growing Challenge of AI Agent and NHI Management](https://www.darkreading.com/cybersecurity-operations/growing-challenge-ai-agent-nhi-management)  
-Agents and machine identities already outnumber humans - stressing identity, policy, and governance.
+📌 [From Inbox to Wipeout: Perplexity Comet’s AI Browser Quietly Erasing Google Drive](https://www.straiker.ai/blog/from-inbox-to-wipeout-perplexity-comets-ai-browser-quietly-erasing-google-drive)  
+Shows how plausible inbox instructions combined with powerful connectors can drive destructive actions (e.g., bulk moves to Trash), highlighting excessive agency and weak safeguards around high-impact connector operations.
 
-📌 [Hugging Face and VirusTotal collaborate to strengthen AI security](https://huggingface.co/blog/virustotal)  
-Continuous VirusTotal scanning across 2.2M plus public model and dataset repos on the Hub.
+📌 [CVE-2025-34291: Critical Account Takeover and RCE Vulnerability in the Langflow AI Agent & Workflow Platform](https://www.obsidiansecurity.com/blog/cve-2025-34291-critical-account-takeover-and-rce-vulnerability-in-the-langflow-ai-agent-workflow-platform)  
+Describes an exploit chain (permissive CORS + missing CSRF on token refresh → session hijack; then RCE via code validation endpoint) expanding blast radius via stored tokens/API keys.
 
-📌 [OAuth for MCP - Emerging Enterprise Patterns for Agent Authorization](https://blog.gitguardian.com/oauth-for-mcp-emerging-enterprise-patterns-for-agent-authorization/)  
-Sequence-level risks in agent interactions require patterns that go beyond request-level OAuth checks.
+📌 [Cryptographers Show That AI Protections Will Always Have Holes](https://www.quantamagazine.org/cryptographers-show-that-ai-protections-will-always-have-holes-20251210/)  
+Summarizes research arguing two-tier external safety filters can be bypassed because the LLM can solve “puzzles” the filter cannot, leaving exploitable compute gaps.
 
-📌 [Same Model, Different Hat - Bypassing OpenAI Guardrails](https://hiddenlayer.com/innovation-hub/same-model-different-hat/)  
-Using the same model family to both generate and judge safety can couple failure modes and be bypassed.
+📌 [Patch Wednesday: Root Cause Analysis with LLMs](https://www.akamai.com/blog/security-research/patch-wednesday-root-cause-analysis-with-llms)  
+Describes PatchDiff-AI: a multi-agent system that combines KB metadata and binary diffs to guide root-cause analysis for Patch Tuesday CVEs, reporting strong hit rates on file/function/RCA identification.
 
-📌 [LOLMIL - Living Off the Land Models and Inference Libraries](https://dreadnode.io/blog/lolmil-living-off-the-land-models-and-inference-libraries)  
-Living-off-the-land patterns for LLM era malware - C2-less concepts inspired by classic cyberpunk visions.
+📌 [Autonomous Pentesting: How AI is Changing Offensive Security](https://blog.securelayer7.net/autonomous-pentesting/)  
+Argues autonomous pentesting shifts cadence to continuous coverage (asset discovery, recon, validation, prioritization) in cloud/API-heavy environments, complementing humans on edge cases and judgment.
 
-📌 [The security paradox of local LLMs](https://quesma.com/blog/local-llms-security-paradox/)  
-Local models comply far more with malicious prompts than frontier models - higher jailbreak success rates.
+📌 [Architecting Security for Agentic Capabilities in Chrome](https://chromeos.dev/en/posts/architecting-security-for-agentic-capabilities-in-chrome)  
+Outlines Chrome’s agentic threat model and mitigations (alignment critic, origin sets, deterministic checks, confirmations, parallel detection, red-teaming, VRP incentives) focused on indirect prompt injection and unsafe actions.
 
-📌 [How a fake AI recruiter delivers five staged malware disguised as a dream job](https://medium.com/deriv-tech/how-a-fake-ai-recruiter-delivers-five-staged-malware-disguised-as-a-dream-job-64cc68fec263)  
-Multi-stage malware via social engineering and AI-native distribution channels.
+📌 [UEFI Vulnerability Analysis Using AI: Part 1](https://whiteknightlabs.com/2025/12/02/uefi-vulnerability-analysis-using-ai-part-1/)  
+Walks through UEFI vuln analysis at scale and argues multi-GB codebases exceed typical upload/context limits, motivating RAG workflows and local infrastructure.
 
-📌 [The Highs and Lows of Vibe Coding](https://snyk.io/articles/the-highs-and-lows-of-vibe-coding/)  
-Democratization and speed vs catastrophic vulnerabilities and maintenance debt in AI-generated code.
+📌 [DIG AI: Uncensored Darknet AI Assistant At The Service Of Criminals And Terrorists](https://www.resecurity.com/blog/article/dig-ai-uncensored-darknet-ai-assistant-at-the-service-of-criminals-and-terrorists)  
+Reports an “uncensored” Tor-hosted GenAI assistant marketed for scaling cybercrime workflows, noting abuse potential and enforcement challenges in darknet distribution.
 
-📌 [State of MCP Server Security 2025 - 5,200 Servers, Credential Risks, and an Open-Source Fix](https://astrix.security/learn/blog/state-of-mcp-server-security-2025/)  
-Large-scale scan of open-source MCP servers shows widespread credential risks and misconfigurations.
+📌 [LLM-Powered AMSI Provider vs. Red Team Agent](https://dreadnode.io/blog/llm-powered-amsi-provider-vs-red-team-agent)  
+Implements a Windows AMSI provider using an LLM for detection logic, emphasizing an operational interface integrated into execution flow rather than a notebook-only prototype.
 
-📌 [LLM Poisoning 1/3 - Reading the Transformer's Thoughts](https://www.synacktiv.com/en/publications/llm-poisoning-13-reading-the-transformers-thoughts)  
-Tiny weight edits implant stealth backdoors that fire on triggers - methodology to detect internal concepts.
+📌 [AI Shared Responsibility Model](https://www.linkedin.com/pulse/understanding-ai-shared-responsibility-model-framework-castro-yd0ae/)  
+Proposes a shared-responsibility framework mapping governance/security/ops responsibilities across AI deployment models (managed SaaS through on-prem) given shifting data, autonomy, and model behavior.
 
-📌 [From Path Traversal to Supply Chain Compromise - Breaking MCP Server Hosting](https://blog.gitguardian.com/breaking-mcp-server-hosting/)  
-Smithery path traversal exposed thousands of API keys and more than 3,000 MCP servers.
+📌 [AI Risk Map](https://github.com/cosai-oasis/secure-ai-tooling/tree/main/risk-map)  
+Framework for identifying/analyzing/mitigating AI system security risks across the AI development lifecycle.
 
-📌 [Interpreting Jailbreaks and Prompt Injections with Attribution Graphs](https://labs.zenity.io/p/interpreting-jailbreaks-and-prompt-injections-with-attribution-graphs)  
-Attribution graphs to map and reason about jailbreak chains and injection paths.
+📌 [HexStrike on Kali Linux 2025.4: A Comprehensive Guide](https://medium.com/ai-security-hub/hexstrike-on-kali-linux-2025-4-a-comprehensive-guide-85a0e5752949)  
+Overview of HexStrike AI as an offensive security framework combining multi-agent AI with a large toolset.
+
+📌 [Red Teaming BrowseSafe: Prompt Injection Risks in Perplexity’s Open-Source Model](https://www.lasso.security/blog/red-teaming-browsesafe-prompt-injection-risks-in-perplexitys-open-source-model)  
+Reports red-teaming results for Perplexity’s BrowseSafe prompt-injection filter and highlights residual risk even with filtering.
+
+📌 [How Amazon uses AI agents to anticipate and counter cyber threats](https://www.amazon.science/blog/how-amazon-uses-ai-agents-to-anticipate-and-counter-cyber-threats)  
+Describes Amazon’s Autonomous Threat Analysis (ATA): competitive red/blue agent simulations in isolated environments that validate detections via telemetry and accelerate detection engineering cycles.
+
+📌 [Claude in Chrome: A Threat Analysis](https://labs.zenity.io/p/claude-in-chrome-a-threat-analysis)  
+Maps agentic browser risks (indirect prompt injection, destructive actions, sensitive disclosure, lateral movement, impersonation) and highlights capability exposure plus “always logged-in” posture risks.
+
+📌 [AG-UI and A2UI Protocols Explained: Building Production-Ready Agentic Systems with MAESTRO Security](https://kenhuangus.substack.com/p/ag-ui-and-a2ui-protocols-explained)  
+Explains AG-UI (bidirectional event stream) and A2UI (declarative whitelisted rendering) and maps threats (state corruption, leakage, tool abuse, transport hijack, deceptive UI) with corresponding control themes.
+
+📌 [Cyber & Dev: MCP](https://zkorman.com/posts/cyber-and-dev-2-mcp/)  
+Explains Model Context Protocol (MCP) as a standard for tool discovery/calls (stdio local or streamable HTTP remote via JSON-RPC) and argues security hinges on permissioning and treating connected servers as broad read/write extensions of the agent’s context.
 
 # 🧰 Tools & Resources
 
-🧰 **[mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner)** - MCP security scanner to find exposed or weak MCP servers. ⭐️537  
-🧰 **[deep-eye](https://github.com/zakirkun/deep-eye)** - AI-driven vulnerability scanner and pentest assistant with multi-LLM support. ⭐️408  
-🧰 **[vibe-check-mcp-server](https://github.com/PV-Bhat/vibe-check-mcp-server)** - MCP server to sanity-check agent actions before tool use. ⭐️299  
-🧰 **[rules](https://github.com/project-codeguard/rules)** - Model-agnostic AI security ruleset for policy enforcement and unsafe tool detection. ⭐️277  
-🧰 **[AI-VAPT](https://github.com/vikramrajkumarmajji/AI-VAPT)** - Autonomous AI-powered VAPT framework. ⭐️66  
-🧰 **[leash](https://github.com/strongdm/leash)** - Control plane to leash and authorize AI agents within boundaries. ⭐️56  
-🧰 **[hacktheweb](https://github.com/yashab-cyber/hacktheweb)** - AI-powered web app pentester with adaptive scans and reports. ⭐️15  
-🧰 **[ai-and-ml-security-minicourse](https://github.com/kjam/ai-and-ml-security-minicourse)** - Hands-on labs on prompt bypass and guardrail evasion. ⭐️14  
-🧰 **[BugPilot-Ai](https://github.com/letchupkt/BugPilot-Ai)** - AI desktop assistant orchestrating real security tools for bounty and pentest workflows. ⭐️9  
-🧰 **[openvscan](https://github.com/Buddhsen-tripathi/openvscan)** - AI-assisted open-source vulnerability scanner for web assets. ⭐️8  
-🧰 **[AI_SOC](https://github.com/zhadyz/AI_SOC)** - AI-augmented SOC stack for alert triage and investigations. ⭐️4  
-🧰 **[aracne](https://github.com/stratosphereips/aracne)** - Autonomous agent for offensive and defensive SSH operations. ⭐️3  
-🧰 **[adversarial-vision](https://github.com/NotSooShariff/adversarial-vision)** - Playground to craft adversarial inputs for vision plus LLM systems. ⭐️1  
-🧰 **[prompt-security-standard](https://github.com/alvinveroy/prompt-security-standard)** - YAML-style standard to document and test GenAI and prompt security controls. ⭐️0  
-🧰 **[soc-cert-guardian-extension](https://github.com/joupify/soc-cert-guardian-extension)** - Chrome extension with AI-assisted checks and CVE intel for SOC and CERT workflows. ⭐️0  
-🧰 **[Aardvark - OpenAI's agentic security researcher](https://openai.com/index/introducing-aardvark/)** - GPT-5 powered agent that scans code, validates exploitability, and proposes patches.
+🧰 **[mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner)** - MCP security scanner that probes MCP servers/tools for common vulnerability classes and unsafe exposure patterns. ⭐️730  
+🧰 **[GhidraGPT](https://github.com/weirdmachine64/GhidraGPT)** - Integrate LLM models directly into Ghidra for automated code rewrite and analysis. ⭐️225  
+🧰 **[ARTEMIS](https://github.com/Stanford-Trinity/ARTEMIS)** - Automated Red Teaming Engine with multi-agent intelligent supervision. ⭐️268  
+🧰 **[genai-security-training](https://github.com/schwartz1375/genai-security-training)** - Self-paced training curriculum for red teaming GenAI and AI/ML systems. ⭐️225  
+🧰 **[MCPScan](https://github.com/antgroup/MCPScan)** - MCP security scanner focused on tool/server vulnerabilities and risky deployment patterns. ⭐️192  
+🧰 **[cupcake](https://github.com/eqtylab/cupcake)** - Enforces OPA/Rego policies to constrain AI coding agents’ actions, tool calls, and data access. ⭐️128  
+🧰 **[VulnLLM-R](https://github.com/ucsb-mlsec/VulnLLM-R)** - Reasoning-focused LLM+agent pipeline for project-level vulnerability discovery and evaluation. ⭐️78  
+🧰 **[opengrep-rules](https://github.com/AikidoSec/opengrep-rules)** - Opengrep ruleset to detect prompt-injection risks in GitHub Actions workflows and related configs. ⭐️28  
+🧰 **[prompt-siren](https://github.com/facebookresearch/prompt-siren)** - Research workbench for testing prompt-injection attacks and defenses against LLM agents. ⭐️26  
+🧰 **[AI for the Win](https://github.com/depalmar/ai_for_the_win)** - Hands-on training program for building AI/ML tools for detection, forensics, and incident response. ⭐️16  
+🧰 **[mcp-cybersec-watchdog](https://github.com/girste/mcp-cybersec-watchdog)** - MCP server that runs security analyzers and produces qualitative assessments for MCP implementations. ⭐️9  
+🧰 **[go-promptguard](https://github.com/mdombrov-33/go-promptguard)** - Go library/CLI for detecting LLM prompt-injection attempts in application inputs. ⭐️8  
+🧰 **[PromptScreen](https://github.com/cross-codes/PromptScreen)** - Detects prompt-injection patterns in GitHub Actions workflows and logs. ⭐️7  
+🧰 **[Mcpwn](https://github.com/Teycir/Mcpwn)** - MCP security testing framework scanning for RCE, path traversal, prompt injection, and protocol weaknesses. ⭐️5  
+🧰 **[ARES-Dashboard](https://github.com/Arnoldlarry15/ARES-Dashboard)** - AI red-team operations console aligned to OWASP LLM Top 10 and MITRE. ⭐️5  
+🧰 **[async-control](https://github.com/UKGovernmentBEIS/async-control)** - Stress-tests asynchronous control measures and monitor prompts for LLM agents. ⭐️4  
+🧰 **[PromptGuard](https://github.com/Brightlord5/PromptGuard)** - Pre-commit hook and CLI that flags prompt-injection patterns (OWASP LLM Top 10-inspired rules). ⭐️3  
 
 # 📄 Reports
 
-📘 [AI Incident Response Framework](https://www.linkedin.com/feed/update/urn:li:activity:7389438644538757120)  
-Guidance for AI incident response updates classic playbooks for agentic systems - telemetry checklists, CACAO playbooks, architecture-aware steps.
+📘 [An Addendum to the Guidelines and Companion Guide on Securing AI Systems](https://www.linkedin.com/feed/update/urn:li:activity:7412047391094181888)  
+CSA addendum expanding practical guidance and controls for securing AI systems across the lifecycle.
 
-📘 [AICM Auditing Guidelines](https://cloudsecurityalliance.org/artifacts/aicm-implementation-auditing-guidelines-frameworks)  
-Structured auditing steps for organizations implementing AICM - role-specific accountability and traceability.
+📘 [The State of AI Security and Governance](https://www.linkedin.com/feed/update/urn:li:activity:7407548266768166912)  
+CSA report on enterprise AI adoption patterns, security/gov skills gaps, and top risk concerns (including persistent data exposure).
 
-📘 [AICM Implementation Guidelines](https://cloudsecurityalliance.org/artifacts/aicm-implementation-auditing-guidelines-frameworks)  
-Practical control guidance tailored to model providers, application providers, orchestrated services, customers, and cloud service providers.
+📘 [Frontier AI Trends Report](https://www.linkedin.com/feed/update/urn:li:activity:7407527990101704704)  
+AI Security Institute report summarizing capability trends from extensive testing across domains.
 
-📘 [Architecting secure enterprise AI agents with MCP](https://www.linkedin.com/feed/update/urn:li:activity:7382480880612724736)  
-Agent development lifecycle to design, deploy, and manage enterprise agents safely.
+📘 [Cyber AI Profile - NIST (Preliminary Draft)](https://www.linkedin.com/feed/update/urn:li:activity:7407313095309787136)  
+NIST’s preliminary Cyber AI Profile framing focus areas: Secure (AI components), Defend (AI-enabled defense), Thwart (AI-enabled attacks).
 
-📘 [Disrupting malicious uses of AI](https://www.linkedin.com/feed/update/urn:li:activity:7382084607397105665)  
-Q3 case studies on abusive accounts, influence ops, scams, and cyber misuse - focus on detection and enforcement.
+📘 [OWASP Top 10 for Agentic Applications for 2026](https://www.linkedin.com/feed/update/urn:li:activity:7404450511539712001)  
+Peer-reviewed OWASP framework identifying critical security risks for autonomous/agentic AI systems.
 
-📘 [Agentic AI Runtime Security](https://www.linkedin.com/feed/update/urn:li:activity:7381693201478492160)  
-A2AS framework as a runtime security layer for agents and LLM apps - certified behavior, context integrity, and policy enforcement.
+📘 [Data Security within AI Environments](https://www.linkedin.com/feed/update/urn:li:activity:7402742675893817344)  
+CSA-aligned practitioner guide on AI-era data protection, mapping AI data risks to controls and governance patterns.
 
-# 📅 Upcoming Events
+📘 [Principles for the Secure Integration of Artificial Intelligence in Operational Technology](https://www.linkedin.com/feed/update/urn:li:activity:7402515508647858178)  
+Guidance on introducing AI into OT environments while managing safety, security, and reliability risks.
 
-📅 SANS Fall Cyber Solutions Fest - AI Track - November 6, 2025 - Virtual - SANS Institute  
-📅 FAIRCON25 - AI Risk Management for Cyber - November 4-5, 2025 - New York, NY, USA - FAIR Institute  
-📅 DataSecAI Conference 2025 - Securing AI-Driven Data and Agents - November 12-14, 2025 - Dallas, TX, USA - Cyera  
-📅 Artificial Intelligence to Enhance Cybersecurity 2025 - November 13, 2025 - Virtual - Digital Government Institute  
-📅 [AI Security Summit 2025](https://www.securitysummit.ai/) - November 12-13, 2025 - London, UK  
-📅 [NHI Global Summit - Tackling NHI in the World of Agentic AI](https://nhimg.org/nhi-global-summit-london) - November 13, 2025 - London, UK  
-📅 International Conference on Artificial Intelligence and Cybersecurity (ICAIC 2025) - November 27-28, 2025 - Osaka, Japan - Scientific Research Conferences  
-📅 ISACA Virtual Summit - AI Governance Strategies 2025 - December 3, 2025 - Virtual - ISACA  
-📅 North Carolina AI and Cybersecurity Symposium 2025 - December 3-4, 2025 - Raleigh, NC, USA - Government Technology  
-📅 AI Security Summit @ Black Hat - December 9, 2025 - ExCeL London, UK  
-📅 [AI Hacking Village @ BSidesTLV](https://bsidestlv.com/) - December 11, 2025 - Tel Aviv University, Tel Aviv, Israel - BSidesTLV
+# 📅 Upcoming Conferences
+
+## January 2026
+
+📅 [NHIcon 2026 — The Rise of Agentic AI Security](https://aembit.io/nhicon/)  
+January 27, 2026 · Virtual · Organizer: Aembit
+
+📅 [CSA AI Summit 2026](https://cloudsecurityalliance.org/events/csa-ai-summit-2026)  
+January 28–29, 2026 · Virtual · Organizer: Cloud Security Alliance
+
+## February 2026
+
+📅 [DiCyFor & AI Security Summit (Singapore)](https://www.dicyfor.com/singapore2026)  
+February 10, 2026 · Singapore · Organizer: DiCyFor
+
+📅 [IEEE ICAIC 2026 — International Conference on AI in Cybersecurity](https://icaic.gyancity.com/)  
+February 18–20, 2026 · University of Houston, Houston, TX, USA · Organizer: IEEE / ICAIC
+
+## March 2026
+
+📅 [[un]prompted — The AI Security Practitioner Conference](https://unpromptedcon.org/)  
+March 3–4, 2026 · Salesforce Tower, San Francisco, CA, USA · Organizer: [un]prompted
+
+📅 [AI Security Summit 2026](https://events.lynx.co/ai-security-summit/)  
+March 10, 2026 · Check Point HQ, Tel Aviv, Israel · Organizer: Lynx Events
+
+📅 [DiCyFor & AI Security Summit (Bangkok)](https://www.dicyfor.com/bangkok2026)  
+March 11–12, 2026 · Bangkok, Thailand · Organizer: DiCyFor
+
+📅 [IEEE SaTML 2026 — Secure and Trustworthy Machine Learning](https://satml.org/)  
+March 23–25, 2026 · Munich, Germany · Organizer: IEEE SaTML
+
+## April 2026
+
+📅 [DiCyFor & AI Security Summit (Kuala Lumpur)](https://www.dicyfor.com/kualalumpur2026)  
+April 15, 2026 · Kuala Lumpur, Malaysia · Organizer: DiCyFor
+
+📅 [SANS AI Cybersecurity Summit 2026](https://www.sans.org/cyber-security-training-events/ai-summit-2026)  
+April 20–21, 2026 · Arlington, VA, USA & Virtual · Organizer: SANS Institute
+
+📅 [AI Security Summit @ Black Hat Asia](https://www.blackhat.com/asia-26/ai-security-summit.html)  
+April 22, 2026 · Marina Bay Sands, Singapore · Organizer: Black Hat
 
 # 📚 Research
 
-📖 [The Backbone Breaker Benchmark - Testing the Real Security of AI Agents](https://arxiv.org/pdf/2510.22620)  
-📖 [Black-box Optimization of LLM Outputs by Asking for Directions](https://arxiv.org/pdf/2510.16794)  
-📖 [Genesis - Evolving Attack Strategies for LLM Web Agent Red-Teaming](https://www.arxiv.org/abs/2510.18314)  
-📖 [Exploiting Web Search Tools of AI Agents for Data Exfiltration](https://arxiv.org/abs/2510.09093)  
-📖 [LLM Agents for Automated Web Vulnerability Reproduction - Are We There Yet](https://arxiv.org/abs/2510.14700)  
-📖 [Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples](https://arxiv.org/pdf/2510.07192)  
-📖 [Uncertainty-Aware, Risk-Adaptive Access Control for Agentic Systems using an LLM-Judged TBAC Model](https://arxiv.org/pdf/2510.11414)  
-📖 [Fingerprinting LLMs via Prompt Injection](https://arxiv.org/pdf/2509.25448)  
-📖 [PACEbench - A Framework for Evaluating Practical AI Cyber-Exploitation Capabilities](https://arxiv.org/pdf/2510.11688v1)
+📖 [AI Deception: Risks, Dynamics, and Controls](https://arxiv.org/abs/2511.22619)  
+Survey covering definitions, empirical studies, risks, and a “deception cycle” framing deception emergence and treatment.
+
+📖 [From Rookie to Expert: Manipulating LLMs for Automated Vulnerability Exploitation](https://arxiv.org/pdf/2512.22753v1)  
+Introduces RSA (Role-play, Scenario, Action) as a pretexting methodology to manipulate LLMs into producing functional exploit code.
+
+📖 [Agentic AI for 6G: A New Paradigm for Autonomous RAN Security Compliance](https://www.arxiv.org/pdf/2512.12400)  
+Discusses agentic AI for autonomous RAN security compliance in next-generation 6G environments.
+
+📖 [Bootstrapping Code Security Benchmarking](https://arxiv.org/pdf/2512.21132v1)  
+Presents AutoBaxBuilder, an automated framework for generating code security benchmark tasks with large efficiency gains.
+
+📖 [PACEbench: A Framework for Evaluating Practical AI Cyber Exploitation Capabilities](https://arxiv.org/pdf/2510.11688v1)  
+Introduces PACEbench and PACEagent for evaluating practical AI cyber exploitation across realistic scenarios.
+
+📖 [STAC: When Innocent Tools Form Dangerous Chains to Jailbreak LLM Agents](https://arxiv.org/pdf/2509.25624)  
+Introduces Sequential Tool Attack Chaining (STAC): multi-turn attack sequences where individually benign tool calls combine into harmful outcomes.
+
+📖 [Comparing AI Agents to Cybersecurity Professionals in Real-World Penetration Testing](https://arxiv.org/abs/2512.09882)  
+Compares AI agents and human pentesters in a live enterprise environment; introduces ARTEMIS and reports comparative performance metrics.
+
+📖 [Decompiling the Synergy: An Empirical Study of Human–LLM Teaming in Software Reverse Engineering](https://www.zionbasque.com/files/papers/dec-synergy-study.pdf)  
+Human study on LLM assistance in SRE, highlighting where LLMs help (esp. novices) and where they fail (hallucinations, unhelpful suggestions).
+
+📖 [AprielGuard](https://arxiv.org/abs/2512.20293)  
+SLM for safety/adversarial risk detection across multiple categories and attack types; also released on Hugging Face.
 
 # 🎥 Videos
 
-▶️ Hackers Are Using This AI Tool  
-▶️ Deepfake Image and Video Detection - Mike Raggo  
-▶️ Thinking Like a Hacker in the Age of AI - Richard Thieme  
-▶️ Securing Agentic AI Systems and Multi-Agent Workflows - Andra Lezza and Jeremiah Edwards at Sage  
-▶️ Winners of DARPA's AI Cyber Challenge - Andrew Carney and Jason Roos and Stephen Winchell at DARPA  
-▶️ Claude - Climbing a CTF Scoreboard Near You - Keane L. at Anthropic  
-▶️ Vibe Hacking Using AI for Automation in Offensive and Defensive Ops - Brian Almond at Almond Consulting  
-▶️ Exploiting Shadow Data from AI Models and Embeddings - Patrick Walsh at IronCore Labs  
-▶️ AppleStorm - Unmasking the Privacy Risks of Apple Intelligence - Yoav Magid at Lumia Security Inc.  
-▶️ Invoking Gemini Agents with a Google Calendar Invite - Ben Nassi, Or Yair, and Stav Cohen  
-▶️ LLM Identifies Info Stealer Vector & Extracts IoCs - Olivier Bilodeau and Estelle Ruellan at Flare  
-▶️ Designing and Participating in AI Bug Bounty Programs - Dane Sherrets and Shlomie Liberow at HackerOne  
-▶️ AI, EDR, and Hacking Things - Security Weekly panel  
-▶️ Hacking Context for Auto Root Cause and Attack Flow Discovery - Ezz T. at Microsoft  
-▶️ Orion - Fuzzing Workflow Automation - Max Bazalii and Marius Fleischer  
-▶️ Vibe School - Making Dumb Devices Smart with AI - Katie Paxton-Fear  
-▶️ Automating Compliance and Risk with Agentic AI as CISOs (R)Evolve - Trevor Horwitz at TrustNet  
-▶️ Bypassing Intent Destination Checks, LaunchAnyWhere Privilege Escalation - Qidan He  
-▶️ Prompt. Scan. Exploit - AI's Journey Through Zero-Days and a Thousand Bugs - Joel Noguera Pallarés and Diego Jurado Pallarés at XBOW  
-▶️ Unveiling the Perils of the TorchScript Engine in PyTorch - Ji'an Zhou and Lishuo Song  
-▶️ Loading Models, Launching Shells - Abusing AI File Formats for Code Execution - Cyrus Parzian  
-▶️ AI-Orchestrated Penetration - Adapting Attacks in Real Time - YI-TING SHEN at Array Networks  
-▶️ Decision Making in Adversarial Automation - Bobby K. and Michael O'Dell at ProCircular  
-▶️ How AI + Hardware Can Transform Point of Care Workflows - Tianqi Kevin L. and Chengming Zhang  
-▶️ Cloned Vishing - A Case Study - Katherine Rackliffe  
-▶️ AI Agents - Your New Security Team Members or Biggest Threat - Michael Ifeanyi  
-▶️ Learn to Hack AI by Hacking AI - Satu Korhonen  
-▶️ Let AI Autogenerate Neural ASR Rules for OT Attacks via NLP - Mars C. and Jr-Wei Huang at TXOne Networks and Trend Micro  
-▶️ AI-Augmentation - Transforming Security Operations - Fritz Pamesa  
-▶️ HoloConnect AI - From Space to Biohacking - Dr. Fernando de la Peña at Aexa Aerospace  
-▶️ Tinker, Tailor, LLM Spy - Investigate & Respond to Attacks on GenAI Chatbots - Allyn Stott  
-▶️ Hype vs. Hands-On - What GenAI Actually Brings to ID & Response - Marvin N.  
-▶️ Building a Zero Trust MCP Server Gateway - Policy, Isolation, and Observability for AI Tooling - Aakansha Puri and Navjot Singh  
-▶️ AI-Assisted Security Automation - Vlatko Kosturjak
+▶️ [AI & Product Security: Attack Vectors, Model Risks, and Defensive AI](https://www.youtube.com/watch?v=Da9fL9LaeUs&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=35)  
+▶️ [AI Security Summit | Secure Vibe Coding | Andrew Oates, Snyk](https://www.youtube.com/watch?v=OcjJa04HreA&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=37)  
+▶️ [AI, Identity Security, and the Offense/Defense Balance | ZT Summit 2025 - Dr. Christopher Porter](https://www.youtube.com/watch?v=CfVDHKHcueM&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=38)  
+▶️ [Hack the planet! LangGraph AI HackBot Dev & Q/A - BlaiseBits](https://www.youtube.com/watch?v=HNPdfW5rP2w&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=39)  
+▶️ [I’m A Machine, And You Should Trust Me: The Future Of Non-Human Identity - Dwayne McDaniel](https://www.youtube.com/watch?v=sQSlAITPQpk&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=40)  
+▶️ [Why AI Security Begins and Ends in the Browser - Todd Hathaway](https://www.youtube.com/watch?v=wsdnO4jRI2s&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=41)  
+▶️ [Cross-Layered Design for Security and Resilience in AI-Driven Cyber Physical Human Systems](https://www.youtube.com/watch?v=yRyILxRIcOY&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=42)  
+▶️ [Human Attack Surfaces in Agentic Web](https://www.youtube.com/watch?v=rrHZm6FEQoc&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=43)  
+▶️ [Large Language Models in Cybersecurity: Threats, Exposure and Mitigation - Vincent Lenders](https://www.youtube.com/watch?v=LasVFLBRXt0&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=44)  
+▶️ [Josiah Hagen - Applying Personality to LLMs: Customized Security for the Agentic Age of AI](https://www.youtube.com/watch?v=MG7ItQVgT28&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=45)  
+▶️ [RAGnarok: Assisting Your Threat Hunting with Local LLM](https://www.youtube.com/watch?v=NRWmSZPZ9sc&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=46)  
+▶️ [RAG Against the Machine: Using Retrieval-Augmented Generation & MCP](https://www.youtube.com/watch?v=7Go4KRNFZ_I&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=47)  
+▶️ [Jesse Merhi - Model Context Protocol is Insecure by Design](https://www.youtube.com/watch?v=26vCssimYyA&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=48)  
+▶️ [Agentic AI Malware: Why the Cybersecurity Battle Isn’t Over](https://www.youtube.com/watch?v=MhDdAb7UxM8&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=49)  
+▶️ [Inside the Open-Source Kill Chain: How LLMs Helped Catch Lazarus and Stop a Crypto Backdoor](https://www.youtube.com/watch?v=-5-uosSfwyg&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=50)  
+▶️ [Harnessing AI and Post-Quantum Cryptography for Cybersecurity in the Quantum Era](https://www.youtube.com/watch?v=sjRNI_FV1pI&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=51)  
+▶️ [Teaching AI to Hunt for Vulnerabilities - Roald Nefs](https://www.youtube.com/watch?v=ii90UM4S5B0&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=52)  
+▶️ [Securing AI Infrastructure: Lessons from National Cybersecurity Strategies](https://www.youtube.com/watch?v=K7j56RJI7ao&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=53)  
+▶️ [Itamar Sher - Why LLMs Fall Short in Vulnerability Management](https://www.youtube.com/watch?v=mL4MR27y3lE&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=54)  
+▶️ [Hazard Analysis of Military AI Systems Using STPA-Sec](https://www.youtube.com/watch?v=pQNgIF2r7as&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=55)  
+▶️ [Don’t be LLaMe – The basics of attacking LLMs in your Red Team exercises](https://www.youtube.com/watch?v=WZZrqGFdCj8&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=56)  
+▶️ [When Attackers Tune In: Weaponizing LLM Tuning for Stealthy C2 and Exfiltration](https://www.youtube.com/watch?v=HSb0ct_lcuY&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=57)  
+▶️ [Machine Identity & Attack Path: The Danger of Misconfigurations](https://www.youtube.com/watch?v=cN0pLRzmEe8&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=58)  
+▶️ [Creating the Torment Nexus: Using Machine Learning to Defeat Machine Learning](https://www.youtube.com/watch?v=XGhabe4Fc2s&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=59)  
+▶️ [Crawl, Walk, Run: Building AI Tools for Third-Party Security Evaluation](https://www.youtube.com/watch?v=jq8w3nADzO0&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=60)  
+▶️ [Dreadnode at Offensive AI Con (OAIC) 2025 | From Benchmarks to Breaches: Scaling Offensive Security](https://www.youtube.com/watch?v=W3pRfofIv2E&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=61)  
+▶️ [Show Me The Honey: Creating Elasticsearch Honeypots Powered By LLMs - Claire Dickson (Burn)](https://www.youtube.com/watch?v=Jt4W9wwAaOM&list=PLFO56KBxdGBfdxGr2rXoNVaFboTPp7Xwx&index=62)  
+
