@@ -144,3 +144,8 @@ Sponsored by [CyberBiz](https://cyber-biz.com/) and [InnovGuard.com](https://inn
 ▶️ [SpAIware & More: Advanced Prompt Injection Exploits in LLM Applications - Johann Rehberger](https://www.youtube.com/watch?v=84NVG1c5LRI)
 
 ---
+
+# 🤝 Let's Connect
+If you're a founder building something new or an investor evaluating early-stage opportunities - [let's connect](https://calendly.com/innovguard/meeting).
+
+💬 Read something interesting? Share your thoughts in the comments.
