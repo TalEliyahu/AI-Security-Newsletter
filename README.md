@@ -219,10 +219,10 @@ Karolina Korgul, Yushi Yang, Arkadiusz Drohomirecki, Piotr Błaszczyk, Will Howa
 2️⃣2️⃣ Securing the AI Revolution - François  
 2️⃣3️⃣ MCP: Making Compromise Possible - AI Workflows and Security Implications - Nathan Getty at Menlo Security  
 2️⃣4️⃣ AI Is Undermining Our Privacy: What Can We Do About It? - Robert Stribley at Technique
-```
+
+---
 
 # 🤝 Let's Connect
-
 If you're a founder building something new or an investor evaluating early-stage opportunities - [let's connect](https://calendly.com/innovguard/meeting).
 
 💬 Read something interesting? Share your thoughts in the comments.
