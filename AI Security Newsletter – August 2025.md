@@ -1,8 +1,9 @@
 # AI Security Newsletter – August 2025
 
-A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AI Security community](https://linktr.ee/AISECHUB) on [Twitter](https://x.com/AISecHub) and [LinkedIn group](https://www.linkedin.com/groups/14545517/) for additional updates. Also check out our new project, [Awesome AI Security](https://github.com/TalEliyahu/Awesome-AI-Security).
+A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AISecHub community](https://x.com/AISecHub) and our [LinkedIn group](https://www.linkedin.com/groups/14545517/) for additional updates. Also check out our project, [Awesome AI Security](https://github.com/TalEliyahu/Awesome-AI-Security).
 
-Sponsored by [InnovGuard.com](https://innovguard.com) – Technology Risk & Cybersecurity Advisory, Innovate and Invest with Confidence, Lead with Assurance.
+Sponsored by [InnovGuard.com](https://innovguard.com) - Technology Risk & Cybersecurity Advisory - Innovate and Invest with Confidence, Lead with Assurance.
+
 
 # 🔍 Insights
 📌 Johann Rehberger spent the past month publishing a daily “Month of AI Bugs” series documenting prompt-injection flaws in coding agents and developer tools that lead to data leaks, RCEs in GitHub Copilot, Claude Code, Amazon Q Developer, Windsurf, OpenHands, Devin, and Cursor. https://embracethered.com/blog/ https://youtube.com/@embracethered
