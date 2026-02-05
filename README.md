@@ -195,30 +195,53 @@ Karolina Korgul, Yushi Yang, Arkadiusz Drohomirecki, Piotr Błaszczyk, Will Howa
 
 # 🎥 Videos
 
-1️⃣ When Vibe Scammers Met Vibe Hackers: Pwning PhaaS with Their Own Weapons - Chiao-Lin Yu (Steven Meow) at Trend Micro  
-2️⃣ How to Build an AI Security Program from Scratch - Shannon Murphy at TrendAI  
-3️⃣ Security AI Agent! Automated Penetration Testing - Loi Liang Yang  
-4️⃣ AI-Generated Malware: Ireland Legalizes Spyware - Steve Gibson and Leo Laporte at TWiT  
-5️⃣ AI and Its Impact on Offensive Security Roles in 2026 - Stephen Sims at Off By One Security  
-6️⃣ MCP with .NET: Securely Exposing Your Data to LLMs - Callum Whyte at Bump  
-7️⃣ AI Red Teaming: What Breaks, How It Breaks, and the Human Role - rez0  
-8️⃣ Exploiting AI: A Case Study on Voice Biometric Penetration Testing - Skyler Tuter at TrustedSec  
-9️⃣ Stochastic Garrotes: A Data-Driven Approach to LLM-Generated Malware - Ryan Ashley at IQT Labs  
-🔟 Backdooring LLMs and Bypassing HuggingFace Malware Scanners - Davide Cioccia at DCODX  
-1️⃣1️⃣ Building a Practical AI Assistant for Security Operations - Vincent Ruijter at Sourcegraph  
-1️⃣2️⃣ GenAI Agentic Security in Practice - Black Hat Europe AI Summit  
-1️⃣3️⃣ The AI Triple Security Gap: Why Your Gateway Strategy Is Already Obsolete - Carlos Villanúa Fernández at Traefik Labs  
-1️⃣4️⃣ The Three Horsemen of the AppSec AI-pocalypse - Adam Krieger at Online Business Systems  
-1️⃣5️⃣ Practical Automation of Penetration Testing with Agentic AI - Hiroaki Toyota at LAC  
-1️⃣6️⃣ Building Secure AI Applications with the OWASP Top 10 - Gavin Klondike at GlitchSecure  
-1️⃣7️⃣ AI Agents with Gemini 2.0: Beyond the Chatbot - Márton Kodok at Google  
-1️⃣8️⃣ Why Should We Be Careful with AI? - Maciej Krzysica at j-labs  
-1️⃣9️⃣ Panel: The Present and Future of AI and Security - David Brumley and panel  
-2️⃣0️⃣ Governance and Security of APIs and MCPs - Isabelle Mauny at WSO2  
-2️⃣1️⃣ How I Used and Abused LLMs to Get Top 250 on HTB - Rambo Anderson-You  
-2️⃣2️⃣ Securing the AI Revolution - François  
-2️⃣3️⃣ MCP: Making Compromise Possible - AI Workflows and Security Implications - Nathan Getty at Menlo Security  
-2️⃣4️⃣ AI Is Undermining Our Privacy: What Can We Do About It? - Robert Stribley at Technique
+1️⃣ [When Vibe Scammers Met Vibe Hackers: Pwning PhaaS with Their Own Weapons](https://www.youtube.com/watch?v=Ye9LjLkGLsU&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Chiao-Lin Yu (Steven Meow) at Trend Micro
+
+2️⃣ [How to Build an AI Security Program from Scratch](https://www.youtube.com/watch?v=iN5Pv8qZg44) - Shannon Murphy at TrendAI
+
+3️⃣ [Security AI Agent! Automated Penetration Testing](https://www.youtube.com/watch?v=moNFV5WbXpc) - Loi Liang Yang
+
+4️⃣ [AI-Generated Malware: Ireland Legalizes Spyware](https://www.youtube.com/watch?v=pMqNZmD1AFQ) - Steve Gibson and Leo Laporte at TWiT
+
+5️⃣ [AI and Its Impact on Offensive Security Roles in 2026](https://www.youtube.com/watch?v=SHJeeP1gaBo&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=6) - Stephen Sims at Off By One Security
+
+6️⃣ [MCP with .NET: Securely Exposing Your Data to LLMs](https://www.youtube.com/watch?v=UGD2mNzgPDk&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Callum Whyte at Bump
+
+7️⃣ [AI Red Teaming: What Breaks, How It Breaks, and the Human Role](https://www.youtube.com/watch?v=ld-I17vRC78&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=8) - rez0
+
+8️⃣ [Exploiting AI: A Case Study on Voice Biometric Penetration Testing](https://www.youtube.com/watch?v=7OzUAY5xfus&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=9) - Skyler Tuter at TrustedSec
+
+9️⃣ [Stochastic Garrotes: A Data-Driven Approach to LLM-Generated Malware](https://www.youtube.com/watch?v=Qo5D8XhmG0w&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=10) - Ryan Ashley at IQT Labs
+
+🔟 [Backdooring LLMs and Bypassing HuggingFace Malware Scanners](https://www.youtube.com/watch?v=PWs43paN3vs&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Davide Cioccia at DCODX
+
+1️⃣1️⃣ [Building a Practical AI Assistant for Security Operations](https://www.youtube.com/watch?v=F35g0iQYoOU&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Vincent Ruijter at Sourcegraph
+
+1️⃣2️⃣ [GenAI Agentic Security in Practice](https://www.youtube.com/watch?v=ue9oFtpESQY&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Black Hat Europe AI Summit
+
+1️⃣3️⃣ [The AI Triple Security Gap: Why Your Gateway Strategy Is Already Obsolete](https://www.youtube.com/watch?v=kFcCZF7yx90&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Carlos Villanúa Fernández at Traefik Labs
+
+1️⃣4️⃣ [The Three Horsemen of the AppSec AI-pocalypse](https://www.youtube.com/watch?v=RpDbAzmWWTw&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=15) - Adam Krieger at Online Business Systems
+
+1️⃣5️⃣ [Practical Automation of Penetration Testing with Agentic AI](https://www.youtube.com/watch?v=ue9oFtpESQY&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=16) - Hiroaki Toyota at LAC
+
+1️⃣6️⃣ [Building Secure AI Applications with the OWASP Top 10](https://www.youtube.com/watch?v=1eVEjoG4bEE&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Gavin Klondike at GlitchSecure
+
+1️⃣7️⃣ [AI Agents with Gemini 2.0: Beyond the Chatbot](https://www.youtube.com/watch?v=G_MvKlOox0c&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=18) - Márton Kodok at Google
+
+1️⃣8️⃣ [Why Should We Be Careful with AI?](https://www.youtube.com/watch?v=Ieu76l-vA7g&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=19) - Maciej Krzysica at j-labs
+
+1️⃣9️⃣ [Panel: The Present and Future of AI and Security](https://www.youtube.com/watch?v=CL1YIdDR_3E&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=20) - David Brumley and panel
+
+2️⃣0️⃣ [Governance and Security of APIs and MCPs](https://www.youtube.com/watch?v=5KyBP7h3gJc&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Isabelle Mauny at WSO2
+
+2️⃣1️⃣ [How I Used and Abused LLMs to Get Top 250 on HTB](https://www.youtube.com/watch?v=p5yaHA4k_Jg&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=22) - Rambo Anderson-You
+
+2️⃣2️⃣ [Securing the AI Revolution](https://www.youtube.com/watch?v=5KyBP7h3gJc&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=23) - François
+
+2️⃣3️⃣ [MCP: Making Compromise Possible - AI Workflows and Security Implications](https://www.youtube.com/watch?v=BE-KTe1mgUw&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u&index=24) - Nathan Getty at Menlo Security
+
+2️⃣4️⃣ [AI Is Undermining Our Privacy: What Can We Do About It?](https://www.youtube.com/watch?v=oe9Wyp6-suw&list=PLFO56KBxdGBdjCu1TaDKsILBACaTlVY9u) - Robert Stribley at Technique
 
 ---
 
