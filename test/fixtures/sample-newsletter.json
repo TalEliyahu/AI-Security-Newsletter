@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "title": "Indirect Prompt Injection Against Web-Connected Agents",
+      "url": "https://example.com/research",
+      "summary": "Security researchers show an indirect prompt injection attack path where a malicious webpage can steer an LLM agent into tool use and data exfiltration, with mitigations for provenance and authorization.",
+      "section": "Insights",
+      "date": "2026-03-12"
+    },
+    {
+      "title": "VendorCorp launches Secure AI Platform",
+      "url": "https://example.com/platform",
+      "summary": "VendorCorp announces an industry-leading platform partnership that helps customers transform AI security.",
+      "section": "Insights",
+      "date": "2026-03-13"
+    },
+    {
+      "title": "Generic AI Startup Raises Series B",
+      "url": "https://example.com/funding",
+      "summary": "The company raised funding to build AI workflow software for business users.",
+      "section": "Funding",
+      "date": "2026-03-14"
+    },
+    {
+      "title": "AI Risk Framework Adds Model Supply Chain Controls",
+      "url": "https://example.gov/framework",
+      "summary": "A public-sector AI risk framework adds technical controls for model provenance, dependency review, monitoring, incident response, and secure deployment.",
+      "section": "Reports",
+      "date": "2026-03-15"
+    },
+    {
+      "title": "Critical Prompt Injection Breach Proves All Agents Are Unsafe",
+      "url": "https://example.com/overstated",
+      "summary": "A prompt injection proof of concept shows a possible data exfiltration path in a demo agent, but the current newsletter text calls it a confirmed breach and says all agents are unsafe.",
+      "section": "Insights",
+      "date": "2026-03-16"
+    },
+    {
+      "title": "agent-sandbox-checker",
+      "url": "https://github.com/example/agent-sandbox-checker",
+      "summary": "GitHub security tool release that scans AI coding-agent shell permissions, sandbox escapes, and unsafe MCP tool configuration.",
+      "section": "Tools",
+      "date": "2026-03-17"
+    },
+    {
+      "title": "AI Is Changing Everything",
+      "url": "https://example.com/weak-news",
+      "summary": "A short news article says AI is risky and companies should pay attention, without attack mechanics, affected systems, mitigations, or evidence.",
+      "section": "Notable Reads",
+      "date": "2026-03-18"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ai-security-newsletter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "newsletter-judge": "./bin/newsletter-judge.mjs"
+  },
+  "scripts": {
+    "newsletter-judge": "node ./bin/newsletter-judge.mjs",
+    "judge": "node ./bin/newsletter-judge.mjs",
+    "test": "node --test"
+  }
+}
