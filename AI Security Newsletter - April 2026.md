@@ -139,6 +139,19 @@ Georgetown CSET maps high-level AI guidance into practical implementation steps.
 
 ---
 
+# 🛡️ CVEs
+
+🛡️ [CVE-2026-42208: LiteLLM proxy API key verification SQL injection](https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc)  
+Critical pre-authentication SQL injection in LiteLLM's API-key verification path could expose or modify proxy database records, making LLM gateway credential stores and provider access a priority patch target.
+
+🛡️ [CVE-2026-5752: Terrarium sandbox escape](https://kb.cert.org/vuls/id/414811)  
+CERT/CC documents a critical Terrarium sandbox escape that reaches Node.js internals and executes commands as root inside the host process, reinforcing why AI code-execution sandboxes need container, network, and credential isolation.
+
+🛡️ [CVE-2026-40515: OpenHarness permission bypass](https://www.vulncheck.com/advisories/openharness-permission-bypass-via-grep-and-glob-root-argument)  
+OpenHarness path-normalization gaps let built-in grep and glob tools read sensitive roots despite configured path restrictions, a concrete reminder that agent tool permissions need enforcement below the prompt and helper layer.
+
+---
+
 # 📅 Upcoming Conferences
 
 ## June 2026
@@ -229,6 +242,19 @@ Zonghao Ying, Haozheng Wang, Jiangfan Liu, Quanchen Zou, Aishan Liu, Jian Yang, 
 
 📖 **WebAgentGuard: A Reasoning-Driven Guard Model for Detecting Prompt Injection Attacks in Web Agents**  
 Yulin Chen, Tri Cao, Haoran Li, Yue Liu, Yibo Li, Yufei He, Le Minh Khoi, Yangqiu Song, Shuicheng Yan, Bryan Hooi. [arXiv](https://arxiv.org/abs/2604.12284)
+
+---
+
+# 💬 Reddit Most Interesting Conversations
+
+💬 [Prompt Injection Detection?](https://www.reddit.com/r/cybersecurity/comments/1semk5r/prompt_injection_detection/)  
+Practitioners discuss why prompt-injection detection has to move beyond input filtering toward canary tokens, tool-call telemetry, RAG context logging, and post-execution behavioral signals.
+
+💬 [Open dataset: 100k+ multimodal prompt injection samples with per-category academic sourcing](https://www.reddit.com/r/netsec/comments/1sn2o3v/open_dataset_100k_multimodal_prompt_injection/)  
+The discussion covers dataset methodology, multimodal prompt injection coverage, MCP tool descriptor poisoning, reasoning-trace attacks, and how evaluation ratios can mislead production detector performance.
+
+💬 [Built an MCP proxy that catches prompt injections in tool responses](https://www.reddit.com/r/mcp/comments/1sq2ybq/built_an_mcp_proxy_that_catches_prompt_injections/)  
+The comments focus on where to place MCP detection, why warn-first behavior can be safer for autonomous workflows, and how JSON-path attribution helps distinguish nested tool-output injection from top-level instructions.
 
 ---
 
