@@ -16,9 +16,6 @@ Google scanned public web content for indirect prompt injection patterns and sep
 📌 [Comment and Control: Prompt Injection to Credential Theft in Claude Code, Gemini CLI, and GitHub Copilot Agent](https://oddguan.com/blog/comment-and-control-prompt-injection-credential-theft-claude-code-gemini-cli-github-copilot/)  
 This writeup demonstrates GitHub comments, issues, and pull request text as command-and-control surfaces for coding agents running in CI. For product security teams, it is a sharp reminder that repository metadata is attacker-controlled input when an agent can read it and access build secrets.
 
-📌 [Rotten Apples: The Technical Details of RSAC's Successful Apple Intelligence Prompt Injection Attack](https://www.rsaconference.com/library/blog/rotten-apples-the-technical-details-of-rsacs-successful-apple-intelligence-prompt-injection-attack)  
-RSAC researchers explain a prompt-injection attack against Apple's on-device foundation model using filter-bypass techniques and model instruction manipulation. The practical takeaway is that local inference does not remove prompt-injection risk when applications expose OS-level model APIs to untrusted or transformed content.
-
 📌 [Flowise Custom MCP Code Injection](https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-c9gw-hvqq-f33r)  
 Flowise's advisory covers a code-injection issue in its Custom MCP path that could let authenticated users reach command execution on agent-builder infrastructure. The lesson for platform teams is direct: MCP configuration surfaces should be treated as privileged execution boundaries, not low-risk workflow metadata.
 
@@ -28,11 +25,20 @@ OX Security shows how MCP server registration can turn tool configuration into h
 📌 [SGLang CVE-2026-5760](https://cyberveille.esante.gouv.fr/alertes/sglang-cve-2026-5760-2026-04-24)  
 CERT Sante tracks an SGLang issue involving malicious GGUF model handling in inference infrastructure. It is a model supply-chain reminder: model files and tokenizer templates need the same sandboxing, signature, and provenance scrutiny as code artifacts.
 
-📌 [Arbitrary Code Injection in LiteLLM](https://security.snyk.io/vuln/SNYK-PYTHON-LITELLM-16049285)  
-Snyk documents a LiteLLM code-injection issue in a guardrail testing endpoint reachable by authenticated callers. It is a useful reminder that LLM gateway admin and test routes need the same hardening as production inference paths because they often execute user-controlled templates or code.
+📌 [Azure MCP Server Missing Authentication for Critical Function](https://nvd.nist.gov/vuln/detail/CVE-2026-32211)  
+NVD's entry for CVE-2026-32211 covers a missing-authentication flaw in Azure MCP Server that could disclose information over the network. The AI-security lesson is direct: MCP servers that bridge agents into cloud or developer infrastructure need ordinary authentication and authorization controls before they become reusable automation surfaces.
+
+📌 [Guardrail Sandbox Escape in LiteLLM](https://x41-dsec.de/lab/advisories/x41-2026-001-litellm/)  
+X41 documents a LiteLLM guardrail testing endpoint where regex-based filtering could be bypassed with bytecode rewriting to execute code as the server process. It is a useful reminder that LLM gateway admin and test routes need the same hardening as production inference paths because they often execute user-controlled templates or code.
+
+📌 [FastGPT NoSQL Injection in loginByPassword Leads to Authentication Bypass](https://github.com/labring/FastGPT/security/advisories/GHSA-x8mx-2mr7-h9xg)  
+FastGPT's advisory documents a NoSQL-injection path in the password login endpoint that could let unauthenticated attackers bypass authentication as any user, including root administrator. Agent-builder platforms need runtime input validation on control-plane APIs, not just TypeScript assertions that disappear at runtime.
 
 📌 [Pre-Auth Remote Code Execution via Terminal WebSocket Authentication Bypass](https://github.com/marimo-team/marimo/security/advisories/GHSA-2679-6mx9-h9xc)  
 The marimo advisory describes a pre-authentication path to terminal access through WebSocket authentication bypass behavior. AI notebook and developer-tool servers should assume local productivity features become remote attack surfaces once exposed in shared workspaces.
+
+📌 [LMDeploy SSRF Exploited Against LLM Inference Engines](https://www.sysdig.com/blog/cve-2026-33626-how-attackers-exploited-lmdeploy-llm-inference-engines-in-12-hours)  
+Sysdig observed exploitation attempts against LMDeploy shortly after disclosure of an SSRF flaw in vision-language image loading. For teams running GPU-hosted inference, user-supplied image URLs, RAG fetchers, and agent retrieval paths should be treated as internal-network access primitives unless egress controls and metadata protections are enforced.
 
 📌 [langchain-openai Vulnerable to Server-Side Request Forgery](https://github.com/langchain-ai/langchain/security/advisories/GHSA-r7w7-9xr2-qq2r)  
 LangChain's advisory documents an SSRF issue tied to redirect and host handling. Even when impact is bounded, agent and LLM framework integrations should validate network destinations because prompt-driven workflows can turn library fetch behavior into data-plane access.
@@ -40,14 +46,11 @@ LangChain's advisory documents an SSRF issue tied to redirect and host handling.
 📌 [Cursor Triple Backtrick: Bypassing Guardrails for Arbitrary Command Execution](https://noma.security/blog/cursor-triple-backtrick-bypassing-guardrails-for-arbitrary-command-execution/)  
 Noma Security details a Cursor guardrail-bypass technique that used command substitution syntax to move from suggested code into shell execution. Coding-agent products need enforcement outside the model response path, because UI warnings and prompt-level intent checks are not a reliable execution boundary.
 
-📌 [10 Indirect Prompt Injection Payloads That Actually Work](https://www.forcepoint.com/blog/x-labs/indirect-prompt-injection-payloads)  
-Forcepoint X-Labs collected indirect prompt-injection payload patterns that target web-connected assistants through hidden instructions, markdown, and content formatting tricks. The practical value is defensive testing: teams can turn these patterns into repeatable cases for browser agents, copilots, and RAG systems.
-
 📌 [Claude PromptMink Malware Crypto](https://www.reversinglabs.com/blog/claude-promptmink-malware-crypto)  
 ReversingLabs analyzes PromptMink, a malware campaign where AI-generated package content and social-engineering material were used around cryptocurrency theft. The case reinforces why package vetting, dependency provenance, and developer-environment monitoring need to account for AI-assisted supply-chain operations.
 
-📌 [Skills Are the New npm Package](https://www.firstops.dev/blog/skills-are-the-new-npm-package)  
-FirstOps argues that reusable agent skills create a package-management problem for AI workflows. Security teams should track skill provenance, permissions, transitive dependencies, and update paths before allowing skills to run with repository, browser, or production-system access.
+📌 [PraisonAI Sensitive Environment Variable Exposure via Untrusted MCP Subprocess Execution](https://github.com/advisories/GHSA-pj2r-f9mw-vrcq)  
+GitHub's advisory describes PraisonAI MCP subprocesses inheriting the parent process environment, exposing API keys and other secrets to untrusted MCP commands. The defensive takeaway is to pass explicit environment allowlists into tool subprocesses instead of letting agent integrations inherit every local credential by default.
 
 📌 [Agent ID Administrator Scope Overreach: Service Principal Takeover in Entra ID](https://www.silverfort.com/blog/agent-id-administrator-scope-overreach-service-principal-takeover-in-entra-id/)  
 Silverfort details an Entra role-boundary issue where agent identity administration could affect broader service-principal ownership. The case matters because agent identities are being grafted onto existing non-human identity systems, and small scoping mistakes can become high-impact privilege paths.
@@ -83,6 +86,18 @@ Chocapikk documents unsafe pickle deserialization in LeRobot's gRPC PolicyServer
 
 🧰 **[vlnr](https://github.com/nandrzej/vlnr)** - AI security agent for Python supply-chain review that scans packages, generates exploits, and validates findings in Docker.
 
+🧰 **[Agent-Security-Regression-Harness](https://github.com/OWASP/Agent-Security-Regression-Harness)** - OWASP regression harness for testing security behavior in agentic applications and MCP-integrated systems.
+
+🧰 **[whitney](https://github.com/transilienceai/whitney)** - Static AI security scanner for prompt injection, broken LLM-as-judge patterns, and AI dependency SBOM coverage.
+
+🧰 **[prompt-authgate](https://github.com/hswtnb-blip/prompt-authgate)** - Claude Code prompt-injection defense that separates trusted user prompts from untrusted file, web, and MCP input.
+
+🧰 **[AgentForensics](https://github.com/aparnaa19/AgentForensics)** - Real-time LLM agent session monitor for detecting prompt injection across tool outputs, web pages, documents, and APIs.
+
+🧰 **[pdf-injection-scanner](https://github.com/Andy8647/pdf-injection-scanner)** - CLI scanner for hidden prompt-injection content in PDFs, including white text, tiny fonts, and off-page text.
+
+🧰 **[Armorer-Guard](https://github.com/ArmorerLabs/Armorer-Guard)** - Local scanner for AI-agent prompt injection, credential leaks, data exfiltration, and risky tool calls.
+
 ---
 
 # 📄 Reports
@@ -99,8 +114,11 @@ The Institute for Security and Technology frames agentic AI around identity, att
 📘 **[Securing the Agentic State: A Practical Guide to Identity & Access Management for AI Agents in Federal Government](https://atarc.org/project/white-paper-securing-the-agentic-state/)**  
 ATARC's Identity Management Working Group focuses on identity and access management for AI agents in federal environments. The practical takeaway is that agent permissions, delegation, speed, and auditability need controls beyond human-centric IAM assumptions.
 
-📘 **[The AI Agent Governance Gap: What CISOs Need Now](https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-agent-governance-framework-gap-20260403/)**  
-Cloud Security Alliance analyzes why existing governance frameworks miss runtime behavior, delegated authority, inter-agent trust, and agent identity visibility. The strongest security signal is the shift from static policy documents to enforceable inventories, scoped credentials, and agent-specific monitoring.
+📘 **[AI RMF Profile on Trustworthy AI in Critical Infrastructure](https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure)**  
+NIST's concept note starts work on an AI RMF profile for critical infrastructure sectors using AI across IT, OT, and ICS environments. The security value is the focus on translating AI trustworthiness requirements into lifecycle and supply-chain practices for high-stakes infrastructure operators.
+
+📘 **[General-Purpose AI Risk-Management Standards Profile](https://cltc.berkeley.edu/research/research-library/)**  
+UC Berkeley CLTC's AI Security Initiative published version 1.2 of its general-purpose AI risk-management standards profile. It gives security and governance teams a non-vendor standards-mapping resource for identifying and mitigating GPAI risks across model development, deployment, and oversight.
 
 ---
 
@@ -110,9 +128,9 @@ Cloud Security Alliance analyzes why existing governance frameworks miss runtime
 
 📅 [siberXcon 2026 / AiSecCon](https://siberx.org/event/siberxcon-2026/) - May 25-27, 2026 · Toronto, Canada · Organizer: siberX
 
-## August 2026
+## June 2026
 
-📅 [The AI Summit at Black Hat USA 2026](https://blackhat.com/us-26/ai-summit.html) - August 4, 2026 · Las Vegas, NV, USA · Organizer: Black Hat
+📅 [SiMLA 2026 - Security in Machine Learning and its Applications](https://simlaacns.github.io/) - June 22-25, 2026 · Stony Brook, NY, USA · Organizer: SiMLA / ACNS
 
 ## October 2026
 
@@ -157,6 +175,18 @@ Zhihao Chen, Ying Zhang, Yi Liu, Gelei Deng, Yuekang Li, Yanjun Zhang, Jianting 
 
 📖 **From Component Manipulation to System Compromise: Understanding and Detecting Malicious MCP Servers**  
 Yiheng Huang, Zhijia Zhao, Bihuan Chen, Susheng Wu, Zhuotong Zhou, Yiheng Cao, Xin Hu, Xin Peng. [arXiv](https://arxiv.org/abs/2604.01905)
+
+📖 **Evaluation of Prompt Injection Defenses in Large Language Models**  
+Priyal Deep, Shane Emmons, Amy Fox, Kyle Bacon, Kelley McAllister, Krisztian Flautner. [arXiv](https://arxiv.org/abs/2604.23887)
+
+📖 **SoK: Security of Autonomous LLM Agents in Agentic Commerce**  
+Qian'ang Mao, Jiaxin Wang, Ya Liu, Li Zhu, Cong Ma, Jiaqi Yan. [arXiv](https://arxiv.org/abs/2604.15367)
+
+📖 **Black-Box Skill Stealing Attack from Proprietary LLM Agents: An Empirical Study**  
+Zihan Wang, Rui Zhang, Yu Liu, Chi Liu, Qingchuan Zhao, Hongwei Li, Guowen Xu. [arXiv](https://arxiv.org/abs/2604.21829)
+
+📖 **Secret Stealing Attacks on Local LLM Fine-Tuning through Supply-Chain Model Code Backdoors**  
+Zi Li, Tian Zhou, Wenze Li, Jingyu Hua, Yunlong Mao, Sheng Zhong. [arXiv](https://arxiv.org/abs/2604.27426)
 
 ---
 
