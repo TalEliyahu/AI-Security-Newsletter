@@ -165,6 +165,26 @@ Yiheng Huang, Zhijia Zhao, Bihuan Chen, Susheng Wu, Zhuotong Zhou, Yiheng Cao, X
 
 # 🎥 Videos
 
+1️⃣ [BSides Charlotte 2026: LLM Attacks Explained Simply](https://www.youtube.com/watch?v=soL3Vu-4HeQ) - Pranay Singh Suri & Jaimeet Singh Suri at BSides Charlotte
+
+2️⃣ [BSides Charlotte 2026: Hooks and Hooks](https://www.youtube.com/watch?v=oFkQKalFpbE) - Levone Campbell at BSides Charlotte
+
+3️⃣ [BSides Charlotte 2026: Provisioned Privilege](https://www.youtube.com/watch?v=rMo1WbEmoZY) - Dr. Pravallika Devineni & Doug Garbarino at BSides Charlotte
+
+4️⃣ [Model Context Protocol (MCP): The Future of AI-Powered SOC Workflows](https://www.youtube.com/watch?v=A8bWZUOO8Ps) - James "Pope" Pope at BSidesSLC
+
+5️⃣ [Own Your AI Security Future](https://www.youtube.com/watch?v=PCsiSshTNfE) - Seth Johnson at BSidesSLC
+
+6️⃣ [Beyond Vibe Coding: Building Reliable AI AppSec Tools](https://www.youtube.com/watch?v=0MN9R5780Ds) - Emily Choi Greene at BSides Vancouver Island
+
+7️⃣ [MCP LFI in 60 minutes (or your money back)](https://www.youtube.com/watch?v=_iZDkQ9q40U) - Kurt Boberg at BSides Seattle
+
+8️⃣ [Up and Down Technique: Exposing Hidden Data from RAG Systems](https://www.youtube.com/watch?v=PEq-Njz4G70) - Pedro "drop" Paniago at BSides Limburg
+
+9️⃣ [Waking Up to AI: An Adventure in Governance](https://www.youtube.com/watch?v=zIvuepYysN0) - Brian Myers at BSides Seattle
+
+🔟 [AI, MCP and Security](https://www.youtube.com/watch?v=pT6QY2CmAZA) - Dominik Guhr at Keycloak DevDay
+
 ---
 
 # 🤝 Let's Connect
