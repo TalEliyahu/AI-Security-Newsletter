@@ -135,29 +135,29 @@ Georgetown CSET maps high-level AI guidance into practical implementation steps.
 
 # 🛡️ CVEs
 
-🛡️ [CVE-2026-6603: AgentScope code injection in Python and shell execution helpers](https://nvd.nist.gov/vuln/detail/CVE-2026-6603)  
-NVD tracks remotely exploitable code injection in AgentScope's Python and shell execution helpers, reinforcing that agent framework tool-execution paths need authentication, isolation, and explicit capability boundaries.
-
-🛡️ [CVE-2026-33626: LMDeploy vision-language SSRF](https://nvd.nist.gov/vuln/detail/CVE-2026-33626)  
-LMDeploy's vision-language image loader fetched arbitrary URLs without internal-address validation, making GPU inference nodes potential paths to cloud metadata services and internal network resources.
-
-🛡️ [CVE-2026-35044: BentoML Dockerfile template injection](https://nvd.nist.gov/vuln/detail/CVE-2026-35044)  
-BentoML rendered user-controlled Dockerfile templates with unsandboxed Jinja2 during container generation, so malicious Bento archives could execute Python on the host before model-serving containers ever started.
-
 🛡️ [CVE-2026-39861: Claude Code sandbox escape via symlink following](https://raxe.ai/labs/advisories/RAXE-2026-059)  
 RAXE documents a Claude Code sandbox-boundary failure where prompt-injection-steered symlink creation and later unsandboxed writes could land outside the intended workspace.
-
-🛡️ [CVE-2026-42208: LiteLLM proxy API key verification SQL injection](https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc)  
-Critical pre-authentication SQL injection in LiteLLM's API-key verification path could expose or modify proxy database records, making LLM gateway credential stores and provider access a priority patch target.
 
 🛡️ [CVE-2026-5760: SGLang rerank RCE via malicious GGUF template](https://cyberveille.esante.gouv.fr/alertes/sglang-cve-2026-5760-2026-04-24)  
 SGLang's `/v1/rerank` path could render malicious GGUF tokenizer templates with unsandboxed Jinja2, turning model files into executable supply-chain inputs for inference servers.
 
+🛡️ [CVE-2026-25874: Hugging Face LeRobot unauthenticated pickle RCE](https://chocapikk.com/posts/2026/lerobot-pickle-rce/)  
+LeRobot's gRPC PolicyServer accepted attacker-controlled pickle payloads over an unauthenticated channel, a sharp reminder that AI robotics and inference control planes cannot trust internal serialization by default.
+
+🛡️ [CVE-2026-35044: BentoML Dockerfile template injection](https://nvd.nist.gov/vuln/detail/CVE-2026-35044)  
+BentoML rendered user-controlled Dockerfile templates with unsandboxed Jinja2 during container generation, so malicious Bento archives could execute Python on the host before model-serving containers ever started.
+
 🛡️ [CVE-2026-5752: Terrarium sandbox escape](https://kb.cert.org/vuls/id/414811)  
 CERT/CC documents a critical Terrarium sandbox escape that reaches Node.js internals and executes commands as root inside the host process, reinforcing why AI code-execution sandboxes need container, network, and credential isolation.
 
-🛡️ [CVE-2026-25874: Hugging Face LeRobot unauthenticated pickle RCE](https://chocapikk.com/posts/2026/lerobot-pickle-rce/)  
-LeRobot's gRPC PolicyServer accepted attacker-controlled pickle payloads over an unauthenticated channel, a sharp reminder that AI robotics and inference control planes cannot trust internal serialization by default.
+🛡️ [CVE-2026-42208: LiteLLM proxy API key verification SQL injection](https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc)  
+Critical pre-authentication SQL injection in LiteLLM's API-key verification path could expose or modify proxy database records, making LLM gateway credential stores and provider access a priority patch target.
+
+🛡️ [CVE-2026-33626: LMDeploy vision-language SSRF](https://nvd.nist.gov/vuln/detail/CVE-2026-33626)  
+LMDeploy's vision-language image loader fetched arbitrary URLs without internal-address validation, making GPU inference nodes potential paths to cloud metadata services and internal network resources.
+
+🛡️ [CVE-2026-6603: AgentScope code injection in Python and shell execution helpers](https://nvd.nist.gov/vuln/detail/CVE-2026-6603)  
+NVD tracks remotely exploitable code injection in AgentScope's Python and shell execution helpers, reinforcing that agent framework tool-execution paths need authentication, isolation, and explicit capability boundaries.
 
 ---
 
@@ -256,14 +256,20 @@ Yulin Chen, Tri Cao, Haoran Li, Yue Liu, Yibo Li, Yufei He, Le Minh Khoi, Yangqi
 
 # 💬 Reddit Most Interesting Conversations
 
+💬 [Systemic Flaw in MCP Protocol Could Expose 150 Million Downloads](https://www.reddit.com/r/webdev/comments/1so5gzp/systemic_flaw_in_mcp_protocol_could_expose_150/)  
+Commenters push past the headline into MCP trust boundaries, local versus remote tool execution, STDIO-backed launches, and whether validation belongs in protocol SDKs or downstream clients.
+
+💬 [Anyone else feel like AI security is being figured out in production right now?](https://www.reddit.com/r/artificial/comments/1sbgw8y/anyone_else_feel_like_ai_security_is_being/)  
+The useful part of the thread is the practitioner discussion around production AI risk: prompt injection, shadow AI, sensitive data handling, logging gaps, and why traditional controls do not map cleanly onto LLM applications.
+
 💬 [Prompt Injection Detection?](https://www.reddit.com/r/cybersecurity/comments/1semk5r/prompt_injection_detection/)  
 Practitioners discuss why prompt-injection detection has to move beyond input filtering toward canary tokens, tool-call telemetry, RAG context logging, and post-execution behavioral signals.
 
+💬 [System prompts are not a security layer. Here's what actually stops prompt injection in production.](https://www.reddit.com/r/PromptEngineering/comments/1shsmdz/system_prompts_are_not_a_security_layer_heres/)  
+The thread is a useful reminder that system prompts are not enforcement boundaries; the security value is in how commenters separate prompt design from authorization, isolation, and tool-permission controls.
+
 💬 [Open dataset: 100k+ multimodal prompt injection samples with per-category academic sourcing](https://www.reddit.com/r/netsec/comments/1sn2o3v/open_dataset_100k_multimodal_prompt_injection/)  
 The discussion covers dataset methodology, multimodal prompt injection coverage, MCP tool descriptor poisoning, reasoning-trace attacks, and how evaluation ratios can mislead production detector performance.
-
-💬 [Built an MCP proxy that catches prompt injections in tool responses](https://www.reddit.com/r/mcp/comments/1sq2ybq/built_an_mcp_proxy_that_catches_prompt_injections/)  
-The comments focus on where to place MCP detection, why warn-first behavior can be safer for autonomous workflows, and how JSON-path attribution helps distinguish nested tool-output injection from top-level instructions.
 
 ---
 
