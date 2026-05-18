@@ -135,29 +135,29 @@ Georgetown CSET maps high-level AI guidance into practical implementation steps.
 
 # 🛡️ CVEs
 
-🛡️ [CVE-2026-6603: AgentScope code injection in Python and shell execution helpers](https://nvd.nist.gov/vuln/detail/CVE-2026-6603)  
-NVD tracks remotely exploitable code injection in AgentScope's Python and shell execution helpers, reinforcing that agent framework tool-execution paths need authentication, isolation, and explicit capability boundaries.
-
-🛡️ [CVE-2026-33626: LMDeploy vision-language SSRF](https://nvd.nist.gov/vuln/detail/CVE-2026-33626)  
-LMDeploy's vision-language image loader fetched arbitrary URLs without internal-address validation, making GPU inference nodes potential paths to cloud metadata services and internal network resources.
-
-🛡️ [CVE-2026-35044: BentoML Dockerfile template injection](https://nvd.nist.gov/vuln/detail/CVE-2026-35044)  
-BentoML rendered user-controlled Dockerfile templates with unsandboxed Jinja2 during container generation, so malicious Bento archives could execute Python on the host before model-serving containers ever started.
-
 🛡️ [CVE-2026-39861: Claude Code sandbox escape via symlink following](https://raxe.ai/labs/advisories/RAXE-2026-059)  
 RAXE documents a Claude Code sandbox-boundary failure where prompt-injection-steered symlink creation and later unsandboxed writes could land outside the intended workspace.
-
-🛡️ [CVE-2026-42208: LiteLLM proxy API key verification SQL injection](https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc)  
-Critical pre-authentication SQL injection in LiteLLM's API-key verification path could expose or modify proxy database records, making LLM gateway credential stores and provider access a priority patch target.
 
 🛡️ [CVE-2026-5760: SGLang rerank RCE via malicious GGUF template](https://cyberveille.esante.gouv.fr/alertes/sglang-cve-2026-5760-2026-04-24)  
 SGLang's `/v1/rerank` path could render malicious GGUF tokenizer templates with unsandboxed Jinja2, turning model files into executable supply-chain inputs for inference servers.
 
+🛡️ [CVE-2026-25874: Hugging Face LeRobot unauthenticated pickle RCE](https://chocapikk.com/posts/2026/lerobot-pickle-rce/)  
+LeRobot's gRPC PolicyServer accepted attacker-controlled pickle payloads over an unauthenticated channel, a sharp reminder that AI robotics and inference control planes cannot trust internal serialization by default.
+
+🛡️ [CVE-2026-35044: BentoML Dockerfile template injection](https://nvd.nist.gov/vuln/detail/CVE-2026-35044)  
+BentoML rendered user-controlled Dockerfile templates with unsandboxed Jinja2 during container generation, so malicious Bento archives could execute Python on the host before model-serving containers ever started.
+
 🛡️ [CVE-2026-5752: Terrarium sandbox escape](https://kb.cert.org/vuls/id/414811)  
 CERT/CC documents a critical Terrarium sandbox escape that reaches Node.js internals and executes commands as root inside the host process, reinforcing why AI code-execution sandboxes need container, network, and credential isolation.
 
-🛡️ [CVE-2026-25874: Hugging Face LeRobot unauthenticated pickle RCE](https://chocapikk.com/posts/2026/lerobot-pickle-rce/)  
-LeRobot's gRPC PolicyServer accepted attacker-controlled pickle payloads over an unauthenticated channel, a sharp reminder that AI robotics and inference control planes cannot trust internal serialization by default.
+🛡️ [CVE-2026-42208: LiteLLM proxy API key verification SQL injection](https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc)  
+Critical pre-authentication SQL injection in LiteLLM's API-key verification path could expose or modify proxy database records, making LLM gateway credential stores and provider access a priority patch target.
+
+🛡️ [CVE-2026-33626: LMDeploy vision-language SSRF](https://nvd.nist.gov/vuln/detail/CVE-2026-33626)  
+LMDeploy's vision-language image loader fetched arbitrary URLs without internal-address validation, making GPU inference nodes potential paths to cloud metadata services and internal network resources.
+
+🛡️ [CVE-2026-6603: AgentScope code injection in Python and shell execution helpers](https://nvd.nist.gov/vuln/detail/CVE-2026-6603)  
+NVD tracks remotely exploitable code injection in AgentScope's Python and shell execution helpers, reinforcing that agent framework tool-execution paths need authentication, isolation, and explicit capability boundaries.
 
 ---
 
