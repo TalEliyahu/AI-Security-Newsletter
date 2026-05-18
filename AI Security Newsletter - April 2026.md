@@ -59,47 +59,19 @@ ReversingLabs analyzes PromptMink, a malicious dependency campaign where AI-assi
 
 # 🧰 Tools & Resources
 
-🧰 **[Armorer-Guard](https://github.com/ArmorerLabs/Armorer-Guard)** - Local scanner for AI-agent prompt injection, credential leaks, data exfiltration, and risky tool calls. ⭐️24
-
-🧰 **[awesome-ai-agent-attacks](https://github.com/webpro255/awesome-ai-agent-attacks)** - Curated timeline of AI agent security incidents, breaches, and vulnerabilities for practitioner threat modeling. ⭐️20
-
-🧰 **[llm-con](https://github.com/lulbitz/llm-con)** - LLM security assessment framework for recon, fingerprinting, jailbreak testing, guardrail bypass, and data-exfiltration simulation. ⭐️16
-
-🧰 **[llm-red-team-toolkit](https://github.com/bastiaan365/llm-red-team-toolkit)** - Python CLI for automated LLM app security testing across prompt injection, jailbreak, exfiltration, and tool-abuse cases. ⭐️0
-
-🧰 **[claude-mythos](https://github.com/anshug/claude-mythos)** - Claude-oriented vulnerability discovery framework with specialized agents for recon, chaining, exploit validation, and triage. ⭐️31
-
-🧰 **[ClawArmor](https://github.com/Alibaba-AAIG/ClawArmor)** - Adaptive defense for AI agents against prompt injection, data exfiltration, and multi-stage attacks. ⭐️19
-
-🧰 **[skillguard](https://github.com/obielin/skillguard)** - Security scanner for AI agent skills that checks prompt injection, data exfiltration, and malicious payloads before installation. ⭐️12
-
-🧰 **[mcp-security-proxy](https://github.com/taha-kahya/mcp-security-proxy)** - Transparent MCP security proxy that monitors tool calls and responses for rug pulls, prompt injection, credential leakage, and anomalies. ⭐️0
-
-🧰 **[ClawSafety](https://github.com/weibowen555/ClawSafety)** - Benchmark for personal AI agents under realistic prompt injection across domains, vectors, and harmful action types. ⭐️16
-
-🧰 **[cve-mcp-server](https://github.com/mukul975/cve-mcp-server)** - MCP server exposing CVE lookup, EPSS, CISA KEV, MITRE ATT&CK, Shodan, VirusTotal, and related security-intelligence tools. ⭐️565
-
-🧰 **[kontext-cli](https://github.com/kontext-security/kontext-cli)** - Runtime security layer for tool-using AI agents with permissions, credential handling, policy enforcement, and audit trails. ⭐️195
-
-🧰 **[vulnhawk](https://github.com/momenbasel/vulnhawk)** - AI-assisted SAST scanner focused on auth bypass, IDOR, and logic bugs across common application languages. ⭐️55
-
-🧰 **[crucible](https://github.com/crucible-security/crucible)** - Testing framework for autonomous red teaming, behavioral monitoring, and security checks for LLM agents. ⭐️40
-
-🧰 **[vlnr](https://github.com/nandrzej/vlnr)** - AI security agent for Python supply-chain review that scans packages, generates exploits, and validates findings in Docker. ⭐️43
-
-🧰 **[whitney](https://github.com/transilienceai/whitney)** - Static AI security scanner for prompt injection, broken LLM-as-judge patterns, and AI dependency SBOM coverage. ⭐️29
-
-🧰 **[prompt-authgate](https://github.com/hswtnb-blip/prompt-authgate)** - Claude Code prompt-injection defense that separates trusted user prompts from untrusted file, web, and MCP input. ⭐️14
-
-🧰 **[AgentForensics](https://github.com/aparnaa19/AgentForensics)** - Real-time LLM agent session monitor for detecting prompt injection across tool outputs, web pages, documents, and APIs. ⭐️11
-
 🧰 **[deepsec](https://github.com/vercel-labs/deepsec)** - Security harness for finding codebase vulnerabilities with coding agents. ⭐️2,772
 
 🧰 **[ThinkWatch](https://github.com/ThinkWatchProject/ThinkWatch)** - AI bastion host for secure AI API and MCP access with proxying, RBAC, audit logs, rate limiting, and cost tracking. ⭐️909
 
+🧰 **[cve-mcp-server](https://github.com/mukul975/cve-mcp-server)** - MCP server exposing CVE lookup, EPSS, CISA KEV, MITRE ATT&CK, Shodan, VirusTotal, and related security-intelligence tools. ⭐️565
+
 🧰 **[pentest-ai](https://github.com/0xSteph/pentest-ai)** - Offensive-security MCP server with wrapped tools, specialist agents, and web-application probes for controlled testing. ⭐️260
 
+🧰 **[kontext-cli](https://github.com/kontext-security/kontext-cli)** - Runtime security layer for tool-using AI agents with permissions, credential handling, policy enforcement, and audit trails. ⭐️195
+
 🧰 **[SkillWard](https://github.com/Fangcun-AI/SkillWard)** - Scanner for agent skills that looks for hidden threats before deployment. ⭐️123
+
+🧰 **[vulnhawk](https://github.com/momenbasel/vulnhawk)** - AI-assisted SAST scanner focused on auth bypass, IDOR, and logic bugs across common application languages. ⭐️55
 
 🧰 **[Talon](https://github.com/CarbeneAI/Talon)** - Penetration-testing MCP for Claude Code with recon, service enumeration, and reporting workflows. ⭐️55
 
@@ -107,7 +79,35 @@ ReversingLabs analyzes PromptMink, a malicious dependency campaign where AI-assi
 
 🧰 **[bordair-multimodal](https://github.com/Josh-blythe/bordair-multimodal)** - Multimodal prompt-injection test suite spanning text, image, document, and audio payloads. ⭐️50
 
+🧰 **[vlnr](https://github.com/nandrzej/vlnr)** - AI security agent for Python supply-chain review that scans packages, generates exploits, and validates findings in Docker. ⭐️43
+
+🧰 **[crucible](https://github.com/crucible-security/crucible)** - Testing framework for autonomous red teaming, behavioral monitoring, and security checks for LLM agents. ⭐️40
+
+🧰 **[claude-mythos](https://github.com/anshug/claude-mythos)** - Claude-oriented vulnerability discovery framework with specialized agents for recon, chaining, exploit validation, and triage. ⭐️31
+
+🧰 **[whitney](https://github.com/transilienceai/whitney)** - Static AI security scanner for prompt injection, broken LLM-as-judge patterns, and AI dependency SBOM coverage. ⭐️29
+
+🧰 **[Armorer-Guard](https://github.com/ArmorerLabs/Armorer-Guard)** - Local scanner for AI-agent prompt injection, credential leaks, data exfiltration, and risky tool calls. ⭐️24
+
+🧰 **[awesome-ai-agent-attacks](https://github.com/webpro255/awesome-ai-agent-attacks)** - Curated timeline of AI agent security incidents, breaches, and vulnerabilities for practitioner threat modeling. ⭐️20
+
+🧰 **[ClawArmor](https://github.com/Alibaba-AAIG/ClawArmor)** - Adaptive defense for AI agents against prompt injection, data exfiltration, and multi-stage attacks. ⭐️19
+
+🧰 **[llm-con](https://github.com/lulbitz/llm-con)** - LLM security assessment framework for recon, fingerprinting, jailbreak testing, guardrail bypass, and data-exfiltration simulation. ⭐️16
+
+🧰 **[ClawSafety](https://github.com/weibowen555/ClawSafety)** - Benchmark for personal AI agents under realistic prompt injection across domains, vectors, and harmful action types. ⭐️16
+
+🧰 **[prompt-authgate](https://github.com/hswtnb-blip/prompt-authgate)** - Claude Code prompt-injection defense that separates trusted user prompts from untrusted file, web, and MCP input. ⭐️14
+
+🧰 **[skillguard](https://github.com/obielin/skillguard)** - Security scanner for AI agent skills that checks prompt injection, data exfiltration, and malicious payloads before installation. ⭐️12
+
+🧰 **[AgentForensics](https://github.com/aparnaa19/AgentForensics)** - Real-time LLM agent session monitor for detecting prompt injection across tool outputs, web pages, documents, and APIs. ⭐️11
+
 🧰 **[pdf-injection-scanner](https://github.com/Andy8647/pdf-injection-scanner)** - CLI scanner for hidden prompt-injection content in PDFs, including white text, tiny fonts, and off-page text. ⭐️11
+
+🧰 **[llm-red-team-toolkit](https://github.com/bastiaan365/llm-red-team-toolkit)** - Python CLI for automated LLM app security testing across prompt injection, jailbreak, exfiltration, and tool-abuse cases. ⭐️0
+
+🧰 **[mcp-security-proxy](https://github.com/taha-kahya/mcp-security-proxy)** - Transparent MCP security proxy that monitors tool calls and responses for rug pulls, prompt injection, credential leakage, and anomalies. ⭐️0
 
 ---
 
