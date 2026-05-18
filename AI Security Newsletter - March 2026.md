@@ -4,103 +4,103 @@ A digest of AI security research, insights, reports, upcoming events, and tools 
 
 Sponsored by [InnovGuard.com](https://innovguard.com) - Technology Risk & Cybersecurity Advisory - Innovate and Invest with Confidence, Lead with Assurance.
 
-This month's issue is especially focused on agentic AI security, AI-assisted vulnerability discovery, prompt injection, MCP/tool abuse, and runtime controls.
+This month's issue is focused on technical AI security research, vulnerability analysis, exploit chains, agent/tool abuse, AI malware, and concrete defensive engineering lessons. Product announcements, vendor partnerships, vendor reports, short videos, tutorials, and non-conference videos were excluded.
 
 ---
 
 # 🔍 Insights
 
 📌 [Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild](https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/)  
-Unit 42 documents an observed web-based indirect prompt injection pattern where an agent processes attacker-controlled page content as operational instruction. The useful takeaway is not just "prompt injection exists"; it is that browser-connected agents need content trust boundaries, tool-use policy, and runtime monitoring before they browse untrusted sites with useful permissions.
-
-📌 [Codex Security: now in research preview](https://openai.com/index/codex-security-now-in-research-preview/)  
-OpenAI introduced Codex Security, an application security agent that builds project context, creates editable threat models, validates findings where possible, and proposes patches. It matters because AI-assisted vulnerability discovery is shifting from standalone scanning toward agentic workflows that reason over architecture, exploitability, and remediation.
-
-📌 [Partnering with Mozilla to improve Firefox's security](https://www.anthropic.com/news/mozilla-firefox-security?id=2631)  
-Anthropic describes a Mozilla collaboration where Claude Opus 4.6 found Firefox vulnerabilities that were triaged and fixed through Mozilla's normal process. The practical signal for defenders is that maintainers will need processes for AI-generated vulnerability reports, including validation, duplicate handling, patch review, and exploitability assessment.
+Unit 42 documents observed indirect prompt injection against web-connected AI agents, including hidden or manipulated website content that agents process as instructions. The important lesson is architectural: browser agents need provenance, content trust boundaries, tool-use limits, and runtime monitoring before they ingest arbitrary web pages.
 
 📌 [AI as tradecraft: How threat actors operationalize AI](https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/)  
-Microsoft Threat Intelligence maps how threat actors use AI across phishing, persona building, infrastructure research, malware iteration, discovery, persistence, and exfiltration planning. The post is useful because it separates AI as an accelerator from fully autonomous attack execution and gives defenders concrete behaviors to hunt.
+Microsoft Threat Intelligence maps how threat actors are using AI for phishing, persona building, infrastructure research, malware iteration, discovery, persistence, and exfiltration planning. It is useful because it keeps the threat model grounded in observed operator workflows rather than vague claims about fully autonomous attacks.
 
-📌 [Cisco Secure AI Factory with NVIDIA makes AI easier to deploy and secure, anywhere organizations need it](https://investor.cisco.com/files/doc_news/Cisco-Secure-AI-Factory-with-NVIDIA-Makes-AI-Easier-to-Deploy-and-Secure-Anywhere-Organizations-Need-It-2026.pdf)  
-Cisco and NVIDIA expanded their Secure AI Factory architecture with security controls for distributed AI infrastructure and agent execution. The security angle is the move toward policy enforcement near AI workloads, including BlueField DPU enforcement, Cisco AI Defense, and guardrails for agent and tool actions.
+📌 [Detecting and analyzing prompt abuse in AI tools](https://www.microsoft.com/en-us/security/blog/2026/03/12/detecting-analyzing-prompt-abuse-in-ai-tools/)  
+Microsoft Incident Response turns prompt abuse into an investigation workflow: discover AI apps, collect logs, identify hidden instructions, inspect suspicious file requests, and connect prompt events to incident response. The defensive value is practical telemetry design for production AI systems.
 
-📌 [Observability for AI Systems: Strengthening visibility for proactive risk detection](https://www.microsoft.com/en-us/security/blog/2026/03/18/observability-ai-systems-strengthening-visibility-proactive-risk-detection/)  
-Microsoft argues that AI system observability has to cover model behavior, prompts, grounding data, agent actions, and operational context, not just infrastructure metrics. This is a strong reminder that logging for AI needs to preserve the right evidence for abuse investigation without turning every prompt into uncontrolled sensitive data.
+📌 [Claudy Day: Chaining Prompt Injection and Data Exfiltration in Claude.ai](https://www.oasis.security/blog/claude-ai-prompt-injection-data-exfiltration-vulnerability)  
+Oasis describes a Claude.ai attack chain combining invisible prompt injection, data exfiltration through the Anthropic Files API, and an open redirect delivery path. The finding shows why AI assistants need strict handling for pre-filled prompts, file APIs, conversation history access, and externally supplied links.
 
-📌 [HackerOne launches agentic prompt injection testing as AI vulnerabilities surge 540%](https://www.hackerone.com/press-release/hackerone-launches-agentic-prompt-injection-testing-ai-vulnerabilities-surge-540)  
-HackerOne launched agentic prompt injection testing, pointing to rising AI vulnerability submissions on its platform. Even though this is a product announcement, it is a useful market signal: bug bounty and testing programs are starting to treat prompt injection and agent misuse as testable vulnerability classes rather than generic AI risk.
+📌 [MS-Agent does not properly sanitize commands sent to its shell tool, allowing for RCE](https://www.kb.cert.org/vuls/id/431821)  
+CERT/CC published CVE-2026-2256 for command injection in ModelScope's MS-Agent framework through unsanitized prompt-derived input passed to a shell tool. This is a clean example of why agent tools cannot rely on regex denylists when prompts, retrieved documents, or external content can influence command construction.
 
-📌 [Secure Homegrown AI Agents with Falcon AIDR and NVIDIA NeMo Guardrails](https://www.crowdstrike.com/en-us/blog/secure-homegrown-ai-agents-with-crowdstrike-falcon-aidr-and-nvidia-nemo-guardrails/)  
-CrowdStrike shows how Falcon AIDR can be integrated with NVIDIA NeMo Guardrails to inspect agent inputs and outputs, block prompt injection attempts, redact sensitive data, and apply policy decisions at runtime. The security relevance is the action layer: production agents need controls around what they read, write, and call, not only safer model prompts.
+📌 [Claude Code has a Workspace Trust Dialog Bypass via Repo-Controlled Settings File](https://github.com/advisories/GHSA-mmgp-wc2j-qcv7)  
+GitHub Advisory Database tracks CVE-2026-33068, where Claude Code resolved repository-controlled settings before showing the workspace trust dialog. The bug matters beyond one tool because it shows that trust prompts fail if untrusted repository state can influence permission mode before the trust decision is made.
 
-📌 [Secure agentic AI end-to-end](https://www.microsoft.com/en-us/security/blog/2026/03/20/secure-agentic-ai-end-to-end/)  
-Microsoft lays out an agent security stack spanning agent inventory, identity, data controls, prompt-injection protection, and security operations. It is a practical reference for teams moving from "AI app security" to full agent lifecycle governance across identities, tools, data, and SOC workflows.
+📌 [Snowflake Cortex AI Escapes Sandbox and Executes Malware](https://www.promptarmor.com/resources/snowflake-ai-escapes-sandbox-and-executes-malware)  
+PromptArmor details an indirect prompt injection chain against Snowflake Cortex Code CLI that bypassed human approval, used shell process substitution to evade command validation, and disabled the sandbox for execution. The case is a concrete warning that subagents, shell parsing, and sandbox override flags need deterministic enforcement outside the model.
+
+📌 [Invisible Threats: Source Code Exfiltration in Google Antigravity](https://www.firetail.ai/blog/invisible-threats-source-code-exfiltration-in-google-antigravity)  
+FireTail shows how invisible Unicode instructions in source comments can drive Google Antigravity to exfiltrate source code. The engineering lesson is simple and uncomfortable: human-in-the-loop review does not help when the human cannot see the instruction the model is processing.
+
+📌 [ShadowPrompt: How Any Website Could Have Hijacked Claude's Chrome Extension](https://www.koi.ai/blog/shadowprompt-how-any-website-could-have-hijacked-anthropic-claude-chrome-extension)  
+Koi Security chains an overly broad `*.claude.ai` trust boundary with XSS in a first-party subdomain to inject prompts into Claude's Chrome extension. This is useful threat modeling material for browser AI assistants, where extension messaging, trusted origins, and third-party embedded components become part of the agent control plane.
+
+📌 [A Slopoly start to AI-enhanced ransomware attacks](https://www.ibm.com/think/x-force/slopoly-start-ai-enhanced-ransomware-attacks)  
+IBM X-Force analyzes Slopoly, a likely LLM-generated PowerShell backdoor used during an Interlock ransomware intrusion. The malware was not especially advanced, which is the point: AI can lower development cost for disposable C2 clients and make malware lineage harder to attribute.
+
+📌 [AI security: Defending against prompt injection and unsafe actions](https://www.redhat.com/en/blog/ai-security-defending-against-prompt-injection-and-unsafe-actions)  
+Red Hat frames prompt injection as an instruction-confusion boundary problem, then walks through input, output, runtime, RAG, and capability-mediation controls. The useful takeaway is to enforce authorization at the tool boundary, not inside the model's willingness to comply.
 
 📌 [Cursor Security: How to Secure AI-Generated Code in 2026](https://www.endorlabs.com/learn/cursor-security)  
-Endor Labs maps Cursor-related risks such as prompt injection in project context, malicious dependencies, hidden rules files, token leaks, and unreviewed auto-run execution. The article is useful for engineering security teams because it turns coding-assistant risk into concrete controls: workspace trust, dependency checks, egress filtering, secrets scanning, and mandatory review.
+Endor Labs maps coding-assistant risk into practical controls: workspace trust, dependency checks, secrets scanning, egress filtering, prompt/context hygiene, and review gates around auto-run execution. It is most valuable as an engineering checklist for teams standardizing on AI coding tools.
 
 📌 [7.2% of MCP Servers Have Security Vulnerabilities - What We Found Scanning 1,899 Servers](https://prompttools.co/blog/mcp-server-security-study-2026)  
-ClawGuard reports results from MCP server scanning and highlights credential exposure, tool poisoning, and audit gaps. Treat the exact vendor numbers as source-specific, but the pattern is important: MCP security review has to inspect tool metadata, auth posture, path handling, and hidden instructions before an agent is connected.
+ClawGuard reports MCP server findings around credential exposure, tool poisoning, command injection, and missing authentication. Treat the exact vendor numbers as source-specific, but the pattern is important: MCP reviews need to inspect tool metadata, auth, path handling, and hidden instructions before an agent connects.
 
-📌 [How SentinelOne's AI EDR autonomously discovered and stopped Anthropic's Claude from executing a zero day supply chain attack, globally](https://www.sentinelone.com/blog/how-sentinelones-ai-edr-autonomously-discovered-and-stopped-anthropics-claude-from-executing-a-zero-day-supply-chain-attack-globally/)  
-SentinelOne describes a supply-chain scenario involving agentic coding workflows, malicious packages, and endpoint/runtime intervention. The high-impact claims should be read as SentinelOne's account, but the defensive lesson is sound: AI coding agents execute in developer environments where package installation, shell execution, and secrets access need runtime controls.
+📌 [MCP Security 2026: 30 CVEs in 60 Days - What Went Wrong](https://www.heyuan110.com/posts/ai/2026-03-10-mcp-security-2026/)  
+This MCP security deep dive catalogs recurring failures across MCP servers, clients, and infrastructure: shell injection, path traversal, authentication gaps, trust caching, and tool metadata abuse. It is a useful operator checklist for teams moving MCP from experiments into production.
 
-📌 [How Charlotte AI AgentWorks Fuels Security's Agentic Ecosystem](https://www.crowdstrike.com/en-us/blog/how-charlotte-ai-agentworks-fuels-securitys-agentic-ecosystem/)  
-CrowdStrike explains its agent-building approach for security operations. The practical value is seeing how SOC agents are being packaged around defined tasks and data sources, which also clarifies where governance, permissions, telemetry, and human review need to sit before autonomous remediation scales.
-
-📌 [Addressing the OWASP Top 10 Risks in Agentic AI with Microsoft Copilot Studio](https://www.microsoft.com/en-us/security/blog/2026/03/30/addressing-the-owasp-top-10-risks-in-agentic-ai-with-microsoft-copilot-studio/)  
-Microsoft maps OWASP's Agentic AI Top 10 to concrete agent platform controls, including goal hijack, tool misuse, identity abuse, memory/context poisoning, and cascading failures. This is useful because it connects the taxonomy to implementation decisions security teams can actually audit.
-
-📌 [Establishing Runtime Security for Agentic AI](https://www.ibm.com/think/insights/agentic-ai-runtime-security)  
-IBM focuses on runtime security for agents that can call tools, handle credentials, and perform multi-step work. The key point is that agent security cannot stop at pre-deployment testing; teams need live policy enforcement, monitoring, and response paths for tool calls and delegated actions.
+📌 [Observability for AI Systems: Strengthening visibility for proactive risk detection](https://www.microsoft.com/en-us/security/blog/2026/03/18/observability-ai-systems-strengthening-visibility-proactive-risk-detection/)  
+Microsoft argues that AI observability must cover prompts, grounding data, model behavior, agent actions, tool calls, and operational context. The practical lesson is that AI logging has to preserve enough evidence for abuse investigations while still controlling sensitive prompt and data exposure.
 
 ---
 
 # 🧰 Tools & Resources
 
-🧰 **[onecli](https://github.com/onecli/onecli)** - Open-source credential vault designed to give AI agents service access without exposing raw keys directly to the agent runtime. ⭐️2.2k
+🧰 **[onecli](https://github.com/onecli/onecli)** - March-created credential vault for giving AI agents service access without exposing raw keys directly to the agent runtime. ⭐️2.2k
 
-🧰 **[zerobox](https://github.com/afshinm/zerobox)** - Lightweight process sandboxing for commands, with file, network, and credential controls useful for constraining coding-agent execution. ⭐️599
+🧰 **[zerobox](https://github.com/afshinm/zerobox)** - March-created process sandboxing tool with file, network, and credential controls useful for constraining coding-agent execution. ⭐️602
 
-🧰 **[api-relay-audit](https://github.com/toby-bridges/api-relay-audit)** - Audit tool for third-party AI API relay/proxy services, checking for hidden prompt injection, prompt leakage, instruction override, and context truncation. ⭐️442
+🧰 **[api-relay-audit](https://github.com/toby-bridges/api-relay-audit)** - March-created audit tool for third-party AI API relay/proxy services, checking for hidden prompt injection, prompt leakage, instruction override, and context truncation. ⭐️452
 
-🧰 **[hol-guard](https://github.com/hashgraph-online/hol-guard)** - AI developer-agent protection tool for Codex, Claude Code, Cursor, Gemini, OpenCode, plugins, skills, MCP servers, and agent harnesses. ⭐️319
+🧰 **[hol-guard](https://github.com/hashgraph-online/hol-guard)** - March-created AI developer-agent protection tool for Codex, Claude Code, Cursor, Gemini, OpenCode, plugins, skills, MCP servers, and agent harnesses. ⭐️319
 
-🧰 **[agentseal](https://github.com/getagentseal/agentseal)** - Toolkit for scanning local agent skills and MCP configs, monitoring for supply-chain issues, testing prompt-injection resistance, and auditing MCP servers. ⭐️257
+🧰 **[agentseal](https://github.com/getagentseal/agentseal)** - March-created toolkit for scanning local agent skills and MCP configs, monitoring for supply-chain issues, testing prompt-injection resistance, and auditing MCP servers. ⭐️257
 
-🧰 **[claudit-sec](https://github.com/HarmonicSecurity/claudit-sec)** - macOS audit tool for Claude Desktop and Claude Code environments, covering MCP servers, extensions, plugins, connectors, scheduled tasks, and permissions. ⭐️247
+🧰 **[claudit-sec](https://github.com/HarmonicSecurity/claudit-sec)** - March-created macOS audit tool for Claude Desktop and Claude Code environments, covering MCP servers, extensions, plugins, connectors, scheduled tasks, and permissions. ⭐️247
 
-🧰 **[clawshield-public](https://github.com/SleuthCo/clawshield-public)** - Agent security proxy with prompt-injection, PII, secrets, policy, audit, firewall, and monitoring components for agent traffic. ⭐️130
+🧰 **[clawshield-public](https://github.com/SleuthCo/clawshield-public)** - March-created agent security proxy with prompt-injection, PII, secrets, policy, audit, firewall, and monitoring components for agent traffic. ⭐️130
 
-🧰 **[AgentGuard](https://github.com/numbergroup/AgentGuard)** - AI agent security framework focused on prompt injection, command injection, Unicode bypass handling, and defensive checks around agent workflows. ⭐️100
+🧰 **[AgentGuard](https://github.com/numbergroup/AgentGuard)** - March-created AI agent security framework focused on prompt injection, command injection, Unicode bypass handling, and defensive checks around agent workflows. ⭐️100
 
-🧰 **[shellward](https://github.com/jnMetaCode/shellward)** - AI agent security middleware and MCP server with DLP flow controls, prompt-injection detection, and integration hooks for agent frameworks. ⭐️93
+🧰 **[shellward](https://github.com/jnMetaCode/shellward)** - March-created AI agent security middleware and MCP server with DLP flow controls, prompt-injection detection, and integration hooks for agent frameworks. ⭐️93
 
-🧰 **[agentsid-scanner](https://github.com/AgentsID-dev/agentsid-scanner)** - MCP server security scanner that grades authentication, permissions, injection risk, and tool safety. ⭐️23
+🧰 **[agentsid-scanner](https://github.com/AgentsID-dev/agentsid-scanner)** - March-created MCP server security scanner that grades authentication, permissions, injection risk, and tool safety. ⭐️23
 
-🧰 **[GRITS](https://github.com/X-Scale-AI/GRITS)** - Open-source framework for scoring, hardening, and governing AI agents with zero-trust-oriented controls. ⭐️11
+🧰 **[GRITS](https://github.com/X-Scale-AI/GRITS)** - March-created framework for scoring, hardening, and governing AI agents with zero-trust-oriented controls. ⭐️11
 
-🧰 **[agent-security-playbook](https://github.com/cmaenner/agent-security-playbook)** - OWASP-grounded procedures for prompt-injection testing, AI agent audits, and LLM risk assessment. ⭐️5
+🧰 **[agent-security-playbook](https://github.com/cmaenner/agent-security-playbook)** - March-created OWASP-grounded procedures for prompt-injection testing, AI agent audits, and LLM risk assessment. ⭐️5
 
 ---
 
 # 📄 Reports
 
-📘 **[HiddenLayer 2026 AI Threat Landscape Report](https://www.prnewswire.com/news-releases/hiddenlayer-releases-the-2026-ai-threat-landscape-report-spotlighting-the-rise-of-agentic-ai-and-the-expanding-attack-surface-of-autonomous-systems-302716687.html)**  
-HiddenLayer's March report focuses on agentic AI, AI supply-chain exposure, shadow AI, breach visibility gaps, and unclear ownership of AI security controls.
-
-📘 **[Rapid7 2026 Global Threat Landscape Report](https://www.rapid7.com/research/report/global-threat-landscape-report-2026/)**  
-Rapid7's report is broader cybersecurity, but it is relevant here because it calls out AI as an attacker force multiplier and connects shrinking exploitation timelines to the need for faster exposure management and response.
-
-📘 **[AI Cooperation Trajectories: Adversaries and Geostrategic Competitors](https://cetas.turing.ac.uk/publications/ai-cooperation-trajectories-adversaries-and-geostrategic-competitors)**  
-CETaS examines hostile AI cooperation among adversaries and geostrategic competitors, with implications for national security, AI-enabled cyber operations, and domestic resilience.
+📘 **[Artificial intelligence and machine learning: Supply chain risks and mitigations](https://www.cyber.gov.au/sites/default/files/2026-03/Artificial%20intelligence%20and%20machine%20learning%20-%20Supply%20chain%20risks%20and%20mitigations.pdf)**  
+Joint government guidance from Australian, Canadian, Japanese, New Zealand, Singaporean, South Korean, UK, and US cyber agencies covering AI/ML supply-chain risks across data, models, software, infrastructure, hardware, and third-party services.
 
 📘 **[Image-Based Prompt Injection: Hijacking Multimodal LLMs Through Visually Embedded Adversarial Instructions](https://labs.cloudsecurityalliance.org/research/csa-research-note-image-prompt-injection-multimodal-llm-2026/)**  
-Cloud Security Alliance's research note summarizes visual prompt-injection attack classes, multimodal threat scenarios, and defense-in-depth patterns for vision-capable AI systems.
+Cloud Security Alliance summarizes visual prompt-injection attack classes, multimodal threat scenarios, and defense-in-depth patterns for vision-capable AI systems.
 
-📘 **[Securing OpenClaw in the Enterprise: A Zero Trust Approach to Agentic AI Hardening](https://labs.cloudsecurityalliance.org/research/enterprise-openclaw-zero-trust-hardening-guide-v1/)**  
-Cloud Security Alliance maps OpenClaw and similar agentic platforms to zero-trust controls, agent identity, MCP/tool governance, sandboxing, supply-chain review, and operational hardening.
+📘 **[AI Chatbots as Covert Command-and-Control Infrastructure: Emerging Threat Patterns and Enterprise Defenses](https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-chatbot-c2-proxy-abuse-20260308-csa-sty/)**  
+Cloud Security Alliance reviews malware and threat-actor patterns that use commercial AI chatbot infrastructure as command-and-control, with defensive implications for API monitoring and abuse response.
+
+📘 **[AI Cooperation Trajectories: Adversaries and Geostrategic Competitors](https://cetas.turing.ac.uk/publications/ai-cooperation-trajectories-adversaries-and-geostrategic-competitors)**  
+CETaS examines hostile AI cooperation among adversaries and geostrategic competitors, with relevance for AI-enabled cyber operations, national-security risk, and resilience planning.
+
+📘 **[Model Poisoning: Credential Exfiltration in Self-Hosted LLM Deployments](https://labs.cloudsecurityalliance.org/research/csa-research-note-model-poisoning-self-hosted-llm-stealer-20/)**  
+Cloud Security Alliance analyzes model artifacts as a credential-theft vector in self-hosted LLM deployments, including risks from executable formats, unsafe loaders, templates, and trusted model registries.
 
 ---
 
@@ -167,25 +167,25 @@ Mateusz Dziemian, Maxwell Lin, Xiaohan Fu, Micha Nowak, Nick Winter, Eliot Jones
 
 # 🎥 Videos
 
-1️⃣ [The Emerging AI SOC Market Explained | Analyst Chat 291](https://www.youtube.com/watch?v=9ou_61F-H4A) - KuppingerCole Analysts
+1️⃣ [Attacking AI](https://www.youtube.com/watch?v=j51uMah-3js) - Jason Haddix at NDC Security 2026
 
-2️⃣ [Agentic Runtime Security Explained: Securing Non-Human Identities](https://www.youtube.com/watch?v=HtnlUosO3XA) - IBM Technology
+2️⃣ [Hijacking Google's CI/CD Through Prompt Injection: The New Era of AI-Based Exploits](https://www.youtube.com/watch?v=OtG6hBDSt24) - Mackenzie Jackson at NDC Security 2026
 
-3️⃣ [How to Build an AI SOC Analyst in 8 Minutes](https://www.youtube.com/watch?v=xWPsmQq3Le8) - Blake White
+3️⃣ [Black-hat LLMs](https://www.youtube.com/watch?v=1sd26pWhfmg) - Nicholas Carlini at [un]prompted 2026
 
-4️⃣ [What is Agentic Security Runtime? Securing AI Agents](https://www.youtube.com/watch?v=NH0plIdqDMk) - IBM Technology
+4️⃣ [Training BrowseSafe: Lessons from Detecting Prompt Injection](https://www.youtube.com/watch?v=Fzgqx1MauJg) - Kyle Polley at [un]prompted 2026
 
-5️⃣ [Securing AI Agents: Identity & Access Management with Entra Agent ID and OAuth 2.1](https://www.youtube.com/watch?v=B3J8er4xDWU) - Joe Tan
+5️⃣ [AI Security with Guarantees](https://www.youtube.com/watch?v=NU6l0Qcf5rU) - Ilia Shumailov at [un]prompted 2026
 
-6️⃣ [Stop buying AI security tools until you watch this](https://www.youtube.com/watch?v=tFSb2lSgqwA) - David Bombal
+6️⃣ [Source to Sink: Improving LLM Vuln Discovery](https://www.youtube.com/watch?v=bxwEZMhqeR0) - Scott Behrens and Justice Cassel at [un]prompted 2026
 
-7️⃣ [Beyond the Hype: Measuring Cyber Readiness in the Age of AI - Gibb Witham](https://www.youtube.com/watch?v=AU77gxn1lVo) - CyberRisk TV
+7️⃣ [NDSS 2026 - Chasing Shadows: Pitfalls in LLM Security Research](https://www.youtube.com/watch?v=iPwKbwxsxAE) - NDSS Symposium
 
-8️⃣ [OWASP Agentic Top 10 Risks You Must Know in 2026](https://www.youtube.com/watch?v=JRYHmsPUgmk) - Kratikal Tech Ltd.
+8️⃣ [The Responsibility Gap: AI and the Shift to True Security Accountability](https://www.youtube.com/watch?v=2DqsxSJM1mI) - RSAC 2026
 
-9️⃣ [AI Red Teaming: Advanced Adversary Simulation | Cybersecurity 2026](https://www.youtube.com/watch?v=TDJ4aOi3P2A) - Shield Spectrum
+9️⃣ [Ambient and Autonomous Security: Building Trust in the Agentic AI Era](https://www.youtube.com/watch?v=o4xrjdEPfoc) - RSAC 2026
 
-🔟 [Claude Hacked Firefox and Found 100+ Security Bugs](https://www.youtube.com/watch?v=8btR9Qy-Zl8) - OVERRIDE
+🔟 [BSides Seattle 2026 Keynote: Attacking AI](https://www.youtube.com/watch?v=Y1mifbXqGDo) - BSides Seattle
 
 ---
 
