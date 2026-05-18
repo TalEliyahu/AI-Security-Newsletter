@@ -10,56 +10,50 @@ This month's issue focuses on technical AI security research, vulnerability anal
 
 # 🔍 Insights
 
-📌 [Roo Code Command Auto-Approval OS Command Injection via Shell Substitution](https://www.sentinelone.com/vulnerability-database/cve-2026-30307/)  
-SentinelOne tracks a reported Roo Code auto-approval bypass where shell substitution inside an apparently allowlisted command could turn coding-agent convenience into OS command execution. The defensive lesson is to enforce command policy outside the agent UI, reject shell metacharacter tricks, and avoid broad auto-approval for untrusted tasks.
+📌 [The (In)security Landscape of AI-Powered GitHub Actions (Part 2/2)](https://www.wiz.io/blog/github-actions-security-ai-powered-actions-vulnerabilities)  
+Wiz Research analyzes AI-powered GitHub Actions where prompt injection, permission boundaries, and dynamically created credential files can turn CI automation into a secret-exfiltration path. The practical lesson is to treat agentic CI workflows as privileged code execution, not just text review.
 
-📌 [Claude Code Sandbox Escape via Symlink Following Enables Arbitrary File Write Outside Workspace](https://raxe.ai/labs/advisories/RAXE-2026-059)  
-RAXE Labs documents a Claude Code sandbox-escape path where symlink following could allow arbitrary file writes outside the intended workspace. Teams running coding agents against untrusted repositories should add workspace isolation, symlink monitoring, and version gates before exposing credentials or build systems.
-
-📌 [The MCP Vulnerability at the Heart of the AI Supply Chain](https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp/)  
-OX Security shows how MCP server registration can turn tool configuration into host command execution across multiple clients and SDKs. Teams adopting MCP need provenance checks, approval gates, and runtime isolation before accepting tool definitions from repositories or third-party packages.
-
-📌 [LMDeploy SSRF Exploited Against LLM Inference Engines](https://www.sysdig.com/blog/cve-2026-33626-how-attackers-exploited-lmdeploy-llm-inference-engines-in-12-hours)  
-Sysdig observed exploitation attempts against LMDeploy shortly after disclosure of an SSRF flaw in vision-language image loading. For teams running GPU-hosted inference, user-supplied image URLs, RAG fetchers, and agent retrieval paths should be treated as internal-network access primitives unless egress controls and metadata protections are enforced.
+📌 [Can AI Attack the Cloud? Lessons From Building an Autonomous Cloud Offensive Multi-Agent System](https://unit42.paloaltonetworks.com/autonomous-ai-cloud-attacks/)  
+Unit 42 describes a multi-agent cloud attack system that chains reconnaissance, exploitation, cloud identity abuse, and data exfiltration. The useful signal is where autonomy helps offensive workflows and where human approval, scoped credentials, and cloud guardrails still matter.
 
 📌 [Comment and Control: Prompt Injection to Credential Theft in Claude Code, Gemini CLI, and GitHub Copilot Agent](https://oddguan.com/blog/comment-and-control-prompt-injection-credential-theft-claude-code-gemini-cli-github-copilot/)  
 This writeup demonstrates GitHub comments, issues, and pull request text as command-and-control surfaces for coding agents running in CI. For product security teams, it is a sharp reminder that repository metadata is attacker-controlled input when an agent can read it and access build secrets.
 
-📌 [FastGPT NoSQL Injection in loginByPassword Leads to Authentication Bypass](https://github.com/labring/FastGPT/security/advisories/GHSA-x8mx-2mr7-h9xg)  
-FastGPT's advisory documents a NoSQL-injection path in the password login endpoint that could let unauthenticated attackers bypass authentication as any user, including root administrator. Agent-builder platforms need runtime input validation on control-plane APIs, not just TypeScript assertions that disappear at runtime.
+📌 [AI Agent Security in 2026: Tool Poisoning, Prompt Leaking, and MCP Sandbox Escapes](https://kensai.app/blog/2026-04-06-ai-agent-security-framework-tool-poisoning-prompt-leaking-mcp-sandbox-escapes)  
+KENSAI maps agent attack surfaces across MCP tool poisoning, prompt leakage, and sandbox escape patterns. The strongest takeaway is that agent defenses need to cover tool metadata, execution isolation, and prompt-visible context rather than relying on model behavior alone.
 
-📌 [AgentScope Code Injection in execute_python_code / execute_shell_command Enables Unauthenticated RCE](https://advisories.gitlab.com/pypi/agentscope/CVE-2026-6603/)  
-GitLab's advisory reports high-severity remote code injection around AgentScope's Python and shell execution helpers, with no fixed version listed at publication time. Agent frameworks should treat code-execution tools as privileged capabilities, require explicit authorization around them, and keep remotely reachable tool paths away from unauthenticated users.
-
-📌 [Pre-Auth Remote Code Execution via Terminal WebSocket Authentication Bypass](https://github.com/marimo-team/marimo/security/advisories/GHSA-2679-6mx9-h9xc)  
-The marimo advisory describes a pre-authentication path to terminal access through WebSocket authentication bypass behavior. AI notebook and developer-tool servers should assume local productivity features become remote attack surfaces once exposed in shared workspaces.
+📌 [10 Indirect Prompt Injection Payloads Caught in the Wild](https://www.forcepoint.com/blog/x-labs/indirect-prompt-injection-payloads)  
+Forcepoint X-Labs catalogs real indirect prompt-injection payload patterns in web content, hidden HTML, and agent-facing text. The value is operational: defenders can turn those patterns into detection ideas for browser agents, RAG ingestion, and tool-output monitoring.
 
 📌 [Cursor Triple Backtrick: Bypassing Guardrails for Arbitrary Command Execution](https://noma.security/blog/cursor-triple-backtrick-bypassing-guardrails-for-arbitrary-command-execution/)  
 Noma Security details a Cursor guardrail-bypass technique that used command substitution syntax to move from suggested code into shell execution. Coding-agent products need enforcement outside the model response path, because UI warnings and prompt-level intent checks are not a reliable execution boundary.
 
-📌 [Server-Side Template Injection in BentoML Dockerfile Generation Allows Host Code Execution from Malicious Bento Archives](https://github.com/bentoml/BentoML/security/advisories/GHSA-v959-cwq9-7hr6)  
-BentoML's advisory covers template injection in Dockerfile generation when processing malicious Bento archives. Model-serving and packaging pipelines should treat imported model bundles as untrusted build inputs and isolate builders from secrets and host resources.
+📌 [A Branch Name as RCE: OpenAI Codex, a Shell Argument, and the GitHub Token It Held](https://rafter.so/blog/incidents/codex-branch-injection)  
+Rafter breaks down how an unsanitized branch-name argument in Codex turned repository selection into command-injection risk around a GitHub token. It is a compact engineering lesson: agent wrappers need strict argument handling and secret scoping even when the model is not the vulnerable component.
 
 📌 [AI threats in the wild: The current state of prompt injections on the web](https://blog.google/security/prompt-injections-web/)  
 Google scanned public web content for indirect prompt injection patterns and separated benign research examples from attempts to influence AI agents, SEO outputs, and data exposure. The useful signal is operational: defenders need detection pipelines that can distinguish educational payloads from instructions positioned for agents that browse untrusted pages.
 
-📌 [Azure MCP Server Missing Authentication for Critical Function](https://nvd.nist.gov/vuln/detail/CVE-2026-32211)  
-NVD tracks CVE-2026-32211 as a missing-authentication issue in Azure MCP Server that can expose information over the network. The AI-security lesson is narrow but important: MCP servers that bridge agents into cloud or developer infrastructure still need ordinary authentication, authorization, and exposure controls before becoming automation surfaces.
+📌 [Malware Now Hunts AI Coding Tools: The Bitwarden Supply Chain Attack and Defending Your Codex CLI Installation](https://codex.danielvaughan.com/2026/04/28/malware-targets-ai-coding-tools-bitwarden-supply-chain-codex-cli-defence/)  
+Daniel Vaughan analyzes how a poisoned Bitwarden CLI release treated coding agents as valuable credential-bearing targets. The defensive takeaway is to combine ordinary supply-chain hygiene with agent-specific controls such as deny-read policies, sandboxing, hooks, and credential isolation.
+
+📌 [The Mother of All AI Supply Chains: Technical Deep Dive](https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-technical-deep-dive/)  
+OX Security gives a technical breakdown of how MCP server registration and configuration can flow into host command execution across clients and SDKs. Teams adopting MCP should review provenance, approval, and runtime isolation before allowing new tools into agent environments.
+
+📌 [Tool poisoning: how MCP tool descriptions hijack agents](https://usewire.io/blog/tool-poisoning-mcp-attack-hiding-in-context/)  
+Wire explains how MCP tool descriptions can carry hidden instructions that models treat as trusted context. The useful engineering lesson is to pin and review tool metadata, constrain tool permissions, and monitor changes to the agent-visible tool surface.
+
+📌 [Why Standard Input Validation Fails Against MCP Prompt Injection — And What Actually Works](https://agentmarketcap.ai/blog/2026/04/10/prompt-injection-defense-mcp-production-2026)  
+This writeup focuses on why regex and conventional input validation do not separate data from instructions in MCP-enabled agents. The practical value is the shift toward structural controls around tool metadata, retrieved content, and execution boundaries.
+
+📌 [MCP Tool Poisoning: How Attackers Hijack AI Agents Through Tool Descriptions](https://langsight.dev/blog/mcp-tool-poisoning/)  
+LangSight explains tool poisoning through MCP descriptions that are visible to models but often invisible to users. The lesson for defenders is to log and review tool descriptions as part of the trusted computing base, not as harmless documentation.
+
+📌 [Prompt Injection Attacks on AI Agents: Threats, Patterns, and Defences](https://devops.gheware.com/blog/posts/prompt-injection-attacks-ai-agents-2026.html)  
+Rajesh Gheware lays out direct and indirect prompt-injection patterns for AI agents and maps defenses to privilege minimization, guard models, human approval, and treating tool output as untrusted input. It is most useful as a practical control checklist for agent builders.
 
 📌 [Claude PromptMink Malware Crypto](https://www.reversinglabs.com/blog/claude-promptmink-malware-crypto)  
 ReversingLabs analyzes PromptMink, a malicious dependency campaign where AI-assisted coding and layered npm packages helped introduce secret-stealing behavior into a crypto agent. The practical lesson is to monitor AI-added dependencies, inspect transitive package behavior, and include developer-environment secrets in supply-chain response playbooks.
-
-📌 [SGLang CVE-2026-5760](https://cyberveille.esante.gouv.fr/alertes/sglang-cve-2026-5760-2026-04-24)  
-CERT Sante describes a critical SGLang `/v1/rerank` issue where a malicious GGUF model can trigger unsandboxed Jinja2 template rendering and execute Python on the inference server. Treat model files and tokenizer templates as executable supply-chain inputs, isolate serving endpoints, and avoid loading untrusted models.
-
-📌 [Guardrail Sandbox Escape in LiteLLM](https://x41-dsec.de/lab/advisories/x41-2026-001-litellm/)  
-X41 documents a LiteLLM guardrail testing endpoint where regex-based filtering could be bypassed with bytecode rewriting to execute code as the server process. It is a useful reminder that LLM gateway admin and test routes need the same hardening as production inference paths because they often execute user-controlled templates or code.
-
-📌 [CVE-2026-25874: HuggingFace LeRobot Unauthenticated RCE via Pickle Deserialization in gRPC PolicyServer](https://chocapikk.com/posts/2026/lerobot-pickle-rce/)  
-Chocapikk documents unsafe pickle deserialization in LeRobot's gRPC PolicyServer path. Robotics and AI-inference teams should avoid treating internal policy-serving endpoints as trusted by default, especially when model-serving code is close to physical or operational control loops.
-
-📌 [Flowise Custom MCP Code Injection](https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-c9gw-hvqq-f33r)  
-Flowise disclosed critical authenticated command execution through Custom MCP adapter configuration. It is a concrete downstream example of why MCP configuration surfaces should be treated as privileged execution boundaries, not ordinary workflow metadata.
 
 ---
 
@@ -141,14 +135,29 @@ Georgetown CSET maps high-level AI guidance into practical implementation steps.
 
 # 🛡️ CVEs
 
+🛡️ [CVE-2026-6603: AgentScope code injection in Python and shell execution helpers](https://nvd.nist.gov/vuln/detail/CVE-2026-6603)  
+NVD tracks remotely exploitable code injection in AgentScope's Python and shell execution helpers, reinforcing that agent framework tool-execution paths need authentication, isolation, and explicit capability boundaries.
+
+🛡️ [CVE-2026-33626: LMDeploy vision-language SSRF](https://nvd.nist.gov/vuln/detail/CVE-2026-33626)  
+LMDeploy's vision-language image loader fetched arbitrary URLs without internal-address validation, making GPU inference nodes potential paths to cloud metadata services and internal network resources.
+
+🛡️ [CVE-2026-35044: BentoML Dockerfile template injection](https://nvd.nist.gov/vuln/detail/CVE-2026-35044)  
+BentoML rendered user-controlled Dockerfile templates with unsandboxed Jinja2 during container generation, so malicious Bento archives could execute Python on the host before model-serving containers ever started.
+
+🛡️ [CVE-2026-39861: Claude Code sandbox escape via symlink following](https://raxe.ai/labs/advisories/RAXE-2026-059)  
+RAXE documents a Claude Code sandbox-boundary failure where prompt-injection-steered symlink creation and later unsandboxed writes could land outside the intended workspace.
+
 🛡️ [CVE-2026-42208: LiteLLM proxy API key verification SQL injection](https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc)  
 Critical pre-authentication SQL injection in LiteLLM's API-key verification path could expose or modify proxy database records, making LLM gateway credential stores and provider access a priority patch target.
+
+🛡️ [CVE-2026-5760: SGLang rerank RCE via malicious GGUF template](https://cyberveille.esante.gouv.fr/alertes/sglang-cve-2026-5760-2026-04-24)  
+SGLang's `/v1/rerank` path could render malicious GGUF tokenizer templates with unsandboxed Jinja2, turning model files into executable supply-chain inputs for inference servers.
 
 🛡️ [CVE-2026-5752: Terrarium sandbox escape](https://kb.cert.org/vuls/id/414811)  
 CERT/CC documents a critical Terrarium sandbox escape that reaches Node.js internals and executes commands as root inside the host process, reinforcing why AI code-execution sandboxes need container, network, and credential isolation.
 
-🛡️ [CVE-2026-40515: OpenHarness permission bypass](https://www.vulncheck.com/advisories/openharness-permission-bypass-via-grep-and-glob-root-argument)  
-OpenHarness path-normalization gaps let built-in grep and glob tools read sensitive roots despite configured path restrictions, a concrete reminder that agent tool permissions need enforcement below the prompt and helper layer.
+🛡️ [CVE-2026-25874: Hugging Face LeRobot unauthenticated pickle RCE](https://chocapikk.com/posts/2026/lerobot-pickle-rce/)  
+LeRobot's gRPC PolicyServer accepted attacker-controlled pickle payloads over an unauthenticated channel, a sharp reminder that AI robotics and inference control planes cannot trust internal serialization by default.
 
 ---
 
