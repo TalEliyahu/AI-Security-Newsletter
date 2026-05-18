@@ -256,14 +256,20 @@ Yulin Chen, Tri Cao, Haoran Li, Yue Liu, Yibo Li, Yufei He, Le Minh Khoi, Yangqi
 
 # 💬 Reddit Most Interesting Conversations
 
+💬 [Systemic Flaw in MCP Protocol Could Expose 150 Million Downloads](https://www.reddit.com/r/webdev/comments/1so5gzp/systemic_flaw_in_mcp_protocol_could_expose_150/)  
+Commenters push past the headline into MCP trust boundaries, local versus remote tool execution, STDIO-backed launches, and whether validation belongs in protocol SDKs or downstream clients.
+
+💬 [Anyone else feel like AI security is being figured out in production right now?](https://www.reddit.com/r/artificial/comments/1sbgw8y/anyone_else_feel_like_ai_security_is_being/)  
+The useful part of the thread is the practitioner discussion around production AI risk: prompt injection, shadow AI, sensitive data handling, logging gaps, and why traditional controls do not map cleanly onto LLM applications.
+
 💬 [Prompt Injection Detection?](https://www.reddit.com/r/cybersecurity/comments/1semk5r/prompt_injection_detection/)  
 Practitioners discuss why prompt-injection detection has to move beyond input filtering toward canary tokens, tool-call telemetry, RAG context logging, and post-execution behavioral signals.
 
+💬 [System prompts are not a security layer. Here's what actually stops prompt injection in production.](https://www.reddit.com/r/PromptEngineering/comments/1shsmdz/system_prompts_are_not_a_security_layer_heres/)  
+The thread is a useful reminder that system prompts are not enforcement boundaries; the security value is in how commenters separate prompt design from authorization, isolation, and tool-permission controls.
+
 💬 [Open dataset: 100k+ multimodal prompt injection samples with per-category academic sourcing](https://www.reddit.com/r/netsec/comments/1sn2o3v/open_dataset_100k_multimodal_prompt_injection/)  
 The discussion covers dataset methodology, multimodal prompt injection coverage, MCP tool descriptor poisoning, reasoning-trace attacks, and how evaluation ratios can mislead production detector performance.
-
-💬 [Built an MCP proxy that catches prompt injections in tool responses](https://www.reddit.com/r/mcp/comments/1sq2ybq/built_an_mcp_proxy_that_catches_prompt_injections/)  
-The comments focus on where to place MCP detection, why warn-first behavior can be safer for autonomous workflows, and how JSON-path attribution helps distinguish nested tool-output injection from top-level instructions.
 
 ---
 
