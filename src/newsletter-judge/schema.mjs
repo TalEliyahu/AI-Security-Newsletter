@@ -71,6 +71,139 @@ export const SCORE_KEYS = [
   "total"
 ];
 
+export const JUDGE_REPORT_JSON_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  required: [
+    "overall_score",
+    "final_recommendation",
+    "summary",
+    "items",
+    "issue_level_review",
+    "warnings"
+  ],
+  properties: {
+    overall_score: { type: "number" },
+    final_recommendation: {
+      type: "string",
+      enum: [...FINAL_RECOMMENDATIONS]
+    },
+    summary: {
+      type: "object",
+      additionalProperties: false,
+      required: ["main_issue", "best_section", "biggest_weakness"],
+      properties: {
+        main_issue: { type: "string" },
+        best_section: { type: "string" },
+        biggest_weakness: { type: "string" }
+      }
+    },
+    items: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        required: [
+          "title",
+          "url",
+          "source_verification_status",
+          "decision",
+          "primary_category",
+          "secondary_categories",
+          "source_type",
+          "scores",
+          "reason",
+          "accuracy_concerns",
+          "rewrite_guidance",
+          "suggested_rewrite",
+          "reviewer_notes"
+        ],
+        properties: {
+          title: { type: "string" },
+          url: {
+            anyOf: [
+              { type: "string" },
+              { type: "null" }
+            ]
+          },
+          source_verification_status: {
+            type: "string",
+            enum: [...SOURCE_VERIFICATION_STATUSES]
+          },
+          decision: {
+            type: "string",
+            enum: [...DECISIONS]
+          },
+          primary_category: {
+            type: "string",
+            enum: [...CATEGORIES]
+          },
+          secondary_categories: {
+            type: "array",
+            items: {
+              type: "string",
+              enum: [...CATEGORIES]
+            }
+          },
+          source_type: {
+            type: "string",
+            enum: [...SOURCE_TYPES]
+          },
+          scores: {
+            type: "object",
+            additionalProperties: false,
+            required: SCORE_KEYS,
+            properties: Object.fromEntries(SCORE_KEYS.map((key) => [key, { type: "number" }]))
+          },
+          reason: { type: "string" },
+          accuracy_concerns: {
+            type: "array",
+            items: { type: "string" }
+          },
+          rewrite_guidance: { type: "string" },
+          suggested_rewrite: { type: "string" },
+          reviewer_notes: {
+            type: "object",
+            additionalProperties: false,
+            required: REVIEWER_NOTE_KEYS,
+            properties: Object.fromEntries(REVIEWER_NOTE_KEYS.map((key) => [key, { type: "string" }]))
+          }
+        }
+      }
+    },
+    issue_level_review: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "strongest_items",
+        "weakest_items",
+        "vendor_noise",
+        "generic_ai_news",
+        "needs_stronger_technical_framing",
+        "missing_themes",
+        "recommended_order",
+        "suggested_headline",
+        "editors_note"
+      ],
+      properties: {
+        strongest_items: { type: "array", items: { type: "string" } },
+        weakest_items: { type: "array", items: { type: "string" } },
+        vendor_noise: { type: "array", items: { type: "string" } },
+        generic_ai_news: { type: "array", items: { type: "string" } },
+        needs_stronger_technical_framing: { type: "array", items: { type: "string" } },
+        missing_themes: { type: "array", items: { type: "string" } },
+        recommended_order: { type: "array", items: { type: "string" } },
+        suggested_headline: { type: "string" },
+        editors_note: { type: "string" }
+      }
+    },
+    warnings: {
+      type: "array",
+      items: { type: "string" }
+    }
+  }
+};
+
 export function validateJudgeReport(report) {
   const errors = [];
 

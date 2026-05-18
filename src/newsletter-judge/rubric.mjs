@@ -481,6 +481,9 @@ function suggestedRewrite(item, primaryCategory) {
 }
 
 function reasonForDecision(decision, scores, flags, primaryCategory) {
+  if (decision === "DROP" && primaryCategory === "Not Relevant") {
+    return "The item does not show enough concrete AI security relevance for the intended technical audience.";
+  }
   if (decision === "DROP" && flags.vendorNoise) {
     return "The item reads like vendor/product promotion and does not provide enough concrete AI security mechanism.";
   }

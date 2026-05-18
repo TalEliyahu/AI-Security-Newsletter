@@ -171,7 +171,7 @@ export function parseMarkdownNewsletter(text) {
       return;
     }
 
-    if (/\[[^\]]+\]\([^)]+\)/.test(trimmed)) {
+    if (currentSection && /\[[^\]]+\]\([^)]+\)/.test(trimmed)) {
       warnings.push(`Ambiguous markdown link outside an item at line ${lineIndex + 1}.`);
     }
   });

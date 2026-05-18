@@ -1,4 +1,4 @@
-import { HeuristicJudgeModelClient } from "./model-client.mjs";
+import { createModelClient } from "./model-client.mjs";
 import { validateJudgeReport } from "./schema.mjs";
 
 export function buildJudgingPrompt({ items, sourceResults = [] }) {
@@ -17,7 +17,7 @@ export function buildJudgingPrompt({ items, sourceResults = [] }) {
 }
 
 export async function judgeNewsletter({ items, sourceResults = [], parserWarnings = [], modelClient } = {}) {
-  const client = modelClient || new HeuristicJudgeModelClient();
+  const client = modelClient || createModelClient();
   const prompt = buildJudgingPrompt({ items, sourceResults });
   const rawOutput = await client.judgeIssue({
     prompt,

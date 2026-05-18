@@ -10,7 +10,7 @@ import { promisify } from "node:util";
 import { parseJsonNewsletter, parseMarkdownNewsletter } from "../src/newsletter-judge/parser.mjs";
 import { verifySourcesForItems } from "../src/newsletter-judge/source-verifier.mjs";
 import { judgeNewsletter } from "../src/newsletter-judge/judge-engine.mjs";
-import { MockJudgeModelClient } from "../src/newsletter-judge/model-client.mjs";
+import { HeuristicJudgeModelClient, MockJudgeModelClient, OpenAIJudgeModelClient } from "../src/newsletter-judge/model-client.mjs";
 import { decide, sumScores } from "../src/newsletter-judge/rubric.mjs";
 import { validateJudgeReport } from "../src/newsletter-judge/schema.mjs";
 import { runJudgeWorkflow } from "../src/newsletter-judge/cli.mjs";
@@ -96,6 +96,35 @@ test("judge engine rejects malformed model JSON", async () => {
   );
 });
 
+test("OpenAI provider uses env-style API config without live network", async () => {
+  let requestBody = null;
+  const client = new OpenAIJudgeModelClient({
+    apiKey: "test-key",
+    model: "test-model",
+    fetchImpl: async (url, options) => {
+      assert.equal(url, "https://api.openai.com/v1/responses");
+      assert.equal(options.headers.authorization, "Bearer test-key");
+      requestBody = JSON.parse(options.body);
+      return {
+        ok: true,
+        status: 200,
+        json: async () => ({
+          output_text: JSON.stringify(minimalValidReport())
+        })
+      };
+    }
+  });
+
+  const output = await client.judgeIssue({
+    items: [{ title: "Prompt injection item", url: null, summary: "Prompt injection in an LLM app." }],
+    sourceResults: [{ source_verification_status: "no_url" }],
+    parserWarnings: []
+  });
+  assert.equal(JSON.parse(output).final_recommendation, "PUBLISH_AFTER_EDITS");
+  assert.equal(requestBody.model, "test-model");
+  assert.equal(requestBody.text.format.type, "json_schema");
+});
+
 test("source verification failure is safe and does not invent source text", async () => {
   const results = await verifySourcesForItems(
     [{ title: "Broken URL", url: "https://example.invalid/source", summary: "AI security claim." }],
@@ -118,7 +147,8 @@ test("fixture decisions cover strong, vendor, funding, governance, overstated, t
   const report = await judgeNewsletter({
     items: parsed.items,
     sourceResults,
-    parserWarnings: parsed.warnings
+    parserWarnings: parsed.warnings,
+    modelClient: new HeuristicJudgeModelClient()
   });
 
   const byTitle = new Map(report.items.map((item) => [item.title, item]));
@@ -151,7 +181,11 @@ test("url fetch failure pushes correctness-sensitive item toward source verifica
       throw new Error("offline");
     }
   });
-  const report = await judgeNewsletter({ items: parsed.items, sourceResults });
+  const report = await judgeNewsletter({
+    items: parsed.items,
+    sourceResults,
+    modelClient: new HeuristicJudgeModelClient()
+  });
   assert.equal(report.items[0].source_verification_status, "unavailable");
   assert.equal(report.items[0].decision, "NEEDS_SOURCE_VERIFICATION");
 });
@@ -161,7 +195,8 @@ test("workflow writes valid json and markdown reports", async () => {
   const result = await runJudgeWorkflow({
     inputPath: path.join(__dirname, "fixtures", "sample-newsletter.md"),
     outputDir,
-    verifySources: false
+    verifySources: false,
+    provider: "heuristic"
   });
   const json = JSON.parse(await fs.readFile(result.paths.jsonPath, "utf8"));
   const markdown = await fs.readFile(result.paths.markdownPath, "utf8");
@@ -179,7 +214,9 @@ test("cli smoke test works for json input", async () => {
       "--format",
       "json",
       "--output",
-      outputDir
+      outputDir,
+      "--provider",
+      "heuristic"
     ],
     { cwd: rootDir }
   );
@@ -187,3 +224,59 @@ test("cli smoke test works for json input", async () => {
   await fs.access(path.join(outputDir, "judge-report.md"));
   await fs.access(path.join(outputDir, "judge-report.json"));
 });
+
+function minimalValidReport() {
+  return {
+    overall_score: 75,
+    final_recommendation: "PUBLISH_AFTER_EDITS",
+    summary: {
+      main_issue: "Needs a little source verification.",
+      best_section: "Insights",
+      biggest_weakness: "One item needs rewriting."
+    },
+    items: [
+      {
+        title: "Prompt injection item",
+        url: null,
+        source_verification_status: "no_url",
+        decision: "KEEP_BUT_REWRITE",
+        primary_category: "Prompt Injection",
+        secondary_categories: [],
+        source_type: "unknown",
+        scores: {
+          ai_security_relevance: 5,
+          technical_substance: 4,
+          correctness: 3,
+          practitioner_value: 4,
+          source_quality: 1,
+          novelty_timeliness: 3,
+          audience_fit: 4,
+          total: 24
+        },
+        reason: "Relevant but needs a source.",
+        accuracy_concerns: ["No source URL."],
+        rewrite_guidance: "Add concrete mechanism and source.",
+        suggested_rewrite: "Prompt injection item shows a concrete LLM appsec risk.",
+        reviewer_notes: {
+          prompt_injection_llm_appsec: "Useful if the trust boundary is clear.",
+          enterprise_architect: "",
+          ai_red_teamer: "",
+          ml_security_researcher: "",
+          governance_assurance: ""
+        }
+      }
+    ],
+    issue_level_review: {
+      strongest_items: ["Prompt injection item"],
+      weakest_items: ["Prompt injection item"],
+      vendor_noise: [],
+      generic_ai_news: [],
+      needs_stronger_technical_framing: ["Prompt injection item"],
+      missing_themes: ["Agent Security"],
+      recommended_order: ["Prompt injection item"],
+      suggested_headline: "Prompt Injection Needs Cleaner Framing",
+      editors_note: "Verify sources before publishing."
+    },
+    warnings: []
+  };
+}
