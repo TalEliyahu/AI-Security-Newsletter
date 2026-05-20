@@ -1,5 +1,7 @@
 # AI Security Newsletter - January 2026
 
+Telegram bot operations for `@AISECHUB_bot` live in [TELEGRAM_BOT.md](./TELEGRAM_BOT.md).
+
 A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AISecHub community](https://x.com/AISecHub) and our [LinkedIn group](https://www.linkedin.com/groups/14545517/) for additional updates. Also check out our project, [Awesome AI Security](https://github.com/TalEliyahu/Awesome-AI-Security).
 
 Sponsored by [InnovGuard.com](https://innovguard.com) - Technology Risk & Cybersecurity Advisory - Innovate and Invest with Confidence, Lead with Assurance.
@@ -249,4 +251,3 @@ Karolina Korgul, Yushi Yang, Arkadiusz Drohomirecki, Piotr Błaszczyk, Will Howa
 If you're a founder building something new or an investor evaluating early-stage opportunities - [let's connect](https://calendly.com/innovguard/meeting).
 
 💬 Read something interesting? Share your thoughts in the comments.
-

@@ -4,11 +4,16 @@
   "private": true,
   "type": "module",
   "bin": {
-    "newsletter-judge": "./bin/newsletter-judge.mjs"
+    "newsletter-judge": "./bin/newsletter-judge.mjs",
+    "aisechub-bot": "./bin/aisechub-bot.mjs"
   },
   "scripts": {
     "newsletter-judge": "node ./bin/newsletter-judge.mjs",
     "judge": "node ./bin/newsletter-judge.mjs",
+    "telegram": "node ./bin/aisechub-bot.mjs",
+    "telegram:listen": "node ./bin/aisechub-bot.mjs listen",
+    "telegram:latest": "node ./bin/aisechub-bot.mjs latest-public --limit 20",
+    "telegram:status": "node ./bin/aisechub-bot.mjs status",
     "test": "node --test"
   }
 }

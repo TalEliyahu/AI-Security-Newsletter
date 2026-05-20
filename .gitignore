@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+.telegram-bot-state.json
+node_modules/
+npm-debug.log*
+
