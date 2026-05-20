@@ -213,107 +213,107 @@ NVD tracks remotely exploitable code injection in AgentScope's Python and shell 
 📖 **Alignment Contracts for Agentic Security Systems**
 
 [arXiv](https://arxiv.org/abs/2605.00081)  
-A framework for bounding agentic security systems that need offensive capability inside authorized engagements while preserving scope, safety, and reporting controls.
+For authorized offensive security agents, the paper treats scope, safety limits, and reporting duties as explicit contracts rather than prompts left for the model to interpret.
 
 📖 **Architecture Matters for Multi-Agent Security**
 
 [arXiv](https://arxiv.org/abs/2604.23459)  
-Analyzes how multi-agent architecture changes security behavior, showing why agent coordination, delegation, and inter-agent trust boundaries need their own threat modeling.
+In multi-agent systems, architecture becomes part of the attack surface: delegation, shared memory, and inter-agent handoffs change where trust boundaries can fail.
 
 📖 **ShieldNet: Network-Level Guardrails against Emerging Supply-Chain Injections in Agentic Systems**
 
 [arXiv](https://arxiv.org/abs/2604.04426)  
-Proposes network-level guardrails for agentic systems that depend on third-party tools and MCP-style services, with a focus on supply-chain injections that bypass prompt-only defenses.
+The control point here is network-level enforcement around agent-tool traffic, so third-party tools and MCP-style services are not protected only by prompt-level defenses.
 
 📖 **LLM-Enabled Open-Source Systems in the Wild: An Empirical Study of Vulnerabilities in GitHub Security Advisories**
 
 [arXiv](https://arxiv.org/abs/2604.04288)  
-Studies vulnerabilities in open-source systems that embed LLM capabilities, giving AppSec teams a clearer view of how model calls, prompts, and execution paths appear in real advisories.
+For AppSec teams, the useful signal is how LLM features show up in ordinary GitHub advisories: prompts, model calls, and execution paths become review targets.
 
 📖 **SnapGuard: Lightweight Prompt Injection Detection for Screenshot-Based Web Agents**
 
 [arXiv](https://arxiv.org/abs/2604.25562)  
-Presents a prompt-injection detector for screenshot-driven web agents, targeting attacks hidden in visual webpage content before agents turn observations into tool actions.
+Screenshot-based web agents need defenses before visual observations become tool actions; this work focuses on detecting prompt injection embedded in page imagery.
 
 📖 **CASCADE: A Cascaded Hybrid Defense Architecture for Prompt Injection Detection in MCP-Based Systems**
 
 [arXiv](https://arxiv.org/abs/2604.17125)  
-Designs a layered detection architecture for MCP-based systems where prompt injection, tool poisoning, and tool invocation risk need controls across more than one enforcement point.
+For MCP-based systems, the takeaway is layered enforcement: prompt injection, tool poisoning, and risky tool invocation need checks at more than one boundary.
 
 📖 **Jailbreaking Large Language Models with Morality Attacks**
 
 [arXiv](https://arxiv.org/abs/2604.17053)  
-Explores jailbreaks that use moral framing to steer model behavior, giving red teamers another test pattern for evaluating safety-aligned models under persuasive adversarial prompts.
+Moral framing becomes the adversarial technique, giving red teamers another way to test whether safety-aligned models can be steered by persuasive prompt context.
 
 📖 **AdversarialCoT: Single-Document Retrieval Poisoning for LLM Reasoning**
 
 [arXiv](https://arxiv.org/abs/2604.12201)  
-Shows how a single poisoned retrieval document can influence chain-of-thought reasoning in RAG systems, making document trust and retrieval hygiene part of the security boundary.
+A single poisoned retrieval document can be enough to steer reasoning in a RAG workflow, which puts document provenance and retrieval hygiene inside the security boundary.
 
 📖 **A Formal Security Framework for MCP-Based AI Agents: Threat Taxonomy, Verification Models, and Defense Mechanisms**
 
 [arXiv](https://arxiv.org/abs/2604.05969)  
-Frames MCP-based agents through threat taxonomy, verification models, and defense mechanisms so teams can reason about tool trust, agent permissions, and protocol-level failure modes.
+MCP-based agents are treated as a formal security system, with tool trust, agent permissions, and protocol-level failure modes modeled instead of handled as implementation details.
 
 📖 **Security Attack and Defense Strategies for Autonomous Agent Frameworks: A Layered Review with OpenClaw as a Case Study**
 
 [arXiv](https://arxiv.org/abs/2604.27464)  
-Uses OpenClaw as a case study for mapping autonomous-agent risks across framework layers, from prompts and memory to tools, orchestration, and runtime controls.
+OpenClaw is used as the case study, but the broader value is the layered map of autonomous-agent risk across prompts, memory, tools, orchestration, and runtime controls.
 
 📖 **Credential Leakage in LLM Agent Skills: A Large-Scale Empirical Study**
 
 [arXiv](https://arxiv.org/abs/2604.03070)  
-Measures credential leakage risk across LLM agent skills, highlighting how third-party skills can expose secrets when agents run with privileged environment access.
+Third-party agent skills become a secret-exposure path when agents run with privileged environment access, making skill review part of credential-protection work.
 
 📖 **SoK: Security of Autonomous LLM Agents in Agentic Commerce**
 
 [arXiv](https://arxiv.org/abs/2604.15367)  
-Surveys security risks in agentic commerce, where LLM agents may negotiate, purchase, transact, and operate across systems that require stronger authorization and fraud controls.
+Agentic commerce shifts AI security into transaction risk: negotiation, purchasing, and cross-system actions need authorization, fraud controls, and stronger accountability.
 
 📖 **Test Before You Deploy: Governing Updates in the LLM Supply Chain**
 
 [arXiv](https://arxiv.org/abs/2604.27789)  
-Treats hosted model updates as a software supply-chain risk, arguing for pre-deployment testing when provider-side changes can alter application behavior without version changes.
+Hosted model updates are framed as supply-chain events because provider-side changes can alter application behavior even when the application code has not changed.
 
 📖 **Enforcing Benign Trajectories: A Behavioral Firewall for Structured-Workflow AI Agents**
 
 [arXiv](https://arxiv.org/abs/2604.26274)  
-Introduces a behavioral firewall concept for structured-workflow agents, using telemetry and anomaly detection to catch risky tool-use trajectories during execution.
+The defense idea is a behavioral firewall for structured agents, using runtime telemetry to spot risky tool-use trajectories while the workflow is still executing.
 
 📖 **Indirect Prompt Injection in the Wild: An Empirical Study of Prevalence, Techniques, and Objectives**
 
 [arXiv](https://arxiv.org/abs/2604.27202)  
-Studies indirect prompt injection on real web content, helping defenders distinguish research examples, benign text, and instructions positioned to influence browsing or retrieval agents.
+Real web content is the dataset, and the defensive question is practical: which text is benign, which is research, and which is positioned to influence browsing or retrieval agents.
 
 📖 **ClawGuard: A Runtime Security Framework for Tool-Augmented LLM Agents Against Indirect Prompt Injection**
 
 [arXiv](https://arxiv.org/abs/2604.11790)  
-Proposes runtime protection for tool-augmented agents facing indirect prompt injection, focusing on the point where untrusted external content can trigger privileged tool actions.
+Tool-augmented agents need runtime checks at the moment untrusted external content could trigger a privileged action; that enforcement point is the center of this work.
 
 📖 **Evaluation of Prompt Injection Defenses in Large Language Models**
 
 [arXiv](https://arxiv.org/abs/2604.23887)  
-Evaluates prompt-injection defenses with an adaptive attacker, giving builders a more realistic view of how defensive prompts and model-level mitigations hold up over repeated attempts.
+Adaptive attackers are the important detail: the evaluation looks at how prompt-injection defenses hold up when the attacker can iterate instead of sending one static payload.
 
 📖 **BadSkill: Backdoor Attacks on Agent Skills via Model-in-Skill Poisoning**
 
 [arXiv](https://arxiv.org/abs/2604.09378)  
-Examines backdoors hidden inside agent skills that bundle model artifacts, extending supply-chain concerns beyond prompt text and ordinary plugin code.
+Agent skills that bundle model artifacts create a supply-chain path beyond ordinary plugin code, where the malicious behavior can live inside the model-in-skill package.
 
 📖 **STAR-Teaming: A Strategy-Response Multiplex Network Approach to Automated LLM Red Teaming**
 
 [arXiv](https://arxiv.org/abs/2604.18976)  
-Presents an automated red-teaming method for generating and evaluating jailbreak strategies, useful for teams building repeatable LLM abuse testing pipelines.
+For teams building repeatable LLM abuse tests, the contribution is automated generation and scoring of jailbreak strategies rather than one-off prompt collections.
 
 📖 **AgentVisor: Defending LLM Agents Against Prompt Injection via Semantic Virtualization**
 
 [arXiv](https://arxiv.org/abs/2604.24118)  
-Uses semantic virtualization to separate untrusted external content from privileged agent execution, aiming to reduce prompt-injection impact in tool-using workflows.
+Semantic virtualization is used as the isolation layer, separating untrusted external content from privileged agent execution in tool-using workflows.
 
 📖 **WebAgentGuard: A Reasoning-Driven Guard Model for Detecting Prompt Injection Attacks in Web Agents**
 
 [arXiv](https://arxiv.org/abs/2604.12284)  
-Builds a reasoning-driven guard model for web agents that must interpret visual and textual page content while resisting malicious instructions embedded in the environment.
+Web agents have to interpret both visual and textual page content, so this guard model targets malicious instructions embedded in the environment before they shape agent reasoning.
 
 ---
 
@@ -332,7 +332,7 @@ Practitioners discuss why prompt-injection detection has to move beyond input fi
 The thread is a useful reminder that system prompts are not enforcement boundaries; the security value is in how commenters separate prompt design from authorization, isolation, and tool-permission controls.
 
 💬 [Open dataset: 100k+ multimodal prompt injection samples with per-category academic sourcing](https://www.reddit.com/r/netsec/comments/1sn2o3v/open_dataset_100k_multimodal_prompt_injection/)  
-The discussion covers dataset methodology, multimodal prompt-injection coverage, MCP tool-descriptor poisoning, reasoning-trace attacks, and why benchmark class ratios can mislead teams about production detector performance.
+Practitioners focus on dataset methodology, multimodal prompt-injection coverage, MCP tool-descriptor poisoning, reasoning-trace attacks, and why benchmark class ratios can mislead teams about production detector performance.
 
 ---
 
