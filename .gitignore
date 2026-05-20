@@ -2,6 +2,7 @@
 .env.*
 !.env.example
 .telegram-bot-state.json
+.telegram-curator-state.json
+logs/
 node_modules/
 npm-debug.log*
-

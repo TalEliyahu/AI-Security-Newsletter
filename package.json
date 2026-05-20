@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "bin": {
+    "aisechub-daily-curator": "./bin/aisechub-daily-curator.mjs",
     "newsletter-judge": "./bin/newsletter-judge.mjs",
     "aisechub-bot": "./bin/aisechub-bot.mjs"
   },
@@ -14,6 +15,7 @@
     "telegram:listen": "node ./bin/aisechub-bot.mjs listen",
     "telegram:latest": "node ./bin/aisechub-bot.mjs latest-public --limit 20",
     "telegram:status": "node ./bin/aisechub-bot.mjs status",
+    "telegram:curate": "node ./bin/aisechub-daily-curator.mjs",
     "test": "node --test"
   }
 }

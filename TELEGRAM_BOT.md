@@ -123,3 +123,32 @@ Check or remove the webhook:
 npm run telegram -- webhook status
 npm run telegram -- webhook delete
 ```
+
+## Daily Curation
+
+The curation profile is in `AISECHUB_CURATION.md`.
+
+Preview the daily curator without posting:
+
+```sh
+npm run telegram:curate -- --dry-run --limit 5
+```
+
+Post selected items:
+
+```sh
+npm run telegram:curate -- --limit 5
+```
+
+The curator loads `.env`, reads recent `@AISecHub` history to avoid duplicates, pulls candidates from selected primary-source feeds and arXiv, ranks them against the channel profile, and posts each item separately as title plus URL.
+
+Install the included macOS daily schedule:
+
+```sh
+mkdir -p ~/Library/LaunchAgents logs
+cp launchd/com.aisechub.daily-curator.plist ~/Library/LaunchAgents/
+launchctl unload ~/Library/LaunchAgents/com.aisechub.daily-curator.plist 2>/dev/null || true
+launchctl load ~/Library/LaunchAgents/com.aisechub.daily-curator.plist
+```
+
+The schedule runs daily at 09:00 local time.
