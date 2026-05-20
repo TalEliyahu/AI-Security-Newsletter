@@ -54,7 +54,7 @@ OX Security traces how MCP server definitions, especially stdio command configur
 
 Wire explains how MCP tool descriptions can carry hidden instructions that models treat as trusted context. The useful engineering lesson is to pin and review tool metadata, constrain tool permissions, and monitor changes to the agent-visible tool surface.
 
-📌 [Why Standard Input Validation Fails Against MCP Prompt Injection — And What Actually Works](https://agentmarketcap.ai/blog/2026/04/10/prompt-injection-defense-mcp-production-2026)
+📌 [Why Standard Input Validation Fails Against MCP Prompt Injection - And What Actually Works](https://agentmarketcap.ai/blog/2026/04/10/prompt-injection-defense-mcp-production-2026)
 
 This writeup explains why regex checks and conventional input validation do not solve the core MCP problem: untrusted data can still be presented to the model as instructions through tool metadata, retrieved content, or tool output. The practical value is the shift toward structural controls around trust labeling, tool permissions, and execution boundaries.
 
