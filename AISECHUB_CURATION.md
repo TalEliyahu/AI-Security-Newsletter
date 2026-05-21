@@ -37,13 +37,23 @@ Reject or heavily down-rank:
 ## Daily Posting Workflow
 
 1. Read recent channel history from `https://t.me/s/AISecHub` and avoid duplicate URLs/titles.
-2. Search current primary sources for new AI security content.
-3. Select 3-5 items using this ranking:
+2. Store message id, title, URL, timestamp, public views, inferred topics, and normalized views/day.
+3. Capture 24h and 48h performance snapshots when posts cross those age thresholds.
+4. Search current primary sources for new AI security content.
+5. Select 3-5 items using this ranking:
    - concrete exploit or vulnerability mechanics
    - primary-source credibility
    - relevance to agent/MCP/prompt-injection/supply-chain security
    - novelty and recency
+   - similarity to topics and sources that outperform recent channel baseline
    - usefulness to practitioners and researchers
-4. Post each item separately in title+URL format.
-5. Verify the latest public channel preview includes the new messages.
+6. Post each item separately in title+URL format.
+7. Verify the latest public channel preview includes the new messages.
 
+## Learning Signals
+
+- Primary signal: public Telegram views normalized by post age.
+- 24h and 48h snapshots are preferred for comparing posts fairly.
+- Topics and sources that outperform the median recent post receive a scoring boost.
+- Underperforming topics and sources receive a small penalty.
+- If no candidate clears the high-confidence threshold, the agent should post nothing.

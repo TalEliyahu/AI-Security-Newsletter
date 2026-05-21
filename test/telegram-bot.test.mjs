@@ -3,6 +3,14 @@ import test from "node:test";
 
 import { TelegramApiError, TelegramBotApi } from "../src/telegram-bot/api.mjs";
 import { handlePrivateMessageCommand } from "../src/telegram-bot/command-handler.mjs";
+import {
+  buildEngagementProfile,
+  buildPostedSet,
+  parseViews,
+  rankCandidates,
+  scoreCandidate,
+  updateEngagementState
+} from "../src/telegram-bot/daily-curator.mjs";
 import { parsePublicChannelPosts } from "../src/telegram-bot/public-channel.mjs";
 import { summarizeMessageUpdate } from "../src/telegram-bot/messages.mjs";
 
@@ -127,3 +135,164 @@ test("private /send command is locked without an allowed user id", async () => {
   assert.match(replies[0].text, /locked/);
 });
 
+test("daily curator parses Telegram view counts", () => {
+  assert.equal(parseViews("42"), 42);
+  assert.equal(parseViews("1.2K"), 1200);
+  assert.equal(parseViews("2M"), 2000000);
+});
+
+test("daily curator stores engagement snapshots and normalized views", () => {
+  const now = new Date("2026-05-22T00:00:00Z");
+  const state = updateEngagementState(
+    { postedUrls: [], engagement: { posts: [] } },
+    [
+      {
+        messageId: 3120,
+        url: "https://t.me/AISecHub/3120",
+        datetime: "2026-05-19T23:00:00Z",
+        views: "1.2K",
+        text: "MCP Server RCE in Agent Tools\nhttps://example.com/mcp-rce",
+        links: [{ href: "https://example.com/mcp-rce" }]
+      }
+    ],
+    now
+  );
+
+  const record = state.engagement.posts[0];
+  assert.equal(record.views, 1200);
+  assert.equal(record.url, "https://example.com/mcp-rce");
+  assert.ok(record.normalizedViewsPerDay > 500);
+  assert.equal(record.performance24h.views, 1200);
+  assert.equal(record.performance48h.views, 1200);
+  assert.deepEqual(record.topics.sort(), ["agent-security", "exploit-vuln-research", "mcp-security"].sort());
+});
+
+test("daily curator blocks duplicate titles and URLs", () => {
+  const posted = buildPostedSet(
+    [
+      {
+        url: "https://t.me/AISecHub/3124",
+        text: "Breaking Anthropic MCP Server\nhttps://cyata.ai/blog/mcp",
+        links: [{ href: "https://cyata.ai/blog/mcp" }]
+      }
+    ],
+    { postedUrls: ["https://example.com/already-posted"], engagement: { posts: [] } }
+  );
+
+  const result = rankCandidates(
+    [
+      {
+        title: "Breaking Anthropic MCP Server",
+        url: "https://new.example.com/same-title",
+        source: "Example",
+        sourceWeight: 10,
+        summary: "MCP server exploit research."
+      },
+      {
+        title: "New MCP Server RCE",
+        url: "https://cyata.ai/blog/mcp",
+        source: "Cyata",
+        sourceWeight: 15,
+        summary: "RCE in MCP server."
+      }
+    ],
+    posted,
+    { limit: 5, threshold: 0, engagementProfile: {}, now: new Date("2026-05-22T00:00:00Z") }
+  );
+
+  assert.equal(result.selected.length, 0);
+  assert.equal(result.rejected.filter((candidate) => candidate.decisionReason === "duplicate title or URL").length, 2);
+});
+
+test("daily curator weighted scoring prefers technical AI security over generic AI posts", () => {
+  const now = new Date("2026-05-22T00:00:00Z");
+  const strong = scoreCandidate(
+    {
+      title: "MCP Server Remote Code Execution in AI Agent Tooling",
+      url: "https://cyata.ai/blog/mcp-rce",
+      source: "Cyata",
+      sourceWeight: 15,
+      summary: "Technical exploit analysis with prompt injection, MCP tool abuse, and code execution.",
+      published: "2026-05-21T00:00:00Z"
+    },
+    { engagementProfile: {}, now }
+  );
+  const generic = scoreCandidate(
+    {
+      title: "AI Startup Launches New Productivity Assistant",
+      url: "https://example.com/ai-productivity",
+      source: "Example",
+      sourceWeight: 1,
+      summary: "Product launch announcement for workflow automation.",
+      published: "2026-05-21T00:00:00Z"
+    },
+    { engagementProfile: {}, now }
+  );
+  const arxiv = scoreCandidate(
+    {
+      title: "Agent Audit: A Security Analysis System for LLM Agent Applications",
+      url: "https://arxiv.org/abs/2603.22853",
+      source: "arXiv",
+      sourceWeight: 18,
+      summary: "Research paper on detecting vulnerabilities in LLM agent applications.",
+      published: "2026-05-20T00:00:00Z"
+    },
+    { engagementProfile: {}, now }
+  );
+
+  assert.ok(strong.score > 120);
+  assert.ok(arxiv.score > 90);
+  assert.ok(generic.score < 0);
+});
+
+test("daily curator boosts topics with above-baseline engagement", () => {
+  const now = new Date("2026-05-22T00:00:00Z");
+  const engagementProfile = buildEngagementProfile(
+    {
+      engagement: {
+        posts: [
+          {
+            title: "MCP Server Exploit",
+            url: "https://example.com/mcp-1",
+            sourceDomain: "example.com",
+            postedAt: "2026-05-20T00:00:00Z",
+            views: 1000,
+            normalizedViewsPerDay: 500,
+            topics: ["mcp-security"]
+          },
+          {
+            title: "MCP Prompt Injection",
+            url: "https://example.com/mcp-2",
+            sourceDomain: "example.com",
+            postedAt: "2026-05-20T00:00:00Z",
+            views: 900,
+            normalizedViewsPerDay: 450,
+            topics: ["mcp-security"]
+          },
+          {
+            title: "Governance Framework",
+            url: "https://example.com/gov",
+            sourceDomain: "example.org",
+            postedAt: "2026-05-20T00:00:00Z",
+            views: 100,
+            normalizedViewsPerDay: 50,
+            topics: ["ai-governance"]
+          },
+          {
+            title: "AI RMF",
+            url: "https://example.com/rmf",
+            sourceDomain: "example.org",
+            postedAt: "2026-05-20T00:00:00Z",
+            views: 120,
+            normalizedViewsPerDay: 60,
+            topics: ["ai-governance"]
+          }
+        ]
+      }
+    },
+    now
+  );
+
+  assert.ok(engagementProfile.topicBoosts["mcp-security"] > 0);
+  assert.ok(engagementProfile.topicBoosts["ai-governance"] < 0);
+});

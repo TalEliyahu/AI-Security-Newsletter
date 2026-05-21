@@ -140,7 +140,9 @@ Post selected items:
 npm run telegram:curate -- --limit 5
 ```
 
-The curator loads `.env`, reads recent `@AISecHub` history to avoid duplicates, pulls candidates from selected primary-source feeds and arXiv, ranks them against the channel profile, and posts each item separately as title plus URL.
+The curator loads `.env`, reads recent `@AISecHub` history to avoid duplicates, records public views for engagement learning, pulls candidates from selected primary-source feeds, curated research pages, and arXiv, ranks them against the channel profile, and posts each item separately as title plus URL.
+
+The state file `.telegram-curator-state.json` stores posted URLs plus engagement records. Logs are written to `logs/aisechub-daily-curator.jsonl`.
 
 Install the included macOS daily schedule:
 
