@@ -9,7 +9,12 @@ const SECTION_ALIASES = new Map([
   ["tools and resources", "Tools & Resources"],
   ["tools resources", "Tools & Resources"],
   ["reports", "Reports"],
+  ["cves", "CVEs"],
+  ["cve", "CVEs"],
   ["videos", "Videos"],
+  ["practitioner discussions", "Practitioner Discussions"],
+  ["reddit conversations", "Practitioner Discussions"],
+  ["reddit most interesting conversations", "Practitioner Discussions"],
   ["incidents", "Incidents"],
   ["governance", "Governance"],
   ["funding", "Funding"],
@@ -269,12 +274,12 @@ function extractFirstMarkdownLink(line) {
 function stripItemPrefix(line) {
   return line
     .trim()
-    .replace(/^(?:[-*+]\s+|\d+[.)]\s+|[0-9]\uFE0F?\u20E3\s+|[^\w\s#\[]+\s*)/u, "")
+    .replace(/^(?:[-*+]\s+|\d+[.)]\s+|(?:[0-9]\uFE0F?\u20E3)+\s+|[^\w\s#\[]+\s*)/u, "")
     .trim();
 }
 
 function hasItemPrefix(line) {
-  return /^(?:[-*+]\s+|\d+[.)]\s+|[0-9]\uFE0F?\u20E3\s+|[^\w\s#\[]+\s*)/u.test(line.trim());
+  return /^(?:[-*+]\s+|\d+[.)]\s+|(?:[0-9]\uFE0F?\u20E3)+\s+|[^\w\s#\[]+\s*)/u.test(line.trim());
 }
 
 function canonicalHeading(value) {
@@ -299,7 +304,7 @@ function cleanTitle(value) {
   return stringOrEmpty(value)
     .replace(/\*\*/g, "")
     .replace(/^[-*+]\s+/, "")
-    .replace(/^[0-9]\uFE0F?\u20E3\s+/u, "")
+    .replace(/^(?:[0-9]\uFE0F?\u20E3)+\s+/u, "")
     .replace(/^[^\w\s[]+\s*/u, "")
     .replace(/\s+/g, " ")
     .trim();

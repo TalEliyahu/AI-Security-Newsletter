@@ -31,6 +31,44 @@ test("markdown parser extracts item titles, urls, summaries, and sections", asyn
   assert.equal(parsed.items[2].url, "https://github.com/example/agent-guard");
 });
 
+test("markdown parser treats CVEs and Practitioner Discussions as sections, not items", () => {
+  const parsed = parseMarkdownNewsletter(`# AI Security Newsletter - May 2026
+
+# 🚨 CVEs
+
+🛡️ [CVE-2026-41497](https://nvd.nist.gov/vuln/detail/CVE-2026-41497)
+Critical MCP command handling issue in an agent orchestration path.
+
+---
+
+# 💬 Practitioner Discussions
+
+💬 [Production AI security thread](https://www.reddit.com/r/cybersecurity/comments/example/thread/)
+Practitioners compare agent access control, logging, and revocation.
+`);
+  assert.deepEqual(parsed.items.map((item) => item.title), [
+    "CVE-2026-41497",
+    "Production AI security thread"
+  ]);
+  assert.equal(parsed.items[0].section, "CVEs");
+  assert.equal(parsed.items[1].section, "Practitioner Discussions");
+});
+
+test("markdown parser handles multi-keycap numbered video items", () => {
+  const parsed = parseMarkdownNewsletter(`# AI Security Newsletter - May 2026
+
+# 🎥 Videos
+
+🔟 [MCPwned](https://www.youtube.com/watch?v=example10) - Speaker at Conference
+
+1️⃣1️⃣ [Prompt, Commit, Repeat](https://www.youtube.com/watch?v=example11) - Speaker at Conference
+`);
+  assert.deepEqual(parsed.items.map((item) => item.title), [
+    "MCPwned",
+    "Prompt, Commit, Repeat"
+  ]);
+});
+
 test("json parser supports object with items array", async () => {
   const text = await fs.readFile(path.join(__dirname, "fixtures", "sample-newsletter.json"), "utf8");
   const parsed = parseJsonNewsletter(text);
@@ -79,6 +117,54 @@ test("decision thresholds remain strict around weak and strong scores", () => {
     }, { vendorNoise: true, genericAiNews: false }, "not_requested", []),
     "DROP"
   );
+});
+
+test("formal CVE critical severity labels are not treated as hype", async () => {
+  const report = await judgeNewsletter({
+    items: [
+      {
+        title: "CVE-2026-41497",
+        url: "https://nvd.nist.gov/vuln/detail/CVE-2026-41497",
+        section: "CVEs",
+        summary: "Critical 9.8 MCP command handling vulnerability in an AI agent framework with RCE, authorization, sandbox, and mitigation impact."
+      }
+    ],
+    sourceResults: [
+      {
+        source_verification_status: "verified",
+        source_title: "CVE-2026-41497",
+        source_text: "CVE-2026-41497 MCP command handling vulnerability RCE authorization sandbox mitigation",
+        final_url: "https://nvd.nist.gov/vuln/detail/CVE-2026-41497",
+        error: null
+      }
+    ],
+    modelClient: new HeuristicJudgeModelClient()
+  });
+  assert.deepEqual(report.items[0].accuracy_concerns, []);
+});
+
+test("unsupported claim detection does not match claim acronyms inside ordinary words", async () => {
+  const report = await judgeNewsletter({
+    items: [
+      {
+        title: "LinkedIn profile prompt injection joke",
+        url: "https://example.com/reddit-thread",
+        section: "Practitioner Discussions",
+        summary: "The post describes how profile text can force recruiting automation to write in Olde English prose."
+      }
+    ],
+    sourceResults: [
+      {
+        source_verification_status: "verified",
+        source_title: "LinkedIn profile prompt injection joke",
+        source_text: "profile prompt injection recruiting automation Olde English prose",
+        final_url: "https://example.com/reddit-thread",
+        error: null
+      }
+    ],
+    modelClient: new HeuristicJudgeModelClient()
+  });
+  assert.equal(report.items[0].accuracy_concerns.some((item) => item.includes('"rce"')), false);
 });
 
 test("schema validation rejects malformed reports", () => {
@@ -138,6 +224,26 @@ test("source verification failure is safe and does not invent source text", asyn
   assert.equal(results[0].source_verification_status, "unavailable");
   assert.equal(results[0].source_text, "");
   assert.match(results[0].error, /network disabled/);
+});
+
+test("source verification extracts text from PDFs when requested", async () => {
+  const results = await verifySourcesForItems(
+    [{ title: "Agentic AI Services Guidance", url: "https://example.gov/agentic-ai.pdf", summary: "Agentic AI service controls." }],
+    {
+      verifySources: true,
+      fetchImpl: async () => ({
+        ok: true,
+        status: 200,
+        url: "https://example.gov/agentic-ai.pdf",
+        headers: { get: () => "application/pdf" },
+        arrayBuffer: async () => new Uint8Array([37, 80, 68, 70]).buffer
+      }),
+      pdfTextExtractor: async () => "Agentic AI services should use scoped privileges, monitoring, and containment."
+    }
+  );
+  assert.equal(results[0].source_verification_status, "verified");
+  assert.match(results[0].source_text, /scoped privileges/);
+  assert.equal(results[0].source_title, "Agentic AI Services Guidance");
 });
 
 test("fixture decisions cover strong, vendor, funding, governance, overstated, tool, and weak news items", async () => {

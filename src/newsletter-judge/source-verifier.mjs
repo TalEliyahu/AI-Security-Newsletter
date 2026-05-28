@@ -1,3 +1,5 @@
+import { PDFParse } from "pdf-parse";
+
 const DEFAULT_TIMEOUT_MS = 8000;
 const MAX_SOURCE_TEXT_CHARS = 20000;
 
@@ -29,12 +31,12 @@ export async function verifySourcesForItems(items, options = {}) {
   const timeoutMs = options.timeoutMs || DEFAULT_TIMEOUT_MS;
   const results = [];
   for (const item of items) {
-    results.push(await verifySingleSource(item, fetchImpl, timeoutMs));
+    results.push(await verifySingleSource(item, fetchImpl, timeoutMs, options));
   }
   return results;
 }
 
-async function verifySingleSource(item, fetchImpl, timeoutMs) {
+async function verifySingleSource(item, fetchImpl, timeoutMs, options = {}) {
   if (!item.url) {
     return unavailable(item, "no_url", null);
   }
@@ -57,7 +59,21 @@ async function verifySingleSource(item, fetchImpl, timeoutMs) {
 
     const contentType = response.headers?.get?.("content-type") || "";
     if (/pdf/i.test(contentType) || /\.pdf(?:$|[?#])/i.test(item.url)) {
-      return unavailable(item, "unavailable", "PDF source fetched but text extraction is not available");
+      const raw = await response.arrayBuffer();
+      const sourceText = await extractPdfText(raw, options).catch((error) => {
+        throw new Error(`PDF text extraction failed: ${error instanceof Error ? error.message : String(error)}`);
+      });
+      if (!sourceText.trim()) {
+        return unavailable(item, "unavailable", "PDF source fetched but no readable text was extracted");
+      }
+      return {
+        url: item.url,
+        source_verification_status: "verified",
+        source_title: item.title || "",
+        source_text: sourceText.slice(0, MAX_SOURCE_TEXT_CHARS),
+        error: null,
+        final_url: response.url || item.url
+      };
     }
 
     const raw = await response.text();
@@ -78,6 +94,19 @@ async function verifySingleSource(item, fetchImpl, timeoutMs) {
   } catch (error) {
     clearTimeout(timer);
     return unavailable(item, "unavailable", error instanceof Error ? error.message : String(error));
+  }
+}
+
+async function extractPdfText(raw, options = {}) {
+  if (typeof options.pdfTextExtractor === "function") {
+    return options.pdfTextExtractor(raw);
+  }
+  const parser = new PDFParse({ data: new Uint8Array(raw) });
+  try {
+    const result = await parser.getText();
+    return result.text || "";
+  } finally {
+    await parser.destroy();
   }
 }
 

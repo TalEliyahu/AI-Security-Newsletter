@@ -424,7 +424,8 @@ function hasSecurityMechanism(lower) {
 }
 
 function hasOverstatedLanguage(lower) {
-  return /\b(devastating|catastrophic|critical|breach|proves|guarantees|unstoppable|zero day|0-day|always|never)\b/.test(lower);
+  const withoutFormalCveSeverity = lower.replace(/\bcritical\s+\d+(?:\.\d+)?\b/g, "");
+  return /\b(devastating|catastrophic|critical|breach|proves|guarantees|unstoppable|zero day|0-day|always|never)\b/.test(withoutFormalCveSeverity);
 }
 
 function findUnsupportedClaims(item, sourceText) {
@@ -432,15 +433,15 @@ function findUnsupportedClaims(item, sourceText) {
   const source = sourceText.toLowerCase();
   const summary = [item.title, item.summary].join(" ").toLowerCase();
   const claimPairs = [
-    ["rce", ["rce", "remote code execution"]],
-    ["cve", ["cve"]],
-    ["breach", ["breach", "compromise", "incident"]],
-    ["malware", ["malware", "ransomware", "backdoor"]],
-    ["exfiltration", ["exfiltration", "exfiltrate", "data leak"]],
-    ["prompt injection", ["prompt injection", "injection"]]
+    ["rce", /\brce\b|remote code execution/, ["rce", "remote code execution"]],
+    ["cve", /\bcve-\d{4}-\d+\b|\bcve\b/, ["cve"]],
+    ["breach", /\bbreach\b|\bcompromise\b|\bincident\b/, ["breach", "compromise", "incident"]],
+    ["malware", /\bmalware\b|\bransomware\b|\bbackdoor\b/, ["malware", "ransomware", "backdoor"]],
+    ["exfiltration", /\bexfiltration\b|\bexfiltrate\b|\bdata leak(?:age)?\b/, ["exfiltration", "exfiltrate", "data leak"]],
+    ["prompt injection", /\bprompt injection\b/, ["prompt injection", "injection"]]
   ];
-  for (const [claim, sourceWords] of claimPairs) {
-    if (summary.includes(claim) && !sourceWords.some((word) => source.includes(word))) {
+  for (const [claim, summaryPattern, sourceWords] of claimPairs) {
+    if (summaryPattern.test(summary) && !sourceWords.some((word) => source.includes(word))) {
       concerns.push(`Source text did not clearly support the "${claim}" claim.`);
     }
   }

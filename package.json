@@ -17,5 +17,8 @@
     "telegram:status": "node ./bin/aisechub-bot.mjs status",
     "telegram:curate": "node ./bin/aisechub-daily-curator.mjs",
     "test": "node --test"
+  },
+  "dependencies": {
+    "pdf-parse": "^2.4.5"
   }
 }
