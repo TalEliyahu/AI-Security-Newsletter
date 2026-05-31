@@ -247,6 +247,14 @@ Applied ML security venue for defenders and researchers working on model behavio
 
 # 📚 Research
 
+📖 **GenAI-Driven Threat Detection with Microsoft Security Copilot**
+
+The paper introduces the Dynamic Threat Detection Agent, an always-on adaptive agent inside Microsoft Security Copilot that investigates Microsoft Defender incidents, builds activity timelines, generates attack-specific hypotheses, validates outputs with schema and grounding constraints, and creates explainable detections. It matters because the issue needs a defensive, production-scale AI-security example alongside attack and prompt-injection research, including deployment across tens of thousands of Defender customers. [arXiv](https://arxiv.org/abs/2605.20896)
+
+📖 **Beyond Zero: Enterprise Security for the AI Era**
+
+The paper argues that application-level zero trust is not enough for autonomous AI agents and high-velocity enterprise data access. Its useful security idea is to move authorization closer to each operation, with per-resource and per-method decisions, action-level trust boundaries, and machine-speed access checks for both humans and agents. [arXiv](https://arxiv.org/abs/2605.22985)
+
 📖 **LACUNA: Safe Agents as Recursive Program Holes**
 
 For AI agent security teams, the paper treats unsafe agent behavior as a program-composition problem: execution holes need scoped authority, typed boundaries, authorization checks, and sandbox limits before an agent fills them with action. [arXiv](https://arxiv.org/abs/2605.28617)
