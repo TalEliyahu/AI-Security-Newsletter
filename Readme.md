@@ -1,6 +1,6 @@
 # AI Security Newsletter - May 2026
 
-A monthly technical digest for AI security practitioners, researchers, builders, and security leaders tracking how AI systems fail, get attacked, and can be defended. This issue covers technical AI security research, vulnerability analysis, exploit chains, agent/tool abuse, AI malware, CVEs, newly created tools, non-vendor reports, upcoming events, practitioner discussions, and cybersecurity conference talks.
+A monthly technical digest for AI security practitioners, researchers, builders, and security leaders tracking how AI systems fail, get attacked, and can be defended.
 
 <p>
   <a href="https://innovguard.com">
@@ -9,8 +9,6 @@ A monthly technical digest for AI security practitioners, researchers, builders,
 </p>
 
 Sponsored by [InnovGuard.com](https://innovguard.com) - Technology Risk & Cybersecurity Advisory - Innovate and Invest with Confidence, Lead with Assurance.
-
-This month’s issue is especially focused on coding-agent security, prompt injection as an execution boundary, MCP/tool abuse, AI developer supply-chain risk, and agent identity governance.
 
 ---
 
