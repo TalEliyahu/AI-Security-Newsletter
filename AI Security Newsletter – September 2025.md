@@ -2,6 +2,12 @@
 
 A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AI Security community](https://linktr.ee/AISECHUB) on [Twitter](https://x.com/AISecHub) and the [LinkedIn group](https://www.linkedin.com/groups/14545517/) for additional updates. Also check out our project, [Awesome AI Security](https://github.com/TalEliyahu/Awesome-AI-Security).
 
+<p>
+  <a href="https://innovguard.com">
+    <img src="assets/innovguard-sponsor.png" alt="InnovGuard" width="360">
+  </a>
+</p>
+
 Sponsored by [InnovGuard.com](https://innovguard.com) - Technology Risk & Cybersecurity Advisory, Innovate and Invest with Confidence, Lead with Assurance.
 
 # 🔍 Insights
