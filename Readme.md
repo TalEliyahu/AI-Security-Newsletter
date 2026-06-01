@@ -26,7 +26,7 @@ Microsoft shows how prompt injection crossed into code execution in Semantic Ker
 
 The concrete risk is RCE through framework glue code: filters, tool calls, file writes, and plugin execution paths need threat modeling, sandbox isolation, authorization checks, and regression tests for hostile content.
 
-📌 [Beyond source code: The files AI coding agents trust - and attackers exploit](https://cloud.google.com/blog/topics/threat-intelligence/beyond-source-code-the-files-ai-coding-agents-trust-and-attackers-exploit)
+📌 [Beyond source code: The files AI coding agents trust - and attackers exploit](https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access)
 
 The attack surface around coding agents now includes instruction files, runtime settings, IDE extensions, and project automation, not just application source code. AppSec teams should treat agent-facing configuration as executable influence and scan it for intent, privilege changes, and hidden instructions.
 
@@ -148,7 +148,7 @@ The control lesson is to test framework defaults as code-execution surfaces: san
 
 NIST summarizes CAISI RFI responses on agent security, including threat categories, authorization gaps, tool-use risks, mitigation needs, and where existing cybersecurity practices need adaptation for autonomous systems.
 
-📘 **[Careful Adoption of Agentic AI Services](https://www.cyber.gov.au/sites/default/files/2026-05/careful_adoption_of_agentic_ai_services.pdf)**
+📘 **[Careful Adoption of Agentic AI Services](https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4475134/nsa-joins-the-asds-acsc-and-others-to-release-guidance-on-agentic-artificial-in/)**
 
 The Five Eyes guidance gives security teams a practical AI agent adoption baseline: start with low-risk use cases, enforce strict privilege controls, monitor continuously, threat model tool access, and design deployments for containment, sandboxing, and reversibility.
 
