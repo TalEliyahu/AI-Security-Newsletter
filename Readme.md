@@ -353,47 +353,25 @@ The thread shows what practitioners expect from an AI security role: AppSec foun
 
 1️⃣ [AppSec Security: The SDLC in the age of agentic](https://www.youtube.com/watch?v=9sEbUpS4eTY) - Jon McCoy at NDC Security 2026
 
-Why watch: maps agentic coding into the SDLC, where AppSec needs threat modeling, vulnerability review, authorization gates, detection, and runtime controls for AI-generated changes.
-
 2️⃣ [Securing Code in the Age of AI](https://www.youtube.com/watch?v=nKKNrgGuU8M) - Simona Toader at NDC Security 2026
-
-Why watch: useful for teams adjusting secure code review, vulnerability triage, threat modeling, prompt-injection review, sandboxing, and developer workflows around AI coding agents.
 
 3️⃣ [AI Agents and Jupyter Notebooks for Security Data Analysis](https://www.youtube.com/watch?v=VJPWZGhQe4A) - Roberto Rodriguez at NDC Security 2026
 
-Why watch: shows how notebook-based AI agents can support security data analysis while still requiring authorization around data access, credential exposure, notebook sandboxing, code execution, and tool execution.
-
 4️⃣ [MCP Security: Keep Your AI Agents from Spilling the Tea](https://www.youtube.com/watch?v=Myg3A-AVjyo) - Manfred Bjorlin and Awar Abdulkarim at NDC Security 2026
-
-Why watch: focuses on MCP security boundaries, tool invocation risk, authorization checks, sandboxing, agent data leakage, and practical controls for tool-connected AI assistants.
 
 5️⃣ [The Most Dangerous Intern is an LLM: Abusing AI Agents Through Text](https://www.youtube.com/watch?v=hm0PxdJuWl4) - BSides Budapest 2026
 
-Why watch: frames untrusted text as an abuse channel for AI agents, with practical implications for trust boundaries, tool authorization, sandboxing, detection, and mitigation.
-
 6️⃣ [Security for AI Agents Using an Ensemble of Fine-tuned Models](https://www.youtube.com/watch?v=BEvFbJQCXDs) - Lidan Hazout and Bar Kaduri at BSidesSF 2026
-
-Why watch: covers a defensive architecture for agent security that uses multiple tuned models to detect policy bypass, unsafe tool invocation, abuse paths, and risky behavior instead of trusting one guardrail.
 
 7️⃣ [Your AI Agent Has Production Access: Now What?](https://www.youtube.com/watch?v=-3p2F5HWdSY) - Jack at BSidesSF 2026
 
-Why watch: directly addresses the deployment problem: agents with production permissions need identity, authorization, credential controls, monitoring, detection, and rollback plans.
-
 8️⃣ [How We Red-Teamed Our Own AI Agent: Lessons from the Field](https://www.youtube.com/watch?v=6sYpcbpsxrc) - Josiah Peedikayil and HS at BSidesSF 2026
-
-Why watch: gives red-team lessons from testing an AI agent, including attack paths, bypass findings, mitigation gaps, detection ideas, and defensive findings teams can adapt to their own systems.
 
 9️⃣ [Pwning and Defending AI Agent Code Interpreters](https://www.youtube.com/watch?v=Fdrm2tLVAwc) - Kinnaird McQuade at BSidesSF 2026
 
-Why watch: code interpreters turn model output into execution, so the talk is relevant for sandboxing, file access, exploit containment, authorization, credential exposure, and mitigation.
-
 🔟 [MCPwned: Hacking MCP Servers with One Skeleton Key](https://www.youtube.com/watch?v=4_Om7f_2dro) - Jonathan Leitschuh at BSidesSF 2026
 
-Why watch: focuses on MCP server exploitation and shared-key failure modes that can break trust between agents and tools, with lessons for authorization, credential isolation, detection, and mitigation.
-
 1️⃣1️⃣ [Prompt, Commit, Repeat: Security at Scale When 1,000 Devs Use AI Agents](https://www.youtube.com/watch?v=s8whRBI5Inc) - Balachandra Shanabhag at BSidesSF 2026
-
-Why watch: useful for organizations rolling out AI coding agents at scale, where secure defaults, vulnerability review, authorization, sandboxing, detection, and developer guardrails need to hold across many teams.
 
 ---
 
