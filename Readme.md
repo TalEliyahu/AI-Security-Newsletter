@@ -44,17 +44,17 @@ PromptArmor maps Codex risk to concrete AI coding-agent controls: workspace app 
 
 The checklist is strongest when used as a deployment threat model: restrict tool permissions, sandbox untrusted repositories, monitor command execution, detect policy bypass, and review credentials before agents can touch production workflows.
 
-📌 [Comment and Control: One Prompt Injection Pattern Hijacked Claude Code, Gemini CLI, and GitHub Copilot Agent](https://getburnrate.io/blog)
+📌 [Comment and Control: How One Prompt Injection Hit Claude Code, Gemini CLI, and Copilot Agent](https://repello.ai/blog/comment-and-control-claude-code-gemini-copilot-prompt-injection)
 
 The writeup turns the Comment and Control disclosure into an engineering checklist for CI-connected AI coding agents. The important pattern is prompt injection through untrusted GitHub content reaching agent actions through PR titles, issue comments, workflow triggers, credential access, and CI secrets.
 
 The defensive line is the repository trust boundary. Treat comments, issues, and pull requests as hostile input, require authorization before tool invocation, isolate CI credentials, and add detection for agent actions triggered by external text.
 
-📌 [AI agents are the new insider threat](https://www.reversinglabs.com/blog/ai-agents-new-insider-threat)
+📌 [The Personal AI Control Plane: How to Govern Your Agents Before They Govern Your Workflow](https://notquiterandom.com/2026/05/11/the-personal-ai-control-plane-how-to-govern-your-agents-before-they-govern-your-workflow/)
 
-This piece frames agents as digital workers with credentials, expected behavior, and abnormal activity patterns. For defenders, that shifts monitoring from application logs alone to agent behavior analytics: what the agent accessed, what it usually does, and when it starts acting outside its role.
+The post turns personal and small-team AI-agent sprawl into a concrete control-plane problem: inventory, permissions, memory, logging, review, and revocation. The useful security point is that delegated AI authority should be visible before a collection of assistants, automations, copilots, and plugins becomes unmanaged access.
 
-The practical model is non-human identity monitoring: credential scope, authorization drift, data access, tool invocation, and anomaly detection need to be reviewed the same way teams review privileged service accounts.
+For practitioners, the model maps cleanly to enterprise agent security: name every agent, restrict scopes, separate memories by context, keep action logs, review high-blast-radius automations, and remove access when the workflow ends.
 
 📌 [Vibe coding and agentic engineering are getting closer than I’d like](https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/)
 
@@ -86,11 +86,11 @@ The article makes a clear distinction between text manipulation and execution ri
 
 That moves mitigation into engineering controls: isolate execution, restrict credentials, log tool calls, detect unusual side effects, and require explicit authorization when untrusted content influences privileged action.
 
-📌 [Prompt Injection in 2026: 7 Attack Patterns We See](https://cybersecify.com/blog/prompt-injection-2026-attack-patterns/)
+📌 [Why Policy in Amazon Bedrock AgentCore chose Cedar for securing agentic workflows](https://aws.amazon.com/blogs/security/why-policy-in-amazon-bedrock-agentcore-chose-cedar-for-securing-agentic-workflows/)
 
-The taxonomy separates prompt injection by entry point and persistence: direct input, retrieved content, RAG poisoning, tool chains, multi-turn manipulation, cross-agent transfer, and multimodal content. It gives red teams a useful checklist for coverage rather than treating prompt injection as one generic bug.
+The writeup makes agent authorization concrete by moving policy decisions outside the model and into Cedar-based checks. The important pattern is per-action control: the agent can propose an operation, but a deterministic policy layer decides whether the action, resource, user, and context are allowed.
 
-The value is practical coverage: each pattern maps to a different trust boundary, detection point, mitigation strategy, and abuse path that testers can add to agent and LLM application evaluations.
+That matters because prompt injection, hallucinated actions, and confused-deputy behavior become less dangerous when side effects pass through explicit authorization. Teams building agent workflows should treat policy generation, review, and enforcement as part of the runtime boundary, not as documentation around the model.
 
 📌 [Prompt injection defenses that survive 2026](https://www.tmls.nyc/insights/field-notes/prompt-injection-defenses-that-survive-2026)
 
