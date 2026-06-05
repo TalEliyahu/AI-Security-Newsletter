@@ -329,21 +329,31 @@ This survey organizes two decades of adversarial ML work across attacks, defense
 
 💬 [Linus Torvalds says AI-powered bug hunters have made Linux security mailing list almost entirely unmanageable](https://www.reddit.com/r/cybersecurity/comments/1tgibc2/linus_torvalds_says_aipowered_bug_hunters_have/)
 
+r/cybersecurity · Reddit score 1,670 · 135 comments
+
 The thread surfaces a real maintainer problem: AI-assisted vulnerability reports can increase volume and detail without improving exploitability, reproduction quality, or triage capacity. Security teams adopting AI bug-finding need validation gates, duplicate detection, evidence standards, and mitigation notes before sending findings upstream.
 
 💬 [VP Requested Full API Access to the ERP for Claude Integration](https://www.reddit.com/r/sysadmin/comments/1tdymin/vp_requested_full_api_access_to_the_erp_for/)
+
+r/sysadmin · Reddit score 859 · 287 comments
 
 The thread captures the access-control problem in plain operational terms: business pressure can push agents toward broad credentials before security has defined scope, approval, logging, revocation, authorization, and monitoring.
 
 💬 [LinkedIn user hides AI prompt injection in bio to force recruitment spam to be sent in Olde English prose](https://www.reddit.com/r/cybersecurity/comments/1tgl37m/linkedin_user_hides_ai_prompt_injection_in_bio_to/)
 
+r/cybersecurity · Reddit score 541 · 25 comments
+
 The example is playful, but the mechanism is serious: scraped profile text becomes untrusted instructions for downstream automation. Recruiting, sales, and enrichment agents need trust-boundary checks, prompt-injection detection, sandboxed actions, and authorization before external profile data influences tool use.
 
 💬 [Anyone Can Silently Steal Your Files from your Claude AI chat - Live Demo](https://www.reddit.com/r/cybersecurity/comments/1tnixwn/anyone_can_silently_steal_your_files_from_your/)
 
+r/cybersecurity · Reddit score 416 · 68 comments
+
 The conversation focuses on agent data access and what users assume a chat interface can reach. It is useful for threat modeling desktop agents, browser agents, connected-file assistants, credential boundaries, authorization checks, and monitoring for unusual file access.
 
 💬 [Interview for AI security engineer position at a Fortune 500 company](https://www.reddit.com/r/cybersecurity/comments/1tdjhjf/interview_for_ai_security_engineer_position_at_a/)
+
+r/cybersecurity · Reddit score 406 · 86 comments
 
 The thread shows what practitioners expect from an AI security role: AppSec foundations, model behavior, prompt injection, threat modeling, vulnerability review, authorization, governance, detection, and practical controls around AI-enabled products.
 
