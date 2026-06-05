@@ -234,6 +234,10 @@ Focused venue for machine-learning security, adversarial ML, model robustness, p
 
 ## August 2026
 
+📅 [Black Hat USA 2026 - AI Summit](https://blackhat.com/us-26/ai-summit.html) - August 4, 2026 · Las Vegas, NV, USA · Organizer: Black Hat
+
+Black Hat's AI Summit is focused on how AI changes digital defense, offensive capability, security operations, and risk management for teams securing production AI systems.
+
 📅 [IEEE CSR GenXSec 2026 - Generative and eXplainable AI for Security in Networking](https://www.ieee-csr.org/csr-genxsec/) - August 3-5, 2026 · Lisbon, Portugal · Organizer: IEEE CSR
 
 Track for generative AI in network security, including detection, explainability, threat modeling, mitigation, and operational use of AI systems in defensive environments.
@@ -243,6 +247,16 @@ Track for generative AI in network security, including detection, explainability
 📅 [CAMLIS 2026 - Conference on Applied Machine Learning in Information Security](https://www.camlis.org/) - October 21-23, 2026 · Arlington, VA, USA · Organizer: CAMLIS
 
 Applied ML security venue for defenders and researchers working on model behavior, detection, adversarial testing, vulnerability analysis, benchmark design, and security analytics.
+
+📅 [GAISS 2026 - IEEE Conference on Generative AI for Secure Systems](https://gaiss.info/) - October 28-30, 2026 · Austin, TX, USA · Organizer: IEEE
+
+IEEE venue for generative AI security work across adversarial robustness, secure deployment, privacy, evaluation, and security engineering for teams shipping AI systems.
+
+## November 2026
+
+📅 [19th ACM Workshop on Artificial Intelligence and Security (AISec 2026)](https://aisec.cc/) - November 15-19, 2026 · The Hague, Netherlands · Organizer: ACM AISec
+
+Long-running AI security workshop colocated with ACM CCS, covering adversarial ML, privacy, model abuse, AI-enabled security, and security risks in learning-based systems.
 ---
 
 # 📚 Research
