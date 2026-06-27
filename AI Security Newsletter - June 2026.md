@@ -32,6 +32,33 @@ TMLS frames prompt injection as a runtime security problem for agents, where the
 📌 [MCP prompt injection surface: securing agents in 2026](https://www.keepmyprompts.com/en/blog/mcp-prompt-injection-surface-secure-agents-2026)
 KeepMyPrompts maps MCP prompt-injection exposure across tool descriptions, server responses, and agent decisions, which is useful for teams reviewing MCP servers before they connect them to production data or privileged actions.
 
+📌 [Agentjacking: MCP Injection Hijacks AI Coding Agents](https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-mcp-sentry-injection-20260612/)
+Cloud Security Alliance summarizes the Sentry-to-MCP "agentjacking" pattern, where externally controlled telemetry or issue content becomes trusted context for coding agents. The useful defensive frame is to treat observability, bug-report, and integration data as untrusted agent input, not as neutral development metadata.
+
+📌 [Five Eyes warns AI is enabling malicious cyber activity](https://www.nsa.gov/Press-Room/News-Highlights/Tag/280930/artifical-intelligence/)
+Five Eyes cyber agencies warn that adversaries are using AI to improve reconnaissance, phishing, malware adaptation, and vulnerability discovery. The defensive signal is that AI-assisted attack activity is now a mainstream intelligence concern, not a niche application-security topic.
+
+📌 [Breaking LiteLLM: From Low-Privilege User to Admin and RCE](https://www.obsidiansecurity.com/blog/litellm-privilege-escalation-rce)
+Obsidian documents a chained LiteLLM privilege-escalation and RCE path, showing how low-privilege access to an AI gateway can become administrative control. For defenders, the case argues for separating gateway administration, model-provider secrets, MCP testing functions, and runtime agent permissions.
+
+📌 [NIST Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems](https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update)
+NIST highlights why fixed AI guardrails cannot be treated as complete protection against adaptive prompts. The practical security takeaway is to pair guardrails with continuous evaluation, runtime containment, monitoring, and update loops instead of treating a static rule set as a durable control boundary.
+
+📌 [Prompt injection still drives most agentic AI security failures in new OWASP report](https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/)
+Help Net Security pulls out the key operational shift in OWASP's latest agentic-security report: prompt injection has moved from theoretical concern to documented incidents, advisories, and breach patterns. The pressure is now on engineering teams to secure tool use, identity, memory, and approvals around agents.
+
+📌 [OWASP Top 10 for Agentic Applications for 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+OWASP's agentic application list gives teams a concrete control vocabulary for excessive agency, tool misuse, context poisoning, authorization failures, memory risk, and agent supply-chain exposure. It is useful as a review checklist for agent features before they receive production credentials or write access.
+
+📌 [Security Considerations for Model Context Protocol Implementations in AI Agent Systems](https://datatracker.ietf.org/doc/html/draft-mohiuddin-mcp-security-considerations-00)
+This IETF Internet-Draft frames MCP security at the protocol and implementation layer, including transport, authentication, authorization, tool exposure, and data-flow concerns. It helps security reviewers separate MCP as a protocol from the specific trust decisions made by each server, client, and agent host.
+
+📌 [The AI Agent Lethal Trifecta](https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-agent-lethal-trifecta-capability-securi/)
+CSA Labs applies the "lethal trifecta" lens to agent deployments: access to private data, exposure to untrusted content, and the ability to trigger external side effects. That framing is useful because most serious agent failures appear when all three are present in one workflow.
+
+📌 [LLM Agents as Offensive Post-Exploitation Tools](https://labs.cloudsecurityalliance.org/research/)
+Cloud Security Alliance's June research archive includes work on LLM agents as post-exploitation tools, shifting the AI-security discussion from jailbreak demos to attacker operations after initial access. The defensive focus becomes containment, telemetry, credential scoping, and detecting agent-driven lateral movement.
+
 ---
 
 # 🧰 Tools & Resources
@@ -63,6 +90,26 @@ KeepMyPrompts maps MCP prompt-injection exposure across tool descriptions, serve
 ---
 
 # 📄 Reports
+
+📘 **[State of Agentic AI Security and Governance 2.01](https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/)**
+
+OWASP's June update turns agentic-AI security into a governance and engineering map, covering autonomous workflows, agent risk categories, controls, and the practical gap between early threat models and production incidents.
+
+📘 **[Summary Analysis of Responses to the Request for Information Regarding Security Considerations for AI Agents](https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai)**
+
+NIST summarizes CAISI RFI responses on AI-agent security, including authorization, tool-use risk, evaluation practices, mitigation needs, and the government support organizations want for secure agent adoption.
+
+📘 **[Security Considerations for Model Context Protocol Implementations in AI Agent Systems](https://datatracker.ietf.org/doc/draft-mohiuddin-mcp-security-considerations/)**
+
+The IETF draft gives implementers a protocol-level checklist for MCP security, including transport choices, authentication, authorization, tool descriptions, server trust, and deployment controls for agent systems.
+
+📘 **[2026 State of Modern Application & AI Security](https://cloudsecurityalliance.org/artifacts/2026-state-of-modern-application-and-ai-security)**
+
+Cloud Security Alliance examines how compressed exploitation timelines and AI-assisted vulnerability discovery change application-security priorities, with emphasis on runtime visibility, exploitability validation, and mitigation speed.
+
+📘 **[Model Context Protocol: Security Design Considerations for AI-Driven Automation](https://media.defense.gov/2026/Jun/02/2003943289/-1/-1/0/CSI_MCP_SECURITY.PDF)**
+
+NSA and international partners publish MCP security design guidance for AI-driven automation, covering authentication, authorization, server trust, transport controls, tool exposure, and monitoring for agent ecosystems moving from experiments into production.
 
 ---
 
@@ -167,6 +214,21 @@ Looks at credential-exfiltration detection before final output and across multip
 ---
 
 # 🎥 Videos
+
+1️⃣ [RCE in LLM Coding Agents: Lessons from Newly Disclosed Claude Code Vulnerabilities](https://www.youtube.com/watch?v=vo8kqlkjpWg)
+Cloud Native San Francisco session on coding-agent RCE lessons, useful for teams reviewing how prompt injection, local tools, and developer environments can combine into host-side execution risk.
+
+2️⃣ [The Future of Secure Enterprise AI: Building Reliable Agents with MCP](https://www.youtube.com/watch?v=-EJJLb7eRKo)
+Xpand Conference talk on MCP-based enterprise agent design, with practical emphasis on reliable agent infrastructure, data exposure, and security controls around connected tools.
+
+3️⃣ [CNAS 2026 National Security Conference: Setting the Rules for AI Warfare](https://www.youtube.com/watch?v=8MDyUeumV2c)
+CNAS session on AI warfare norms and national-security policy, relevant for security teams tracking how AI-enabled cyber operations are moving into public-sector doctrine and governance.
+
+4️⃣ [HitchHacker's Guide to Building Secure Agents](https://www.youtube.com/watch?v=eRaay8rBU_I)
+NDC Conferences talk on secure agent construction, covering the engineering risks that appear when agents receive tools, credentials, state, and autonomy inside real software systems.
+
+5️⃣ [Attacking AI Systems](https://www.youtube.com/watch?v=5PNr7VSv-Ss)
+CodeValue session on attacking AI systems, useful as a practitioner-oriented walkthrough of how AI features expand application threat models beyond ordinary prompt and API handling.
 
 ---
 
