@@ -2,7 +2,7 @@
 
 A digest of AI security research, insights, reports, upcoming events, and tools & resources. Follow the [AI Security community](https://linktr.ee/AISECHUB) on [Twitter](https://twitter.com) and [LinkedIn group](https://linkedin.com) for additional updates.
 
-<p>
+<p align="center">
   <a href="https://innovguard.com">
     <img src="assets/innovguard-sponsor.png" alt="InnovGuard" width="360">
   </a>
