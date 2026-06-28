@@ -4,7 +4,7 @@ A digest of AI security research, insights, reports, upcoming events, and tools 
 
 Sponsored by [InnovGuard.com](https://innovguard.com) - Technology Risk & Cybersecurity Advisory - *Innovate and Invest with Confidence, Lead with Assurance.*
 
-<p>
+<p align="center">
   <a href="https://innovguard.com">
     <img src="assets/innovguard-sponsor.png" alt="InnovGuard" width="360">
   </a>
